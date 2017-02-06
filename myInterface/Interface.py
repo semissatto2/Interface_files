@@ -43,6 +43,7 @@ class EpicsInterface(QWidget, Ui_Form_epicsInterface):
         self.close()
         window = TelaInicial()
         window.show()
+        sys.exit(app.exec_())
         
     def readPv(self):
          nome_da_pv = self.lineEdit_readPv.text()
