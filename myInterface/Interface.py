@@ -49,7 +49,7 @@ class EpicsInterface(QWidget, Ui_Form_epicsInterface):
                       pv_value = str(float(pv.value/10))
                       self.lineEdit_PvValue.setText(pv_value)
              else:
-                      self.lineEdit_2.PvValue('PV not connected')
+                      self.lineEdit_PvValue.setText('PV not connected')
         
 # Init interface
 if __name__ == '__main__':
