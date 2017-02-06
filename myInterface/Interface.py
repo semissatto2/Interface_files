@@ -41,8 +41,8 @@ class EpicsInterface(QWidget, Ui_Form_epicsInterface):
     # My slot's
     def onClickBack(self):
         self.close()
-        #window = TelaInicial()
-        TelaInicial().show()
+        window = TelaInicial()
+        window.show()
         
     def readPv(self):
          nome_da_pv = self.lineEdit_readPv.text()
