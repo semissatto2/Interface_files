@@ -25,6 +25,7 @@ class TelaInicial(QMainWindow, Ui_Form_telaInicial):
     def onClick(self):
         self.epicsInterface = EpicsInterface()
         self.epicsInterface.show()
+        self.close()
         
 # Window #2 Class
 class EpicsInterface(QWidget, Ui_Form_epicsInterface):
@@ -40,6 +41,7 @@ class EpicsInterface(QWidget, Ui_Form_epicsInterface):
     # My slot's
     def onClickBack(self):
         self.close()
+        TelaInicial.show()
         
     def readPv(self):
          nome_da_pv = self.lineEdit_readPv.text()
