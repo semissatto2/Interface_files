@@ -1,21 +1,11 @@
-# hello_app_from_ui_mult.py
+from epics import PV
 
-from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
-from PyQt5 import uic
-import sys
+names = ['IVUFE:EPS:AI_UTL-WPR-TT', 'IVUFE:EPS:AI_UTL-WRT-TT', 'IVUFE:EPS:AI_DEV-XBPM1-TT', 'IVUFE:EPS:AI_DEV-XBPM1-TT1', 'IVUFE:EPS:AI_DEV-XBPM1-TT2', 'IVUFE:EPS:AI_DEV-XBPM1-TT3', 'IVUFE:EPS:AI_DEV-XBPM1-TT4', 'IVUFE:EPS:AI_DEV-XBPM2-TT', 'IVUFE:EPS:AI_DEV-XBPM2-TT1', 'IVUFE:EPS:AI_DEV-XBPM2-TT2', 'IVUFE:EPS:AI_DEV-XBPM2-TT3', 'IVUFE:EPS:AI_DEV-XBPM2-TT4', 'IVUFE:EPS:AI_DEV-MSK-TT', 'IVUFE:EPS:AI_DEV-MSK-TT1', 'IVUFE:EPS:AI_DEV-MSK-TT2', 'IVUFE:EPS:AI_DEV-MSK-TT3', 'IVUFE:EPS:AI_DEV-MSK-TT4', 'IVUFE:EPS:AI_DEV-SLITS-TT', 'IVUFE:EPS:AI_DEV-SLITS-TT1', 'IVUFE:EPS:AI_DEV-SLITS-TT2', 'IVUFE:EPS:AI_DEV-SLITS-TT3', 'IVUFE:EPS:AI_DEV-SLITS-TT4', 'IVUFE:EPS:AI_DEV-PS-TT1', 'IVUFE:EPS:AS_UTL-CAR-PIT', 'IVUFE:EPS:AS_UTL-WPR-FIT', 'IVUFE:EPS:AS_UTL-WPR-PIT', 'IVUFE:EPS:AS_UTL-WRT-FIT', 'IVUFE:EPS:AS_UTL-WRT-PIT', 'IVUFE:EPS:AS_DEV-XBPM1-FIT', 'IVUFE:EPS:AS_DEV-XBPM2-FIT', 'IVUFE:EPS:AS_DEV-MSK-FIT', 'IVUFE:EPS:AS_DEV-SLITS-FIT']
 
-Ui_Form, QtBaseClass = uic.loadUiType("epicsInterface.ui")
+values = list()
 
-class MainWindow(QWidget, Ui_Form):
-    def __init__(self, parent=None):
-        super(MainWindow, self).__init__(parent)
-        super(Ui_Form, self).__init__()
-        self.setupUi(self)
-        self.push
+for name in names:
+    values.append(PV(name).value)
 
-
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
-    sys.exit(app.exec_())
+for i, value in enumerate(values):
+    "setTextA" + "%d" = value % (i)
