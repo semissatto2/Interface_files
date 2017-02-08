@@ -78,7 +78,13 @@ class EPSInterface(QWidget, Ui_Form_EPSInterface):
 
 	# Bind signal to method
         self.threadclass.sig.connect(self.updateAI)
-
+        self.LinkButtonBackEPS.clicked.connect(self.onClickBack)
+	
+    def onClickBack(self):
+		self.close()
+		self.window = TelaInicial()
+		self.window.show()
+		
     def updateAI(self, AI1, AI2, AI3, AI4):
         self.lineEditAI1.setText(str(AI1))
         self.lineEditAI2.setText(str(AI2))
