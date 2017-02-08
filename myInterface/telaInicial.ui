@@ -38,6 +38,11 @@
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QCommandLinkButton" name="LinkButtonEPICS">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
         <property name="autoFillBackground">
          <bool>false</bool>
         </property>
@@ -70,6 +75,11 @@
       </item>
       <item>
        <widget class="QCommandLinkButton" name="LinkButtonEPS">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>EPS Interface</string>
         </property>
@@ -80,6 +90,11 @@
       </item>
       <item>
        <widget class="QCommandLinkButton" name="LinkButtonPPS">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>PPS Interface</string>
         </property>
@@ -87,6 +102,11 @@
       </item>
       <item>
        <widget class="QCommandLinkButton" name="LinkButtonHVAC">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>HVAC Interface</string>
         </property>
@@ -102,7 +122,7 @@
      <x>0</x>
      <y>0</y>
      <width>474</width>
-     <height>19</height>
+     <height>17</height>
     </rect>
    </property>
   </widget>
