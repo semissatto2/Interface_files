@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>472</width>
+    <height>377</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,14 +17,14 @@
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QLabel" name="labelPt100">
+      <widget class="QLabel" name="labelAI1">
        <property name="font">
         <font>
          <pointsize>14</pointsize>
         </font>
        </property>
        <property name="text">
-        <string>Pt100 value (ºC):</string>
+        <string>Analog Input 1</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -32,20 +32,61 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEditPt100"/>
+      <widget class="QLineEdit" name="lineEditAI1"/>
      </item>
      <item>
-      <spacer name="verticalSpacer">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
+      <widget class="QLabel" name="labelAI2">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
        </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>108</width>
-         <height>23</height>
-        </size>
+       <property name="text">
+        <string>Analog Input 2</string>
        </property>
-      </spacer>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEditAI2"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelAI3">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Analog Input 3</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEditAI3"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelAI4">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Analog Input 4</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEditAI4"/>
      </item>
     </layout>
    </item>
