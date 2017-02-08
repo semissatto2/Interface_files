@@ -70,3 +70,7 @@ pvValues[30]=pv31.value
 pvValues[31]=pv32.value
 
 #print (pvValues)	# Debbug
+
+
+for i in range(32):
+	"setTextA"+"%d" = pvValues[i] %(i)

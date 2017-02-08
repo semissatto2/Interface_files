@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1150</width>
-    <height>578</height>
+    <width>867</width>
+    <height>471</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>EPS Interface</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_11">
    <item>
@@ -87,8 +90,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -114,8 +123,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -141,8 +156,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -168,8 +189,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -199,8 +226,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -226,8 +259,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -253,8 +292,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -280,8 +325,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -311,8 +362,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -338,8 +395,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -365,8 +428,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -392,8 +461,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -423,8 +498,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -450,8 +531,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -477,8 +564,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -504,8 +597,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -539,8 +638,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -566,8 +671,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -593,8 +704,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -620,8 +737,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -651,8 +774,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -678,8 +807,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -705,8 +840,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -732,8 +873,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -763,8 +910,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -790,8 +943,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -817,8 +976,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -844,8 +1009,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -875,8 +1046,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -902,8 +1079,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -929,8 +1112,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -956,8 +1145,14 @@
                <pointsize>18</pointsize>
               </font>
              </property>
+             <property name="autoFillBackground">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
