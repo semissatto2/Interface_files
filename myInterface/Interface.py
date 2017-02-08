@@ -94,11 +94,11 @@ class ThreadClass(QtCore.QThread):
         
     def run(self):
         while 1:
-            AI1 = myEpics.getRandom()
-            AI2 = myEpics.getRandom()
-            AI3 = myEpics.getRandom()
-            AI4 = myEpics.getRandom()
-            time.sleep(0.05)
+            AI1 = myEpics.readAIValues()[0]
+            AI2 = myEpics.readAIValues()[1]
+            AI3 = myEpics.readAIValues()[2]
+            AI4 = myEpics.readAIValues()[3]
+            time.sleep(0.4)
 
 
             
