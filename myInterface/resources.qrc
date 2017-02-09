@@ -1,7 +1,8 @@
 <RCC>
   <qresource prefix="images">
-    <file>images/FUNDO - escuro.png</file>
-    <file>images/FUNDO - mais  escuro.png</file>
+    <file>myBG.jpg</file>
+    <file>images/backgroundSite.jpg</file>
+    <file>fundoEscuro.png</file>
     <file>green-back-button-icon-65921.png</file>
     <file>logoSirius.png</file>
     <file>logo_659x595.png</file>
