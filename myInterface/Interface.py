@@ -109,7 +109,6 @@ class EPSInterface(QWidget, Ui_Form_EPSInterface):
         self.labelAI30.setText(myEpics.pv30.pvname)
         self.labelAI31.setText(myEpics.pv31.pvname)
         self.labelAI32.setText(myEpics.pv32.pvname)
-        print (myEpics.pv32.pvname)
         
        # Bind signal to method
         self.threadclass.sig.connect(self.updateAI)

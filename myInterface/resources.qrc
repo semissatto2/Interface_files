@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="images">
+    <file>images/FUNDO - mais  escuro.png</file>
     <file>myBG.jpg</file>
     <file>images/backgroundSite.jpg</file>
     <file>fundoEscuro.png</file>

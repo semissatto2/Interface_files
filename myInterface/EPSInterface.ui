@@ -6,18 +6,37 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>968</width>
-    <height>743</height>
+    <width>798</width>
+    <height>553</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>EPS Interface</string>
   </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
   <property name="styleSheet">
-   <string notr="true">border-image: url(:/images/myBG.jpg);</string>
+   <string notr="true">QWidget{
+background-color: qlineargradient(spread:pad, x1:0.511258, y1:0.167, x2:0.5, y2:0.994624, stop:0.0107527 rgba(51, 51, 51, 255), stop:0.698925 rgba(173, 173, 173, 255));
+}
+QLabel{
+background-color: transparent;
+	font: 75 11pt &quot;Courier 10 Pitch&quot;;
+	color: rgb(0, 0, 0);
+}
+
+QLineEdit{
+background-color: rgb(221, 221, 221);
+	color: rgb(0, 0, 0);
+}
+
+Spacer{
+background-color: rgb(0, 255, 0);
+}</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0">
+   <item row="1" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout_4">
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -25,13 +44,22 @@
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
           <widget class="QCommandLinkButton" name="LinkButtonBackEPS">
+           <property name="maximumSize">
+            <size>
+             <width>41</width>
+             <height>16777215</height>
+            </size>
+           </property>
            <property name="font">
             <font>
              <pointsize>14</pointsize>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(206, 206, 206);</string>
+           </property>
            <property name="text">
-            <string>Back</string>
+            <string/>
            </property>
            <property name="icon">
             <iconset resource="resources.qrc">
@@ -44,6 +72,19 @@
             </size>
            </property>
           </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
          </item>
         </layout>
        </item>
@@ -72,7 +113,11 @@
             <widget class="QLabel" name="labelAI1">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -105,7 +150,11 @@
             <widget class="QLabel" name="labelAI2">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -138,7 +187,11 @@
             <widget class="QLabel" name="labelAI3">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -171,8 +224,18 @@
             <widget class="QLabel" name="labelAI4">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
+             </property>
+             <property name="mouseTracking">
+              <bool>false</bool>
+             </property>
+             <property name="acceptDrops">
+              <bool>true</bool>
              </property>
              <property name="text">
               <string>Analog Input 4</string>
@@ -208,7 +271,11 @@
             <widget class="QLabel" name="labelAI5">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -241,7 +308,11 @@
             <widget class="QLabel" name="labelAI6">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -274,7 +345,11 @@
             <widget class="QLabel" name="labelAI7">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -307,7 +382,11 @@
             <widget class="QLabel" name="labelAI8">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -344,7 +423,11 @@
             <widget class="QLabel" name="labelAI9">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -377,7 +460,11 @@
             <widget class="QLabel" name="labelAI10">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -410,7 +497,11 @@
             <widget class="QLabel" name="labelAI11">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -443,7 +534,11 @@
             <widget class="QLabel" name="labelAI12">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -480,7 +575,11 @@
             <widget class="QLabel" name="labelAI13">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -513,7 +612,11 @@
             <widget class="QLabel" name="labelAI14">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -546,7 +649,11 @@
             <widget class="QLabel" name="labelAI15">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -579,7 +686,11 @@
             <widget class="QLabel" name="labelAI16">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -620,7 +731,11 @@
             <widget class="QLabel" name="labelAI17">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -653,7 +768,11 @@
             <widget class="QLabel" name="labelAI18">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -686,7 +805,11 @@
             <widget class="QLabel" name="labelAI19">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -719,7 +842,11 @@
             <widget class="QLabel" name="labelAI20">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -756,7 +883,11 @@
             <widget class="QLabel" name="labelAI21">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -789,7 +920,11 @@
             <widget class="QLabel" name="labelAI22">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -822,7 +957,11 @@
             <widget class="QLabel" name="labelAI23">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -855,7 +994,11 @@
             <widget class="QLabel" name="labelAI24">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -892,7 +1035,11 @@
             <widget class="QLabel" name="labelAI25">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -925,7 +1072,11 @@
             <widget class="QLabel" name="labelAI26">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -958,7 +1109,11 @@
             <widget class="QLabel" name="labelAI27">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -991,7 +1146,11 @@
             <widget class="QLabel" name="labelAI28">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -1028,7 +1187,11 @@
             <widget class="QLabel" name="labelAI29">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -1061,7 +1224,11 @@
             <widget class="QLabel" name="labelAI30">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -1094,7 +1261,11 @@
             <widget class="QLabel" name="labelAI31">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -1127,7 +1298,11 @@
             <widget class="QLabel" name="labelAI32">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <family>Courier 10 Pitch</family>
+               <pointsize>11</pointsize>
+               <weight>9</weight>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
              </property>
              <property name="text">
@@ -1164,11 +1339,288 @@
      </item>
     </layout>
    </item>
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>90</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>1500</width>
+       <height>61</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0.521, y1:0.725505, x2:0.521, y2:0.989247, stop:0.198925 rgba(24, 24, 24, 255), stop:0.94086 rgba(76, 76, 76, 255));</string>
+     </property>
+     <widget class="QLabel" name="labelLogoSiriusCabecario">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>31</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>81</width>
+        <height>41</height>
+       </size>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>logoSirius.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>0</y>
+        <width>671</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="labelBp">
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ababab;&quot;&gt;BP&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelBpBool">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>31</width>
+           <height>21</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string extracomment="Bool status"/>
+         </property>
+         <property name="toolTipDuration">
+          <number>3</number>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>../led_green.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelPpsStatus">
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ababab;&quot;&gt;PPS STATUS&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelPpsStatus_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>31</width>
+           <height>21</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string extracomment="Bool status"/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>../led_green.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelEpsStatus">
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ababab;&quot;&gt;EPS STATUS&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelEpsStatus_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>31</width>
+           <height>21</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string extracomment="Bool status"/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>../led_green.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelShutter">
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ababab;&quot;&gt;SHUTTER&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEditShutter">
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(205, 205, 205);</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelBeamStatus">
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ababab;&quot;&gt;BEAM STATUS&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEditBeamStatus">
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(205, 205, 205);</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
   </layout>
  </widget>
  <resources>
   <include location="resources.qrc"/>
-  <include location="../../../.designer/backup/resources.qrc"/>
+  <include location="resources.qrc"/>
  </resources>
  <connections/>
 </ui>
