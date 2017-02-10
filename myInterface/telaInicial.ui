@@ -89,14 +89,14 @@
        </widget>
       </item>
       <item>
-       <widget class="QCommandLinkButton" name="LinkButtonPPS">
+       <widget class="QCommandLinkButton" name="LinkButtonTemp">
         <property name="font">
          <font>
           <pointsize>14</pointsize>
          </font>
         </property>
         <property name="text">
-         <string>PPS Interface</string>
+         <string>Temp. Interface</string>
         </property>
        </widget>
       </item>
