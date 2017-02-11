@@ -3,14 +3,13 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
 from PyQt5 import uic, QtCore
 import sys
-from epics import caget, PV
 import myEpicsHome
 import time
 
 # Load UI Files
 Ui_Form_telaInicial, QtBaseClass = uic.loadUiType("telaInicial.ui")
 Ui_Form_epicsInterface, QtBaseClass = uic.loadUiType("epicsInterface.ui")
-Ui_Form_EPSInterface, QtBaseClass = uic.loadUiType("EPSInterface.ui")
+Ui_Form_TempScreen, QtBaseClass = uic.loadUiType("TempScreen.ui")
 
 # Window #1 Class
 class TelaInicial(QMainWindow, Ui_Form_telaInicial):
@@ -24,7 +23,7 @@ class TelaInicial(QMainWindow, Ui_Form_telaInicial):
         # Bind signal to slot
         self.LinkButtonEPICS.clicked.connect(self.openEPICS)
         self.LinkButtonEPS.clicked.connect(self.openEPS)
-
+        self.LinkButtonTempScreen.clicked.connect(self.openTempScreen)
 
 
     # My slot's
@@ -63,13 +62,14 @@ class EpicsInterface(QWidget, Ui_Form_epicsInterface):
                       pv_value = str(float(pv.value/10))
                       self.lineEdit_PvValue.setText(pv_value)
              else:
-                      self.lineEdit_PvValue.setText('PV not connected')
+                      self.lineEdit_PvValue.setText('PV not connected')  
+
         
 # Window #3 Class
-class EPSInterface(QWidget, Ui_Form_EPSInterface):
+class TempScreen(QWidget, Ui_Form_TempScreen):
     def __init__(self, parent=None):
-        super(EPSInterface, self).__init__(parent)
-        super(Ui_Form_EPSInterface, self).__init__()
+        super(TempScreen, self).__init__(parent)
+        super(Ui_Form_TempScreen, self).__init__()
         self.setupUi(self)
 
         # Add things to my Window
@@ -77,43 +77,10 @@ class EPSInterface(QWidget, Ui_Form_EPSInterface):
         self.threadclass.start()
 
        # Set things to my Window
-        self.labelAI1.setText('Variavel 1')
-        self.labelAI2.setText('Variavel 1')
-        self.labelAI3.setText('Variavel 1')
-        self.labelAI4.setText('Variavel 1')
-        self.labelAI5.setText('Variavel 1')
-        self.labelAI6.setText('Variavel 1')
-        self.labelAI7.setText('Variavel 1')
-        self.labelAI8.setText('Variavel 1')
-        self.labelAI9.setText('Variavel 1')
-        self.labelAI10.setText('Variavel 1')
-        self.labelAI11.setText('Variavel 1')
-        self.labelAI12.setText('Variavel 1')
-        self.labelAI13.setText('Variavel 1')
-        self.labelAI14.setText('Variavel 1')
-        self.labelAI15.setText('Variavel 1')
-        self.labelAI16.setText('Variavel 1')
-        self.labelAI17.setText('Variavel 1')
-        self.labelAI18.setText('Variavel 1')
-        self.labelAI19.setText('Variavel 1')
-        self.labelAI20.setText('Variavel 1')
-        self.labelAI21.setText('Variavel 1')
-        self.labelAI22.setText('Variavel 1')
-        self.labelAI23.setText('Variavel 1')
-        self.labelAI24.setText('Variavel 1')
-        self.labelAI25.setText('Variavel 1')
-        self.labelAI26.setText('Variavel 1')
-        self.labelAI27.setText('Variavel 1')
-        self.labelAI28.setText('Variavel 1')
-        self.labelAI29.setText('Variavel 1')
-        self.labelAI30.setText('Variavel 1')
-        self.labelAI31.setText('Variavel 1')
-        self.labelAI32.setText('Variavel 1')
 
         
        # Bind signal to method
         self.threadclass.sig.connect(self.updateAI)
-        self.LinkButtonBackEPS.clicked.connect(self.onClickBack)
     
     def onClickBack(self):
         self.close()
