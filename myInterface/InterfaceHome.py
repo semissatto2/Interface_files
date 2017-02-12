@@ -135,10 +135,39 @@ class TempScreen(QWidget, Ui_Form_TempScreen):
         self.setupUi(self)
 
         # Add things to my Window
-
+        self.threadtempscreen = ThreadTempScreen()
+        self.threadtempscreen.start()
+        
         # Set things to my Window
 
         # Bind signal to method
+        self.threadtempscreen.sig.connect(self,updateTempScreen)
+        
+    def updateTempScreen(self, A1, B1):
+        self.lineEditWprFitValue.setText(str(A1))
+        if B1 == 1:
+            self.labelWprFitBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelWprFitBool.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        pass # Atualizar bools e valores
+    
+class ThreadTempScreen(QtCore.QThread):
+    # Create the signal
+    sig = QtCore.pyqtSignal(float, int)
+    
+    def __init__(self, parent=None):
+        super(ThreadTempScreen, self).__init__(parent)
+        
+    def run(self, float, int):
+        while 1:
+            A1 = myEpicsHome.getRandom()
+            B1 = myEpicsHome.getBool()
+            time.sleep(0.4)
+
+
+            
+            # Emit the signal
+            self.sig.emit(A1,B1)
         
 class ThreadClass(QtCore.QThread):
     # Create the signal
