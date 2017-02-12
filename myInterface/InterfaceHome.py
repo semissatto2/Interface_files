@@ -179,7 +179,7 @@ class ThreadTempScreen(QtCore.QThread):
     
     def __init__(self, parent=None):
         super(ThreadTempScreen, self).__init__(parent)
-        self.myList = [int]*5
+        self.myList = [int]*6
         
     def run(self):
         while 1:
