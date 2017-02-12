@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>474</width>
-    <height>253</height>
+    <width>586</width>
+    <height>393</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -47,7 +47,7 @@
          <bool>false</bool>
         </property>
         <property name="text">
-         <string>EPICS Read interface</string>
+         <string>EPICS Interface</string>
         </property>
         <property name="icon">
          <iconset resource="resources.qrc">
@@ -101,14 +101,26 @@
        </widget>
       </item>
       <item>
-       <widget class="QCommandLinkButton" name="LinkButtonHVAC">
+       <widget class="QCommandLinkButton" name="LinkButtonPyDM">
         <property name="font">
          <font>
           <pointsize>14</pointsize>
          </font>
         </property>
         <property name="text">
-         <string>HVAC Interface</string>
+         <string>PyDM Interface</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCommandLinkButton" name="LinkButtonArchiver">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Archiver Interface</string>
         </property>
        </widget>
       </item>
@@ -121,7 +133,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>474</width>
+     <width>586</width>
      <height>25</height>
     </rect>
    </property>
