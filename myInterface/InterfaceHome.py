@@ -143,17 +143,39 @@ class TempScreen(QWidget, Ui_Form_TempScreen):
         # Bind signal to method
         self.threadtempscreen.sig.connect(self.updateTempScreen)
         
-    def updateTempScreen(self, A1, B1):
+    def updateTempScreen(self, A1, *myList):
         self.lineEditWprFitValue.setText(str(A1))
-        if B1 == 1:
+        
+        #Update Booleans variables (0 - failure/red) (1 - normal/green)
+        if myList[0] == 1:
             self.labelWprFitBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
             self.labelWprFitBool.setPixmap(QtGui.QPixmap("images/led_red.png"))
-        pass # Atualizar bools e valores
+        if myList[1] == 1:
+            self.labelBpBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelBpBool.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        if myList[2] == 1:
+            self.labelEpsStatusBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelEpsStatusBool.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        if myList[3] == 1:
+            self.labelPpsStatusBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelPpsStatusBool.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        if myList[4] == 1:
+            self.lineEditShutter.setText("CLOSED")
+        else:
+            self.lineEditShutter.setText("OPEN")
+        if myList[5] == 1:
+            self.lineEditBeamStatus.setText("ON")
+        else:
+            self.lineEditBeamStatus.setText("OFF")
+
     
 class ThreadTempScreen(QtCore.QThread):
     # Create the signal
-    sig = QtCore.pyqtSignal(float, int)
+    sig = QtCore.pyqtSignal(float, *args)
     
     def __init__(self, parent=None):
         super(ThreadTempScreen, self).__init__(parent)
@@ -161,13 +183,19 @@ class ThreadTempScreen(QtCore.QThread):
     def run(self):
         while 1:
             A1 = myEpicsHome.getRandom()
-            B1 = myEpicsHome.getBool()
+            myList[0] = myEpicsHome.getBool()
+            myList[1] = myEpicsHome.getBool()
+            myList[2] = myEpicsHome.getBool()
+            myList[3] = myEpicsHome.getBool()
+            myList[4] = myEpicsHome.getBool()
+            myList[4] = myEpicsHome.getBool()
+
             time.sleep(0.4)
 
 
             
             # Emit the signal
-            self.sig.emit(A1,B1)
+            self.sig.emit(A1,*myList)
         
 class ThreadClass(QtCore.QThread):
     # Create the signal
