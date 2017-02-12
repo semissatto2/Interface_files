@@ -158,7 +158,7 @@ class ThreadTempScreen(QtCore.QThread):
     def __init__(self, parent=None):
         super(ThreadTempScreen, self).__init__(parent)
         
-    def run(self, float, int):
+    def run(self):
         while 1:
             A1 = myEpicsHome.getRandom()
             B1 = myEpicsHome.getBool()
