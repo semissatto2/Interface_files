@@ -191,13 +191,13 @@ class ThreadTempScreen(QtCore.QThread):
             self.myList[4] = myEpicsHome.getBool()
             self.myList[4] = myEpicsHome.getBool()
             self.myList[5] = myEpicsHome.getBool()
-            print (self.myList)
+            print (self.myList) # Debugg
             time.sleep(0.4)
 
 
             
             # Emit the signal
-            self.sig.emit(A1,*self.myList)
+            self.sig.emit(A1,self.myList)
         
 class ThreadClass(QtCore.QThread):
     # Create the signal
