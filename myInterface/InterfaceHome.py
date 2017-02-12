@@ -184,13 +184,13 @@ class ThreadTempScreen(QtCore.QThread):
         myList = list(range(5))
         while 1:
             A1 = myEpicsHome.getRandom()
-            self.myList[0] = myEpicsHome.getBool()
-            self.myList[1] = myEpicsHome.getBool()
-            self.myList[2] = myEpicsHome.getBool()
-            self.myList[3] = myEpicsHome.getBool()
-            self.myList[4] = myEpicsHome.getBool()
-            self.myList[4] = myEpicsHome.getBool()
-            self.myList[5] = myEpicsHome.getBool()
+            myList[0] = myEpicsHome.getBool()
+            myList[1] = myEpicsHome.getBool()
+            myList[2] = myEpicsHome.getBool()
+            myList[3] = myEpicsHome.getBool()
+            myList[4] = myEpicsHome.getBool()
+            myList[4] = myEpicsHome.getBool()
+            myList[5] = myEpicsHome.getBool()
             print (self.myList) # Debugg
             time.sleep(0.4)
 
