@@ -9,6 +9,7 @@ import time
 # Load UI Files
 Ui_Form_telaInicial, QtBaseClass = uic.loadUiType("telaInicial.ui")
 Ui_Form_epicsInterface, QtBaseClass = uic.loadUiType("epicsInterface.ui")
+Ui_Form_EPSInterface, QtBaseClass = uic.loadUiType("EPSInterface.ui")
 Ui_Form_TempScreen, QtBaseClass = uic.loadUiType("TempScreen.ui")
 
 # Window #1 Class
@@ -35,6 +36,11 @@ class TelaInicial(QMainWindow, Ui_Form_telaInicial):
     def openEPS(self):
         self.EPSInterface = EPSInterface()
         self.EPSInterface.show()
+        self.close()
+    
+    def openTempScreen(self):
+        self.TempScreen = TempScreen()
+        self.TempScreen.show()
         self.close()
 
 # Window #2 Class
@@ -66,10 +72,10 @@ class EpicsInterface(QWidget, Ui_Form_epicsInterface):
 
         
 # Window #3 Class
-class TempScreen(QWidget, Ui_Form_TempScreen):
+class EPSInterface(QWidget, Ui_Form_EPSInterface):
     def __init__(self, parent=None):
-        super(TempScreen, self).__init__(parent)
-        super(Ui_Form_TempScreen, self).__init__()
+        super(EPSInterface, self).__init__(parent)
+        super(Ui_Form_EPSInterface, self).__init__()
         self.setupUi(self)
 
         # Add things to my Window
