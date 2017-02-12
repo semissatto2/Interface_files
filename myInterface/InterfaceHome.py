@@ -191,6 +191,7 @@ class ThreadTempScreen(QtCore.QThread):
             self.myList[4] = myEpicsHome.getBool()
             self.myList[4] = myEpicsHome.getBool()
             self.myList[5] = myEpicsHome.getBool()
+            print (self.myList)
             time.sleep(0.4)
 
 
