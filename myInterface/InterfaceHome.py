@@ -175,7 +175,7 @@ class TempScreen(QWidget, Ui_Form_TempScreen):
     
 class ThreadTempScreen(QtCore.QThread):
     # Create the signal
-    sig = QtCore.pyqtSignal(float, int)
+    sig = QtCore.pyqtSignal(float, list)
     
     def __init__(self, parent=None):
         super(ThreadTempScreen, self).__init__(parent)
