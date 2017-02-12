@@ -175,7 +175,7 @@ class TempScreen(QWidget, Ui_Form_TempScreen):
     
 class ThreadTempScreen(QtCore.QThread):
     # Create the signal
-    sig = QtCore.pyqtSignal(float, *args)
+    sig = QtCore.pyqtSignal(float, list[5])
     
     def __init__(self, parent=None):
         super(ThreadTempScreen, self).__init__(parent)
@@ -189,7 +189,7 @@ class ThreadTempScreen(QtCore.QThread):
             myList[3] = myEpicsHome.getBool()
             myList[4] = myEpicsHome.getBool()
             myList[4] = myEpicsHome.getBool()
-
+            myList[5] = myEpicsHome.getBool()
             time.sleep(0.4)
 
 
