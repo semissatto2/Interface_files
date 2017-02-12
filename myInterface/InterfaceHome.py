@@ -197,7 +197,7 @@ class ThreadTempScreen(QtCore.QThread):
 
             
             # Emit the signal
-            self.sig.emit(A1,self.myList)
+            self.sig.emit(A1,myList)
         
 class ThreadClass(QtCore.QThread):
     # Create the signal
