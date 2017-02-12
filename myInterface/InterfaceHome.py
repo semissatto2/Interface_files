@@ -1,7 +1,7 @@
 # hello_app_from_ui_mult.py
 
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
-from PyQt5 import uic, QtCore
+from PyQt5 import uic, QtCore, QtGui
 import sys
 import myEpicsHome
 import time
