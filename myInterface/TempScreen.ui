@@ -495,7 +495,7 @@ font: 75 13pt &quot;Utopia&quot;;
 background-color: transparent;</string>
                </property>
                <property name="text">
-                <string>L/MIB</string>
+                <string>L/MIN</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>

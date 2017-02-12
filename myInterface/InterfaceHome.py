@@ -141,7 +141,7 @@ class TempScreen(QWidget, Ui_Form_TempScreen):
         # Set things to my Window
 
         # Bind signal to method
-        self.threadtempscreen.sig.connect(self,updateTempScreen)
+        self.threadtempscreen.sig.connect(self.updateTempScreen)
         
     def updateTempScreen(self, A1, B1):
         self.lineEditWprFitValue.setText(str(A1))
