@@ -126,7 +126,20 @@ class EPSInterface(QWidget, Ui_Form_EPSInterface):
         self.lineEditAI30.setText(str(AI30))
         self.lineEditAI31.setText(str(AI31))
         self.lineEditAI32.setText(str(AI32))
+        
+# Window #4 Class
+class TempScreen(QWidget, Ui_Form_TempScreen):
+    def __init__(self, parent=None):
+        super(TempScreen, self).__init__(parent)
+        super(Ui_Form_TempScreen, self).__init__()
+        self.setupUi(self)
 
+        # Add things to my Window
+
+        # Set things to my Window
+
+        # Bind signal to method
+        
 class ThreadClass(QtCore.QThread):
     # Create the signal
     sig = QtCore.pyqtSignal(float, float, float, float,float, float, float, float,float, float, float, float,float, float, float, float,float, float, float, float,float, float, float, float,float, float, float, float,float, float, float, float)
