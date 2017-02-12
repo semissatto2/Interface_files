@@ -179,24 +179,24 @@ class ThreadTempScreen(QtCore.QThread):
     
     def __init__(self, parent=None):
         super(ThreadTempScreen, self).__init__(parent)
-        myList= [int]*5
+        self.myList = [int]*5
         
     def run(self):
         while 1:
             A1 = myEpicsHome.getRandom()
-            myList[0] = myEpicsHome.getBool()
-            myList[1] = myEpicsHome.getBool()
-            myList[2] = myEpicsHome.getBool()
-            myList[3] = myEpicsHome.getBool()
-            myList[4] = myEpicsHome.getBool()
-            myList[4] = myEpicsHome.getBool()
-            myList[5] = myEpicsHome.getBool()
+            self.myList[0] = myEpicsHome.getBool()
+            self.myList[1] = myEpicsHome.getBool()
+            self.myList[2] = myEpicsHome.getBool()
+            self.myList[3] = myEpicsHome.getBool()
+            self.myList[4] = myEpicsHome.getBool()
+            self.myList[4] = myEpicsHome.getBool()
+            self.myList[5] = myEpicsHome.getBool()
             time.sleep(0.4)
 
 
             
             # Emit the signal
-            self.sig.emit(A1,*myList)
+            self.sig.emit(A1,*self.myList)
         
 class ThreadClass(QtCore.QThread):
     # Create the signal
