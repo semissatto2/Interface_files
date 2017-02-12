@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1003</width>
-    <height>665</height>
+    <width>1168</width>
+    <height>686</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1421,7 +1421,7 @@ background-color: transparent;</string>
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_53">
+             <widget class="QLineEdit" name="lineEditXbpm1FitValue">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
@@ -1443,7 +1443,7 @@ background-color: transparent;</string>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_35">
               <item>
-               <widget class="QLineEdit" name="lineEdit_54">
+               <widget class="QLineEdit" name="lineEditXbpm1FitSetPoint">
                 <property name="styleSheet">
                  <string notr="true">background-color: rgb(218, 218, 218);</string>
                 </property>
@@ -3779,120 +3779,8 @@ background-color: transparent;</string>
     </widget>
    </item>
   </layout>
+  <zorder>splitter_3</zorder>
   <zorder>frameCabecario</zorder>
-  <zorder>lineEdit_3</zorder>
-  <zorder>lineEdit_4</zorder>
-  <zorder>lineEdit_5</zorder>
-  <zorder>lineEditWprFitSetPoint</zorder>
-  <zorder>lineEdit_7</zorder>
-  <zorder>lineEdit_8</zorder>
-  <zorder>lineEdit_9</zorder>
-  <zorder>lineEdit_10</zorder>
-  <zorder>lineEdit_11</zorder>
-  <zorder>lineEdit_12</zorder>
-  <zorder>lineEdit_13</zorder>
-  <zorder>lineEdit_14</zorder>
-  <zorder>lineEdit_15</zorder>
-  <zorder>lineEdit_16</zorder>
-  <zorder>lineEdit_17</zorder>
-  <zorder>lineEdit_18</zorder>
-  <zorder>lineEdit_19</zorder>
-  <zorder>lineEdit_20</zorder>
-  <zorder>lineEdit_21</zorder>
-  <zorder>lineEdit_22</zorder>
-  <zorder>lineEdit_23</zorder>
-  <zorder>lineEdit_24</zorder>
-  <zorder>lineEdit_25</zorder>
-  <zorder>lineEdit_26</zorder>
-  <zorder>lineEdit_27</zorder>
-  <zorder>lineEdit_28</zorder>
-  <zorder>lineEdit_29</zorder>
-  <zorder>lineEdit_30</zorder>
-  <zorder>lineEdit_31</zorder>
-  <zorder>lineEdit_32</zorder>
-  <zorder>lineEdit_33</zorder>
-  <zorder>lineEdit_34</zorder>
-  <zorder>lineEdit_35</zorder>
-  <zorder>lineEdit_36</zorder>
-  <zorder>lineEdit_37</zorder>
-  <zorder>lineEdit_38</zorder>
-  <zorder>lineEdit_39</zorder>
-  <zorder>lineEdit_40</zorder>
-  <zorder>verticalSpacer</zorder>
-  <zorder>verticalSpacer_2</zorder>
-  <zorder>label_9</zorder>
-  <zorder>label_11</zorder>
-  <zorder>label_12</zorder>
-  <zorder>labelWprFitBool</zorder>
-  <zorder>label_14</zorder>
-  <zorder>label_15</zorder>
-  <zorder>layoutWidget</zorder>
-  <zorder>layoutWidget_2</zorder>
-  <zorder>layoutWidget_3</zorder>
-  <zorder>layoutWidget_4</zorder>
-  <zorder>layoutWidget_5</zorder>
-  <zorder>layoutWidget_6</zorder>
-  <zorder>layoutWidget_7</zorder>
-  <zorder>layoutWidget_8</zorder>
-  <zorder>layoutWidget_9</zorder>
-  <zorder>layoutWidget_10</zorder>
-  <zorder>lineEdit_34</zorder>
-  <zorder>lineEdit_35</zorder>
-  <zorder>lineEdit_36</zorder>
-  <zorder>lineEdit_37</zorder>
-  <zorder>verticalSpacer_2</zorder>
-  <zorder>layoutWidget_13</zorder>
-  <zorder>layoutWidget_15</zorder>
-  <zorder>layoutWidget_17</zorder>
-  <zorder>layoutWidget_18</zorder>
-  <zorder>layoutWidget_19</zorder>
-  <zorder>horizontalSpacer</zorder>
-  <zorder>layoutWidget_7</zorder>
-  <zorder>layoutWidget_13</zorder>
-  <zorder>layoutWidget_20</zorder>
-  <zorder>layoutWidget_20</zorder>
-  <zorder>label_9</zorder>
-  <zorder>lineEditWprSv</zorder>
-  <zorder>layoutWidget_11</zorder>
-  <zorder>layoutWidget_12</zorder>
-  <zorder>layoutWidget_14</zorder>
-  <zorder>layoutWidget_16</zorder>
-  <zorder>pushButton</zorder>
-  <zorder>pushButton_2</zorder>
-  <zorder>label_43</zorder>
-  <zorder>label_44</zorder>
-  <zorder>label_45</zorder>
-  <zorder>label_44</zorder>
-  <zorder>label_41</zorder>
-  <zorder>label_42</zorder>
-  <zorder>lineEdit_56</zorder>
-  <zorder>horizontalSpacer_3</zorder>
-  <zorder>label_64</zorder>
-  <zorder>lineEdit_70</zorder>
-  <zorder>label_29</zorder>
-  <zorder>horizontalSpacer_9</zorder>
-  <zorder>label_66</zorder>
-  <zorder>label_30</zorder>
-  <zorder>lineEdit_55</zorder>
-  <zorder>label_29</zorder>
-  <zorder>horizontalSpacer_3</zorder>
-  <zorder>label_64</zorder>
-  <zorder>label_30</zorder>
-  <zorder>layoutWidget_5</zorder>
-  <zorder>frameBPM1_2</zorder>
-  <zorder>frameBPM1_3</zorder>
-  <zorder>frameBPM1_4</zorder>
-  <zorder>label_256</zorder>
-  <zorder>label_257</zorder>
-  <zorder>horizontalSpacer_40</zorder>
-  <zorder>layoutWidget_9</zorder>
-  <zorder>label_263</zorder>
-  <zorder>layoutWidget_10</zorder>
-  <zorder>label_267</zorder>
-  <zorder>pushButton</zorder>
-  <zorder>pushButton_2</zorder>
-  <zorder>commandLinkButton</zorder>
-  <zorder>commandLinkButton_2</zorder>
  </widget>
  <resources/>
  <connections/>

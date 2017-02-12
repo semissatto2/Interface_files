@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>474</width>
-    <height>243</height>
+    <height>253</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -89,7 +89,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QCommandLinkButton" name="LinkButtonTemp">
+       <widget class="QCommandLinkButton" name="LinkButtonTempScreen">
         <property name="font">
          <font>
           <pointsize>14</pointsize>
@@ -122,7 +122,7 @@
      <x>0</x>
      <y>0</y>
      <width>474</width>
-     <height>17</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
