@@ -181,7 +181,7 @@ class ThreadTempScreen(QtCore.QThread):
         super(ThreadTempScreen, self).__init__(parent)
         
     def run(self):
-        myList = list(range(5))
+        myList = list(range(6))
         while 1:
             A1 = myEpicsHome.getRandom()
             myList[0] = myEpicsHome.getBool()
@@ -190,8 +190,8 @@ class ThreadTempScreen(QtCore.QThread):
             myList[3] = myEpicsHome.getBool()
             myList[4] = myEpicsHome.getBool()
             myList[4] = myEpicsHome.getBool()
+            print (myList) # Debugg
             myList[5] = myEpicsHome.getBool()
-            print (self.myList) # Debugg
             time.sleep(0.4)
 
 
