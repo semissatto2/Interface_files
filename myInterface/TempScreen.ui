@@ -7,11 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>1003</width>
-    <height>665</height>
+    <height>687</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Temperature Interface</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>images/temperature-icon-png-1.png</normaloff>images/temperature-icon-png-1.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.488882, y1:0.247, x2:0.484, y2:0.951613, stop:0.0591398 rgba(38, 38, 38, 255), stop:1 rgba(105, 105, 105, 255));
@@ -22,257 +26,6 @@ background-color: transparent;
 </string>
   </property>
   <layout class="QGridLayout" name="gridLayout_12">
-   <item row="0" column="0" colspan="2">
-    <widget class="QFrame" name="frameCabecario">
-     <property name="minimumSize">
-      <size>
-       <width>510</width>
-       <height>50</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: qlineargradient(spread:pad, x1:0.521, y1:0.725505, x2:0.521, y2:0.989247, stop:0.198925 rgba(24, 24, 24, 255), stop:0.94086 rgba(76, 76, 76, 255));</string>
-     </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_9">
-      <item>
-       <widget class="QLabel" name="label">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>61</width>
-          <height>61</height>
-         </size>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap>images/LogoSirius_cortado.png</pixmap>
-        </property>
-        <property name="scaledContents">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_8">
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
-          <item>
-           <widget class="QLabel" name="label_2">
-            <property name="maximumSize">
-             <size>
-              <width>41</width>
-              <height>41</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">color: rgb(226, 226, 226);
-font: 75 20pt &quot;Courier 10 Pitch&quot;;
-background-color: transparent;</string>
-            </property>
-            <property name="text">
-             <string>BP</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="labelBpBool">
-            <property name="maximumSize">
-             <size>
-              <width>41</width>
-              <height>41</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-color: transparent;</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="pixmap">
-             <pixmap>images/led_red.png</pixmap>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_7">
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_4">
-            <item>
-             <widget class="QLabel" name="label_4">
-              <property name="styleSheet">
-               <string notr="true">color: rgb(226, 226, 226);
-font: 75 20pt &quot;Courier 10 Pitch&quot;;
-background-color: transparent;</string>
-              </property>
-              <property name="text">
-               <string>PPS STATUS</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="labelPpsStatusBool">
-              <property name="maximumSize">
-               <size>
-                <width>41</width>
-                <height>41</height>
-               </size>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">background-color: transparent;</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-              <property name="pixmap">
-               <pixmap>images/led_red.png</pixmap>
-              </property>
-              <property name="scaledContents">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_5">
-            <item>
-             <widget class="QLabel" name="label_6">
-              <property name="styleSheet">
-               <string notr="true">color: rgb(226, 226, 226);
-font: 75 20pt &quot;Courier 10 Pitch&quot;;
-background-color: transparent;</string>
-              </property>
-              <property name="text">
-               <string>EPS STATUS</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="labelEpsStatusBool">
-              <property name="maximumSize">
-               <size>
-                <width>41</width>
-                <height>41</height>
-               </size>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">background-color: transparent;</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-              <property name="pixmap">
-               <pixmap>images/led_red.png</pixmap>
-              </property>
-              <property name="scaledContents">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_6">
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout">
-            <item>
-             <widget class="QLabel" name="label_7">
-              <property name="styleSheet">
-               <string notr="true">color: rgb(226, 226, 226);
-font: 75 20pt &quot;Courier 10 Pitch&quot;;
-background-color: transparent;</string>
-              </property>
-              <property name="text">
-               <string>SHUTTER</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="lineEditShutter">
-              <property name="styleSheet">
-               <string notr="true">background-color: rgb(214, 214, 214);
-border-style: solid;
-border-color: rgb(39, 143, 255);
-border-width: 1px;</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-              <property name="readOnly">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_2">
-            <item>
-             <widget class="QLabel" name="label_8">
-              <property name="styleSheet">
-               <string notr="true">color: rgb(226, 226, 226);
-font: 75 20pt &quot;Courier 10 Pitch&quot;;
-background-color: transparent;</string>
-              </property>
-              <property name="text">
-               <string>BEAM STATUS</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="lineEditBeamStatus">
-              <property name="styleSheet">
-               <string notr="true">background-color: rgb(214, 214, 214);
-border-style: solid;
-border-color: rgb(39, 143, 255);
-border-width: 1px;</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-              <property name="readOnly">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </widget>
-   </item>
    <item row="1" column="0">
     <layout class="QVBoxLayout" name="verticalLayout_19">
      <item>
@@ -1378,6 +1131,257 @@ background-color: transparent;</string>
      </item>
     </layout>
    </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QFrame" name="frameCabecario">
+     <property name="minimumSize">
+      <size>
+       <width>510</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0.521, y1:0.725505, x2:0.521, y2:0.989247, stop:0.198925 rgba(24, 24, 24, 255), stop:0.94086 rgba(76, 76, 76, 255));</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_9">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>61</width>
+          <height>61</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>images/LogoSirius_cortado.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="maximumSize">
+             <size>
+              <width>41</width>
+              <height>41</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 20pt &quot;Courier 10 Pitch&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>BP</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="labelBpBool">
+            <property name="maximumSize">
+             <size>
+              <width>41</width>
+              <height>41</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>images/led_red.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 20pt &quot;Courier 10 Pitch&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>PPS STATUS</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelPpsStatusBool">
+              <property name="maximumSize">
+               <size>
+                <width>41</width>
+                <height>41</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/led_red.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 20pt &quot;Courier 10 Pitch&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>EPS STATUS</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelEpsStatusBool">
+              <property name="maximumSize">
+               <size>
+                <width>41</width>
+                <height>41</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/led_red.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QLabel" name="label_7">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 20pt &quot;Courier 10 Pitch&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>SHUTTER</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditShutter">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(214, 214, 214);
+border-style: solid;
+border-color: rgb(39, 143, 255);
+border-width: 1px;</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_8">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 20pt &quot;Courier 10 Pitch&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>BEAM STATUS</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditBeamStatus">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(214, 214, 214);
+border-style: solid;
+border-color: rgb(39, 143, 255);
+border-width: 1px;</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
    <item row="1" column="1">
     <widget class="QSplitter" name="splitter_3">
      <property name="styleSheet">
@@ -1421,7 +1425,7 @@ background-color: transparent;</string>
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_53">
+             <widget class="QLineEdit" name="lineEditXbpm1FitValue">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
@@ -1443,7 +1447,7 @@ background-color: transparent;</string>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_35">
               <item>
-               <widget class="QLineEdit" name="lineEdit_54">
+               <widget class="QLineEdit" name="lineEditXbpm1FitSetPoint">
                 <property name="styleSheet">
                  <string notr="true">background-color: rgb(218, 218, 218);</string>
                 </property>
@@ -1508,7 +1512,7 @@ background-color: transparent;</string>
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_40">
+             <widget class="QLineEdit" name="lineEditXbpm1TtValue">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
@@ -1530,7 +1534,7 @@ background-color: transparent;</string>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_18">
               <item>
-               <widget class="QLineEdit" name="lineEdit_30">
+               <widget class="QLineEdit" name="lineEditXbpm1TtSetPoint">
                 <property name="styleSheet">
                  <string notr="true">background-color: rgb(218, 218, 218);</string>
                 </property>
@@ -1597,14 +1601,14 @@ background-color: transparent;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_50">
+           <widget class="QLineEdit" name="lineEditXbpm1Tt1Value">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_51">
+           <widget class="QLineEdit" name="lineEditXbpm1Tt1Offset">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
@@ -1613,7 +1617,7 @@ background-color: transparent;</string>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_33">
             <item>
-             <widget class="QLineEdit" name="lineEdit_52">
+             <widget class="QLineEdit" name="lineEditXbpm1Tt1Setpoint">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
@@ -1678,14 +1682,14 @@ background-color: transparent;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_47">
+           <widget class="QLineEdit" name="lineEditXbpm1Tt2Value">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_48">
+           <widget class="QLineEdit" name="lineEditXbpm1Tt2Offset">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
@@ -1694,7 +1698,7 @@ background-color: transparent;</string>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_31">
             <item>
-             <widget class="QLineEdit" name="lineEdit_49">
+             <widget class="QLineEdit" name="lineEditXbpm1Tt2SetPoint">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
@@ -1759,14 +1763,14 @@ background-color: transparent;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_44">
+           <widget class="QLineEdit" name="lineEditXbpm1Tt3Value">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_45">
+           <widget class="QLineEdit" name="lineEditXbpm1Tt3Offset">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
@@ -1775,7 +1779,7 @@ background-color: transparent;</string>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_29">
             <item>
-             <widget class="QLineEdit" name="lineEdit_46">
+             <widget class="QLineEdit" name="lineEditXbpm1Tt3Setpoint">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
@@ -1840,14 +1844,14 @@ background-color: transparent;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_42">
+           <widget class="QLineEdit" name="lineEditXbpm1Tt4Value">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_34">
+           <widget class="QLineEdit" name="lineEditXbpm1Tt4Offset">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
@@ -1856,7 +1860,7 @@ background-color: transparent;</string>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_19">
             <item>
-             <widget class="QLineEdit" name="lineEdit_31">
+             <widget class="QLineEdit" name="lineEditXbpm1Tt4SetPoint">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
@@ -2016,7 +2020,7 @@ background-color: transparent;</string>
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_84">
+             <widget class="QLineEdit" name="lineEditMskFitValue">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
@@ -2038,14 +2042,14 @@ background-color: transparent;</string>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_77">
               <item>
-               <widget class="QLineEdit" name="lineEdit_102">
+               <widget class="QLineEdit" name="lineEditMskFitSetPoint">
                 <property name="styleSheet">
                  <string notr="true">background-color: rgb(218, 218, 218);</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QLabel" name="label_119">
+               <widget class="QLabel" name="labelMskFitBool">
                 <property name="maximumSize">
                  <size>
                   <width>21</width>
@@ -2103,7 +2107,7 @@ background-color: transparent;</string>
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_103">
+             <widget class="QLineEdit" name="lineEditMskTtValue">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
@@ -2125,14 +2129,14 @@ background-color: transparent;</string>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_79">
               <item>
-               <widget class="QLineEdit" name="lineEdit_104">
+               <widget class="QLineEdit" name="lineEditMskTtSetPoint">
                 <property name="styleSheet">
                  <string notr="true">background-color: rgb(218, 218, 218);</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QLabel" name="label_194">
+               <widget class="QLabel" name="labelMskTtBool">
                 <property name="maximumSize">
                  <size>
                   <width>21</width>
@@ -2192,14 +2196,14 @@ background-color: transparent;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_108">
+           <widget class="QLineEdit" name="lineEditMskTt1Value">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_109">
+           <widget class="QLineEdit" name="lineEditMskTt1Offset">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
@@ -2208,14 +2212,14 @@ background-color: transparent;</string>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_92">
             <item>
-             <widget class="QLineEdit" name="lineEdit_110">
+             <widget class="QLineEdit" name="lineEditMskTt1SetPoint">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_197">
+             <widget class="QLabel" name="labelMskTt1Bool">
               <property name="maximumSize">
                <size>
                 <width>21</width>
@@ -2273,14 +2277,14 @@ background-color: transparent;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_111">
+           <widget class="QLineEdit" name="lineEditMskTt2Value">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_112">
+           <widget class="QLineEdit" name="lineEditMskTt2Offset">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
@@ -2289,14 +2293,14 @@ background-color: transparent;</string>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_94">
             <item>
-             <widget class="QLineEdit" name="lineEdit_113">
+             <widget class="QLineEdit" name="lineEditMskTt2SetPoint">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_200">
+             <widget class="QLabel" name="labelMskTt2Bool">
               <property name="maximumSize">
                <size>
                 <width>21</width>
@@ -2354,14 +2358,14 @@ background-color: transparent;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_114">
+           <widget class="QLineEdit" name="lineEditMskTt3Value">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_115">
+           <widget class="QLineEdit" name="lineEditMskTt3Offset">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
@@ -2370,14 +2374,14 @@ background-color: transparent;</string>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_96">
             <item>
-             <widget class="QLineEdit" name="lineEdit_116">
+             <widget class="QLineEdit" name="lineEditMskTt3SetPoint">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_203">
+             <widget class="QLabel" name="labelMskTt3Bool">
               <property name="maximumSize">
                <size>
                 <width>21</width>
@@ -2435,14 +2439,14 @@ background-color: transparent;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_117">
+           <widget class="QLineEdit" name="lineEditMskTt4Value">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_118">
+           <widget class="QLineEdit" name="lineEditMskTt4Offset">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
@@ -2451,14 +2455,14 @@ background-color: transparent;</string>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_98">
             <item>
-             <widget class="QLineEdit" name="lineEdit_119">
+             <widget class="QLineEdit" name="lineEditMskTt4SetPoint">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_206">
+             <widget class="QLabel" name="labelMskTt4Bool">
               <property name="maximumSize">
                <size>
                 <width>21</width>
@@ -2616,7 +2620,7 @@ background-color: transparent;</string>
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_120">
+             <widget class="QLineEdit" name="lineEditXbpm2FitValue">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
@@ -2638,14 +2642,14 @@ background-color: transparent;</string>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_101">
               <item>
-               <widget class="QLineEdit" name="lineEdit_121">
+               <widget class="QLineEdit" name="lineEditXbpm2FitSetPoint">
                 <property name="styleSheet">
                  <string notr="true">background-color: rgb(218, 218, 218);</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QLabel" name="label_213">
+               <widget class="QLabel" name="labelXbpm2FitBool">
                 <property name="maximumSize">
                  <size>
                   <width>21</width>
@@ -2703,7 +2707,7 @@ background-color: transparent;</string>
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_122">
+             <widget class="QLineEdit" name="lineEditXbpm2TtValue">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
@@ -2725,14 +2729,14 @@ background-color: transparent;</string>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_103">
               <item>
-               <widget class="QLineEdit" name="lineEdit_123">
+               <widget class="QLineEdit" name="lineEditXbpm2TtSetPoint">
                 <property name="styleSheet">
                  <string notr="true">background-color: rgb(218, 218, 218);</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QLabel" name="label_216">
+               <widget class="QLabel" name="labelXbpm2TtBool">
                 <property name="maximumSize">
                  <size>
                   <width>21</width>
@@ -2792,14 +2796,14 @@ background-color: transparent;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_124">
+           <widget class="QLineEdit" name="lineEditXbpm2Tt1Value">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_125">
+           <widget class="QLineEdit" name="lineEditXbpm2Tt1Offset">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
@@ -2808,14 +2812,14 @@ background-color: transparent;</string>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_105">
             <item>
-             <widget class="QLineEdit" name="lineEdit_198">
+             <widget class="QLineEdit" name="lineEditXbpm2Tt1SetPoint">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_219">
+             <widget class="QLabel" name="labelXbpm2Tt1Bool">
               <property name="maximumSize">
                <size>
                 <width>21</width>
@@ -2873,14 +2877,14 @@ background-color: transparent;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_199">
+           <widget class="QLineEdit" name="lineEditXbpm2Tt2Value">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_200">
+           <widget class="QLineEdit" name="lineEditXbpm2Tt2Offset">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
@@ -2889,14 +2893,14 @@ background-color: transparent;</string>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_167">
             <item>
-             <widget class="QLineEdit" name="lineEdit_201">
+             <widget class="QLineEdit" name="lineEditXbpm2Tt2SetPoint">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_222">
+             <widget class="QLabel" name="labelXbpm2Tt2Bool">
               <property name="maximumSize">
                <size>
                 <width>21</width>
@@ -2954,14 +2958,14 @@ background-color: transparent;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_202">
+           <widget class="QLineEdit" name="lineEditXbpm2Tt3Value">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_203">
+           <widget class="QLineEdit" name="lineEditXbpm2Tt3Offset">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
@@ -2970,14 +2974,14 @@ background-color: transparent;</string>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_169">
             <item>
-             <widget class="QLineEdit" name="lineEdit_204">
+             <widget class="QLineEdit" name="lineEditXbpm2Tt3SetPoint">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_225">
+             <widget class="QLabel" name="labelXbpm2Tt3Bool">
               <property name="maximumSize">
                <size>
                 <width>21</width>
@@ -3035,14 +3039,14 @@ background-color: transparent;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_205">
+           <widget class="QLineEdit" name="lineEditXbpm2Tt4Value">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_206">
+           <widget class="QLineEdit" name="lineEditXbpm2Tt4Offset">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
@@ -3051,14 +3055,14 @@ background-color: transparent;</string>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_171">
             <item>
-             <widget class="QLineEdit" name="lineEdit_207">
+             <widget class="QLineEdit" name="lineEditXbpm2Tt4Setpoint">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_228">
+             <widget class="QLabel" name="labelXbpm2Tt4Bool">
               <property name="maximumSize">
                <size>
                 <width>21</width>
@@ -3211,7 +3215,7 @@ background-color: transparent;</string>
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_208">
+             <widget class="QLineEdit" name="lineEditSlitsFitValue">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
@@ -3233,14 +3237,14 @@ background-color: transparent;</string>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_174">
               <item>
-               <widget class="QLineEdit" name="lineEdit_209">
+               <widget class="QLineEdit" name="lineEditSlitsFitSetPoint">
                 <property name="styleSheet">
                  <string notr="true">background-color: rgb(218, 218, 218);</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QLabel" name="label_235">
+               <widget class="QLabel" name="labelSlitsFitBool">
                 <property name="maximumSize">
                  <size>
                   <width>21</width>
@@ -3298,7 +3302,7 @@ background-color: transparent;</string>
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_210">
+             <widget class="QLineEdit" name="lineEditSlitsTtValue">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
@@ -3320,14 +3324,14 @@ background-color: transparent;</string>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_176">
               <item>
-               <widget class="QLineEdit" name="lineEdit_211">
+               <widget class="QLineEdit" name="lineEditSlitsTtSetPoint">
                 <property name="styleSheet">
                  <string notr="true">background-color: rgb(218, 218, 218);</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QLabel" name="label_238">
+               <widget class="QLabel" name="labelSlitsTtBool">
                 <property name="maximumSize">
                  <size>
                   <width>21</width>
@@ -3387,14 +3391,14 @@ background-color: transparent;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_212">
+           <widget class="QLineEdit" name="lineEditSlitsTt1Value">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_213">
+           <widget class="QLineEdit" name="lineEditSlitsTt1Offset">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
@@ -3403,14 +3407,14 @@ background-color: transparent;</string>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_178">
             <item>
-             <widget class="QLineEdit" name="lineEdit_214">
+             <widget class="QLineEdit" name="lineEditSlitsTt1SetPoint">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_241">
+             <widget class="QLabel" name="labelSlitsTt1Bool">
               <property name="maximumSize">
                <size>
                 <width>21</width>
@@ -3468,14 +3472,14 @@ background-color: transparent;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_215">
+           <widget class="QLineEdit" name="lineEditSlitsTt2Value">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_216">
+           <widget class="QLineEdit" name="lineEditSlitsTt2Offset">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
@@ -3484,14 +3488,14 @@ background-color: transparent;</string>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_180">
             <item>
-             <widget class="QLineEdit" name="lineEdit_217">
+             <widget class="QLineEdit" name="lineEditSlitsTt2SetPoint">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_244">
+             <widget class="QLabel" name="labelSlitsTt2Bool">
               <property name="maximumSize">
                <size>
                 <width>21</width>
@@ -3549,14 +3553,14 @@ background-color: transparent;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_218">
+           <widget class="QLineEdit" name="lineEditSlitsTt3Value">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_219">
+           <widget class="QLineEdit" name="lineEditSlitsTt3Offset">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
@@ -3565,14 +3569,14 @@ background-color: transparent;</string>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_182">
             <item>
-             <widget class="QLineEdit" name="lineEdit_220">
+             <widget class="QLineEdit" name="lineEditSlitsTt3SetPoint">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_247">
+             <widget class="QLabel" name="labelSlitsTt3Bool">
               <property name="maximumSize">
                <size>
                 <width>21</width>
@@ -3630,14 +3634,14 @@ background-color: transparent;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_221">
+           <widget class="QLineEdit" name="lineEditSlitsTt4Value">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_222">
+           <widget class="QLineEdit" name="lineEditSlitsTt4Offset">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(218, 218, 218);</string>
             </property>
@@ -3646,14 +3650,14 @@ background-color: transparent;</string>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_184">
             <item>
-             <widget class="QLineEdit" name="lineEdit_223">
+             <widget class="QLineEdit" name="lineEditSlitsTt4SetPoint">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(218, 218, 218);</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_250">
+             <widget class="QLabel" name="labelSlitsTt4Bool">
               <property name="maximumSize">
                <size>
                 <width>21</width>
@@ -3778,121 +3782,43 @@ background-color: transparent;</string>
      </widget>
     </widget>
    </item>
+   <item row="2" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_21">
+     <item>
+      <widget class="QPushButton" name="pushButtonBackTempScreen">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(222, 222, 222);</string>
+       </property>
+       <property name="text">
+        <string>BACK</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
   </layout>
+  <zorder>splitter_3</zorder>
   <zorder>frameCabecario</zorder>
-  <zorder>lineEdit_3</zorder>
-  <zorder>lineEdit_4</zorder>
-  <zorder>lineEdit_5</zorder>
-  <zorder>lineEditWprFitSetPoint</zorder>
-  <zorder>lineEdit_7</zorder>
-  <zorder>lineEdit_8</zorder>
-  <zorder>lineEdit_9</zorder>
-  <zorder>lineEdit_10</zorder>
-  <zorder>lineEdit_11</zorder>
-  <zorder>lineEdit_12</zorder>
-  <zorder>lineEdit_13</zorder>
-  <zorder>lineEdit_14</zorder>
-  <zorder>lineEdit_15</zorder>
-  <zorder>lineEdit_16</zorder>
-  <zorder>lineEdit_17</zorder>
-  <zorder>lineEdit_18</zorder>
-  <zorder>lineEdit_19</zorder>
-  <zorder>lineEdit_20</zorder>
-  <zorder>lineEdit_21</zorder>
-  <zorder>lineEdit_22</zorder>
-  <zorder>lineEdit_23</zorder>
-  <zorder>lineEdit_24</zorder>
-  <zorder>lineEdit_25</zorder>
-  <zorder>lineEdit_26</zorder>
-  <zorder>lineEdit_27</zorder>
-  <zorder>lineEdit_28</zorder>
-  <zorder>lineEdit_29</zorder>
-  <zorder>lineEdit_30</zorder>
-  <zorder>lineEdit_31</zorder>
-  <zorder>lineEdit_32</zorder>
-  <zorder>lineEdit_33</zorder>
-  <zorder>lineEdit_34</zorder>
-  <zorder>lineEdit_35</zorder>
-  <zorder>lineEdit_36</zorder>
-  <zorder>lineEdit_37</zorder>
-  <zorder>lineEdit_38</zorder>
-  <zorder>lineEdit_39</zorder>
-  <zorder>lineEdit_40</zorder>
-  <zorder>verticalSpacer</zorder>
-  <zorder>verticalSpacer_2</zorder>
-  <zorder>label_9</zorder>
-  <zorder>label_11</zorder>
-  <zorder>label_12</zorder>
-  <zorder>labelWprFitBool</zorder>
-  <zorder>label_14</zorder>
-  <zorder>label_15</zorder>
   <zorder>layoutWidget</zorder>
-  <zorder>layoutWidget_2</zorder>
-  <zorder>layoutWidget_3</zorder>
-  <zorder>layoutWidget_4</zorder>
-  <zorder>layoutWidget_5</zorder>
-  <zorder>layoutWidget_6</zorder>
-  <zorder>layoutWidget_7</zorder>
-  <zorder>layoutWidget_8</zorder>
-  <zorder>layoutWidget_9</zorder>
-  <zorder>layoutWidget_10</zorder>
-  <zorder>lineEdit_34</zorder>
-  <zorder>lineEdit_35</zorder>
-  <zorder>lineEdit_36</zorder>
-  <zorder>lineEdit_37</zorder>
-  <zorder>verticalSpacer_2</zorder>
-  <zorder>layoutWidget_13</zorder>
-  <zorder>layoutWidget_15</zorder>
-  <zorder>layoutWidget_17</zorder>
-  <zorder>layoutWidget_18</zorder>
-  <zorder>layoutWidget_19</zorder>
-  <zorder>horizontalSpacer</zorder>
-  <zorder>layoutWidget_7</zorder>
-  <zorder>layoutWidget_13</zorder>
-  <zorder>layoutWidget_20</zorder>
-  <zorder>layoutWidget_20</zorder>
-  <zorder>label_9</zorder>
-  <zorder>lineEditWprSv</zorder>
-  <zorder>layoutWidget_11</zorder>
-  <zorder>layoutWidget_12</zorder>
-  <zorder>layoutWidget_14</zorder>
-  <zorder>layoutWidget_16</zorder>
-  <zorder>pushButton</zorder>
-  <zorder>pushButton_2</zorder>
-  <zorder>label_43</zorder>
-  <zorder>label_44</zorder>
-  <zorder>label_45</zorder>
-  <zorder>label_44</zorder>
-  <zorder>label_41</zorder>
-  <zorder>label_42</zorder>
-  <zorder>lineEdit_56</zorder>
-  <zorder>horizontalSpacer_3</zorder>
-  <zorder>label_64</zorder>
-  <zorder>lineEdit_70</zorder>
-  <zorder>label_29</zorder>
-  <zorder>horizontalSpacer_9</zorder>
-  <zorder>label_66</zorder>
-  <zorder>label_30</zorder>
-  <zorder>lineEdit_55</zorder>
-  <zorder>label_29</zorder>
-  <zorder>horizontalSpacer_3</zorder>
-  <zorder>label_64</zorder>
-  <zorder>label_30</zorder>
-  <zorder>layoutWidget_5</zorder>
-  <zorder>frameBPM1_2</zorder>
-  <zorder>frameBPM1_3</zorder>
-  <zorder>frameBPM1_4</zorder>
-  <zorder>label_256</zorder>
-  <zorder>label_257</zorder>
-  <zorder>horizontalSpacer_40</zorder>
-  <zorder>layoutWidget_9</zorder>
-  <zorder>label_263</zorder>
-  <zorder>layoutWidget_10</zorder>
-  <zorder>label_267</zorder>
-  <zorder>pushButton</zorder>
-  <zorder>pushButton_2</zorder>
-  <zorder>commandLinkButton</zorder>
-  <zorder>commandLinkButton_2</zorder>
  </widget>
  <resources/>
  <connections/>

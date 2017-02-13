@@ -47,7 +47,7 @@
          <bool>false</bool>
         </property>
         <property name="text">
-         <string>EPICS Read interface</string>
+         <string>EPICS Interface</string>
         </property>
         <property name="icon">
          <iconset resource="resources.qrc">
@@ -89,7 +89,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QCommandLinkButton" name="LinkButtonTemp">
+       <widget class="QCommandLinkButton" name="LinkButtonTempScreen">
         <property name="font">
          <font>
           <pointsize>14</pointsize>

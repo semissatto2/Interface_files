@@ -54,7 +54,7 @@ class EpicsInterface(QWidget, Ui_Form_epicsInterface):
         self.LinkButtonBack.clicked.connect(self.onClickBack)
         self.pushButton_readPv.clicked.connect(self.readPv)
         
-    # My slot's
+    # My slots
     def onClickBack(self):
         self.close()
         self.window = TelaInicial()
@@ -142,6 +142,13 @@ class TempScreen(QWidget, Ui_Form_TempScreen):
 
         # Bind signal to method
         self.threadtempscreen.sig.connect(self.updateTempScreen)
+        self.pushButtonBackTempScreen.clicked.connect(self.onClickBack)
+
+        # My slots
+    def onClickBack(self):
+        self.close()
+        self.window = TelaInicial()
+        self.window.show()
         
     def updateTempScreen(self, A1, myList):
         self.lineEditWprFitValue.setText(str(A1))
