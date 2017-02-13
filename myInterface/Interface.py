@@ -48,7 +48,6 @@ class TelaInicial(QMainWindow, Ui_Form_telaInicial):
     def openPyDM(self):
         app_pydm = PyDMApplication(sys.argv)
         app_pydm.new_window("lineEditTestPyDM.ui")
-        sys.exit(app_pydm.exec_())
 
 # Window #2 Class
 class EpicsInterface(QWidget, Ui_Form_epicsInterface):
