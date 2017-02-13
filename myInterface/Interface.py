@@ -171,7 +171,7 @@ class TempScreen(QWidget, Ui_Form_TempScreen):
             self.labelWprFitBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
             self.labelWprFitBool.setPixmap(QtGui.QPixmap("images/led_red.png"))
-        if myList[114].value == 1:
+        if myList[114].value == 0:
             self.labelBpBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
             self.labelBpBool.setPixmap(QtGui.QPixmap("images/led_red.png"))
