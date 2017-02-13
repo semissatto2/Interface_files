@@ -150,7 +150,7 @@ background-color: transparent;</string>
                <property name="font">
                 <font>
                  <family>Utopia</family>
-                 <pointsize>11</pointsize>
+                 <pointsize>14</pointsize>
                  <weight>75</weight>
                  <bold>true</bold>
                 </font>
@@ -159,7 +159,7 @@ background-color: transparent;</string>
                 <string notr="true">background-color: rgb(218, 218, 218);</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
               </widget>
              </item>
@@ -187,7 +187,7 @@ background-color: transparent;</string>
                <property name="font">
                 <font>
                  <family>Utopia</family>
-                 <pointsize>11</pointsize>
+                 <pointsize>14</pointsize>
                  <weight>75</weight>
                  <bold>true</bold>
                 </font>
@@ -196,7 +196,7 @@ background-color: transparent;</string>
                 <string notr="true">background-color: rgb(218, 218, 218);</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
               </widget>
              </item>
@@ -224,7 +224,7 @@ background-color: transparent;</string>
                <property name="font">
                 <font>
                  <family>Utopia</family>
-                 <pointsize>11</pointsize>
+                 <pointsize>14</pointsize>
                  <weight>75</weight>
                  <bold>true</bold>
                 </font>
@@ -233,7 +233,7 @@ background-color: transparent;</string>
                 <string notr="true">background-color: rgb(218, 218, 218);</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
               </widget>
              </item>
@@ -250,7 +250,7 @@ background-color: transparent;</string>
                <property name="font">
                 <font>
                  <family>Utopia</family>
-                 <pointsize>11</pointsize>
+                 <pointsize>14</pointsize>
                  <weight>75</weight>
                  <bold>true</bold>
                 </font>
@@ -259,7 +259,7 @@ background-color: transparent;</string>
                 <string notr="true">background-color: rgb(218, 218, 218);</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
               </widget>
              </item>
@@ -309,7 +309,7 @@ background-color: transparent;</string>
                <property name="font">
                 <font>
                  <family>Utopia</family>
-                 <pointsize>11</pointsize>
+                 <pointsize>14</pointsize>
                  <weight>75</weight>
                  <bold>true</bold>
                 </font>
@@ -318,7 +318,7 @@ background-color: transparent;</string>
                 <string notr="true">background-color: rgb(218, 218, 218);</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
               </widget>
              </item>
@@ -368,7 +368,7 @@ background-color: transparent;</string>
                <property name="font">
                 <font>
                  <family>Utopia</family>
-                 <pointsize>11</pointsize>
+                 <pointsize>14</pointsize>
                  <weight>75</weight>
                  <bold>true</bold>
                 </font>
@@ -377,7 +377,7 @@ background-color: transparent;</string>
                 <string notr="true">background-color: rgb(218, 218, 218);</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
               </widget>
              </item>
@@ -573,8 +573,19 @@ background-color: transparent;</string>
              </item>
              <item>
               <widget class="QLineEdit" name="lineEditWrtFitValue">
+               <property name="font">
+                <font>
+                 <family>Utopia</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
                <property name="styleSheet">
                 <string notr="true">background-color: rgb(218, 218, 218);</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
               </widget>
              </item>
@@ -599,8 +610,19 @@ background-color: transparent;</string>
              </item>
              <item>
               <widget class="QLineEdit" name="lineEditWrtPitValue">
+               <property name="font">
+                <font>
+                 <family>Utopia</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
                <property name="styleSheet">
                 <string notr="true">background-color: rgb(218, 218, 218);</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
               </widget>
              </item>
@@ -624,9 +646,20 @@ background-color: transparent;</string>
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_38">
+              <widget class="QLineEdit" name="lineEditWrtTtValue">
+               <property name="font">
+                <font>
+                 <family>Utopia</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
                <property name="styleSheet">
                 <string notr="true">background-color: rgb(218, 218, 218);</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
               </widget>
              </item>
@@ -640,8 +673,19 @@ background-color: transparent;</string>
             <layout class="QHBoxLayout" name="horizontalLayout_37">
              <item>
               <widget class="QLineEdit" name="lineEditWrtFitSetPoint">
+               <property name="font">
+                <font>
+                 <family>Utopia</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
                <property name="styleSheet">
                 <string notr="true">background-color: rgb(218, 218, 218);</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
               </widget>
              </item>
@@ -688,8 +732,19 @@ background-color: transparent;</string>
             <layout class="QHBoxLayout" name="horizontalLayout_50">
              <item>
               <widget class="QLineEdit" name="lineEditWrtPitSetPoint">
+               <property name="font">
+                <font>
+                 <family>Utopia</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
                <property name="styleSheet">
                 <string notr="true">background-color: rgb(218, 218, 218);</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
               </widget>
              </item>
@@ -735,9 +790,20 @@ background-color: transparent;</string>
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_51">
              <item>
-              <widget class="QLineEdit" name="lineEdit_11">
+              <widget class="QLineEdit" name="lineEditWrtTtSetPoint">
+               <property name="font">
+                <font>
+                 <family>Utopia</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
                <property name="styleSheet">
                 <string notr="true">background-color: rgb(218, 218, 218);</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
               </widget>
              </item>
@@ -3901,7 +3967,6 @@ background-color: transparent;</string>
   </layout>
   <zorder>splitter_3</zorder>
   <zorder>frameCabecario</zorder>
-  <zorder>layoutWidget</zorder>
  </widget>
  <resources/>
  <connections/>
