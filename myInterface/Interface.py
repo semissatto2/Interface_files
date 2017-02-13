@@ -3,7 +3,7 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
 from PyQt5 import uic, QtCore, QtGui
 import sys
-import myEpicsHome
+import myEpics
 import time
 
 # Load UI Files
@@ -150,31 +150,36 @@ class TempScreen(QWidget, Ui_Form_TempScreen):
         self.window = TelaInicial()
         self.window.show()
         
-    def updateTempScreen(self, A1, myList):
-        self.lineEditWprFitValue.setText(str(A1))
+    def updateTempScreen(self, myList):
+        self.lineEditWprFitValue.setText(str(myList[24].value))
+        self.lineEditWprPitValue.setText(str(myList[25].value))
+        self.lineEditWprTtValue.setText(str(myList[0].value))
+        self.lineEditWprFitSetPoint.setText(str(myList[184].value))
+        self.lineEditWprPitSetPoint.setText(str(myList[185].value))
+        self.lineEditWprTtVSetPoint.setText(str(myList[160].value))   
         
         #Update Booleans variables (0 - failure/red) (1 - normal/green)
-        if myList[0] == 1:
+        if myList[0].value == 1:
             self.labelWprFitBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
             self.labelWprFitBool.setPixmap(QtGui.QPixmap("images/led_red.png"))
-        if myList[1] == 1:
+        if myList[114].value == 1:
             self.labelBpBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
             self.labelBpBool.setPixmap(QtGui.QPixmap("images/led_red.png"))
-        if myList[2] == 1:
+        if myList[113].value == 1:
             self.labelEpsStatusBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
             self.labelEpsStatusBool.setPixmap(QtGui.QPixmap("images/led_red.png"))
-        if myList[3] == 1:
+        if myList[116].value == 1:
             self.labelPpsStatusBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
             self.labelPpsStatusBool.setPixmap(QtGui.QPixmap("images/led_red.png"))
-        if myList[4] == 1:
-            self.lineEditShutter.setText("CLOSED")
-        else:
+        if myList[115].value == 1:
             self.lineEditShutter.setText("OPEN")
-        if myList[5] == 1:
+        else:
+            self.lineEditShutter.setText("CLOSED")
+        if myList[124].value == 1:
             self.lineEditBeamStatus.setText("ON")
         else:
             self.lineEditBeamStatus.setText("OFF")
@@ -182,14 +187,15 @@ class TempScreen(QWidget, Ui_Form_TempScreen):
     
 class ThreadTempScreen(QtCore.QThread):
     # Create the signal
-    sig = QtCore.pyqtSignal(float, list)
+    sig = QtCore.pyqtSignal(list)
     
     def __init__(self, parent=None):
         super(ThreadTempScreen, self).__init__(parent)
         
     def run(self):
-        myList = list(range(6))
+        myList = list(range(280)) # Range N = numbers of elements to catch from EPICS e send to Interface
         while 1:
+            '''
             A1 = myEpicsHome.getRandom()
             myList[0] = myEpicsHome.getBool()
             myList[1] = myEpicsHome.getBool()
@@ -198,14 +204,16 @@ class ThreadTempScreen(QtCore.QThread):
             myList[4] = myEpicsHome.getBool()
             myList[4] = myEpicsHome.getBool()
             myList[5] = myEpicsHome.getBool()
+            '''
+            myList = myEpics.pv
             time.sleep(0.4)
-            print (myList) # Debugg
+            #print (myList) # Debugg
 
 
 
             
             # Emit the signal
-            self.sig.emit(A1,myList)
+            self.sig.emit(myList)
         
 class ThreadClass(QtCore.QThread):
     # Create the signal
