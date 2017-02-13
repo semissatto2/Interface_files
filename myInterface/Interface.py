@@ -156,7 +156,7 @@ class TempScreen(QWidget, Ui_Form_TempScreen):
         self.lineEditWprTtValue.setText(str(myList[0].value))
         self.lineEditWprFitSetPoint.setText(str(myList[184].value))
         self.lineEditWprPitSetPoint.setText(str(myList[185].value))
-        self.lineEditWprTtVSetPoint.setText(str(myList[160].value))   
+        self.lineEditWprTtSetPoint.setText(str(myList[160].value))   
         
         #Update Booleans variables (0 - failure/red) (1 - normal/green)
         if myList[0].value == 1:
