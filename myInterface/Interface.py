@@ -5,6 +5,7 @@ from PyQt5 import uic, QtCore, QtGui
 import sys
 import myEpics
 import time
+from epics import PV
 
 # Load UI Files
 Ui_Form_telaInicial, QtBaseClass = uic.loadUiType("telaInicial.ui")
