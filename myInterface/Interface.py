@@ -185,6 +185,22 @@ class TempScreen(QWidget, Ui_Form_TempScreen):
             self.lineEditBeamStatus.setText("ON")
         else:
             self.lineEditBeamStatus.setText("OFF")
+        
+        if myList[82].value == 1:
+            self.labelWprFitBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelWprFitBool.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        
+        
+        if myList[81].value == 1:
+            self.labelWprPitBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelWprPitBool.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        
+        if myList[84].value == 1:
+            self.labelWprTtBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelWprTtBool.setPixmap(QtGui.QPixmap("images/led_red.png"))            
 
     
 class ThreadTempScreen(QtCore.QThread):
@@ -209,10 +225,6 @@ class ThreadTempScreen(QtCore.QThread):
             '''
             myList = myEpics.pv
             time.sleep(0.4)
-            #print (myList) # Debugg
-
-
-
             
             # Emit the signal
             self.sig.emit(myList)
@@ -272,6 +284,4 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = TelaInicial()
     window.show()
-    app_pydm = PyDMApplication(sys.argv)
-    app_pydm.new_window("lineEditTestPyDM.ui")
     sys.exit(app.exec_())
