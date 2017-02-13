@@ -158,7 +158,13 @@ class TempScreen(QWidget, Ui_Form_TempScreen):
         self.lineEditWprTtValue.setText(str(myList[0].value))
         self.lineEditWprFitSetPoint.setText(str(myList[184].value))
         self.lineEditWprPitSetPoint.setText(str(myList[185].value))
-        self.lineEditWprTtSetPoint.setText(str(myList[160].value))   
+        self.lineEditWprTtSetPoint.setText(str(myList[160].value))
+        self.lineEditWrtFitValue.setText(str(myList[26].value))
+        self.lineEditWrtPitValue.setText(str(myList[27].value))
+        self.lineEditWrtTtValue.setText(str(myList[1].value))
+        self.lineEditWrtFitSetPoint.setText(str(myList[186].value))
+        self.lineEditWrtPitSetPoint.setText(str(myList[187].value))
+        self.lineEditWrtTtSetPoint.setText(str(myList[161].value))
         
         #Update Booleans variables (0 - failure/red) (1 - normal/green)
         if myList[0].value == 1:
@@ -169,11 +175,11 @@ class TempScreen(QWidget, Ui_Form_TempScreen):
             self.labelBpBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
             self.labelBpBool.setPixmap(QtGui.QPixmap("images/led_red.png"))
-        if myList[113].value == 1:
+        if myList[113].value == 0:
             self.labelEpsStatusBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
             self.labelEpsStatusBool.setPixmap(QtGui.QPixmap("images/led_red.png"))
-        if myList[116].value == 1:
+        if myList[116].value == 0:
             self.labelPpsStatusBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
             self.labelPpsStatusBool.setPixmap(QtGui.QPixmap("images/led_red.png"))
