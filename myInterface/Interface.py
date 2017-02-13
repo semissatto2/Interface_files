@@ -27,6 +27,7 @@ class TelaInicial(QMainWindow, Ui_Form_telaInicial):
         self.LinkButtonEPICS.clicked.connect(self.openEPICS)
         self.LinkButtonEPS.clicked.connect(self.openEPS)
         self.LinkButtonTempScreen.clicked.connect(self.openTempScreen)
+        self.LinkButtonPyDM.clicked.connect(self.openPyDM)
 
 
     # My slot's
@@ -44,6 +45,10 @@ class TelaInicial(QMainWindow, Ui_Form_telaInicial):
         self.TempScreen = TempScreen()
         self.TempScreen.show()
         self.close()
+    def openPyDM(self):
+        app_pydm = PyDMApplication(sys.argv)
+        app_pydm.new_window("lineEditTestPyDM.ui")
+        sys.exit(app_pydm.exec_())
 
 # Window #2 Class
 class EpicsInterface(QWidget, Ui_Form_epicsInterface):
