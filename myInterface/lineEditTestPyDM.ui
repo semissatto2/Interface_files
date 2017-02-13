@@ -105,7 +105,7 @@ background-color: transparent;</string>
         <bool>true</bool>
        </property>
        <property name="timeSpan">
-        <double>50.000000000000000</double>
+        <double>300.000000000000000</double>
        </property>
       </widget>
      </item>
@@ -115,14 +115,14 @@ background-color: transparent;</string>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>PyDMLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>pydm.widgets.line_edit</header>
-  </customwidget>
-  <customwidget>
    <class>PyDMTimePlot</class>
    <extends>QGraphicsView</extends>
    <header>pydm.widgets.timeplot</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>pydm.widgets.line_edit</header>
   </customwidget>
  </customwidgets>
  <resources/>

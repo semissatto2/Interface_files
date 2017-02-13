@@ -101,14 +101,14 @@
        </widget>
       </item>
       <item>
-       <widget class="QCommandLinkButton" name="LinkButtonHVAC">
+       <widget class="QCommandLinkButton" name="LinkButtonPyDM">
         <property name="font">
          <font>
           <pointsize>14</pointsize>
          </font>
         </property>
         <property name="text">
-         <string>HVAC Interface</string>
+         <string>PyDM Interface</string>
         </property>
        </widget>
       </item>
