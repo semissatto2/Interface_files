@@ -6,6 +6,7 @@ import sys
 import myEpics
 import time
 from epics import PV
+from pydm import PyDMApplication
 
 # Load UI Files
 Ui_Form_telaInicial, QtBaseClass = uic.loadUiType("telaInicial.ui")
@@ -271,4 +272,6 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = TelaInicial()
     window.show()
+    app_pydm = PyDMApplication(sys.argv)
+    app_pydm.new_window("lineEditTestPyDM.ui")
     sys.exit(app.exec_())
