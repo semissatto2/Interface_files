@@ -12,7 +12,7 @@ Ui_Form_telaInicial, QtBaseClass = uic.loadUiType("telaInicial.ui")
 Ui_Form_epicsInterface, QtBaseClass = uic.loadUiType("epicsInterface.ui")
 Ui_Form_EPSInterface, QtBaseClass = uic.loadUiType("EPSInterface.ui")
 Ui_Form_TempScreen, QtBaseClass = uic.loadUiType("TempScreen.ui")
-#Ui_Form_archiverInterface, QtBaseClass = uic.loadUiType("archiverInterface.ui")    # Archiver Interface. Firt i have to fix the QtWebKitWidgets import ERROR
+Ui_Form_archiverInterface, QtBaseClass = uic.loadUiType("archiverInterface.ui")    # Archiver Interface. Firt i have to fix the QtWebKitWidgets import ERROR
 
 # Window #1 Class
 class TelaInicial(QMainWindow, Ui_Form_telaInicial):
@@ -45,27 +45,16 @@ class TelaInicial(QMainWindow, Ui_Form_telaInicial):
     def openTempScreen(self):
         self.TempScreen = TempScreen()
         self.TempScreen.show()
-        self.close()
-        
-    def openPyDM(self):
-        app_pydm = PyDMApplication(sys.argv)
-        app_pydm.new_window("lineEditTestPyDM.ui")
-        pydm.main_window.PyDMMainWindow.menuBar().setVisible(False)
-        pydm.main_window.PyDMMainWindow.statusBar().setVisible(False)
-        pydm.main_window.PyDMMainWindow.ui.line.setVisible(False)
-
-    # Hide central widgets
-        hlayout = Ppydm.main_window.PyDMMainWindow.ui.horizontalLayout
-        for i in reversed(range(hlayout.count())):
-            try:
-                widgetToHide = hlayout.itemAt(i).widget()
-                widgetToHide.setVisible(False)
-            except: pass  
+        self.close()   
 
     def openArchiver(self):
         self.archiverInterface = archiverInterface()
         self.archiverInterface.show()
         self.close()
+
+    def openPyDM(self):
+        app_pydm = PyDMApplication(sys.argv)
+        app_pydm.new_window("lineEditTestPyDM.ui")        
         
 # Window Epics Interface #2 Class
 class EpicsInterface(QWidget, Ui_Form_epicsInterface):
@@ -230,23 +219,23 @@ class TempScreen(QWidget, Ui_Form_TempScreen):
         else:
             self.labelWprTtBool.setPixmap(QtGui.QPixmap("images/led_red.png"))            
 
-        '''
+        
 # Window archiver Interface #5 Class
-class archiverInterface(QWidget, Ui_Form_epicsInterface):
+class archiverInterface(QWidget, Ui_Form_archiverInterface):
     def __init__(self, parent=None):
         super(archiverInterface, self).__init__(parent)
-        super(Ui_Form_archiversInterface, self).__init__()
+        super(Ui_Form_archiverInterface, self).__init__()
         self.setupUi(self)
 
         # Bind signal to slot
-        self.LinkButtonBack.clicked.connect(self.onClickBack)
+        self.pushButtonBack.clicked.connect(self.onClickBack)
         
     # My slots
     def onClickBack(self):
         self.close()
         self.window = TelaInicial()
         self.window.show()
-        '''
+        
         
 class ThreadTempScreen(QtCore.QThread):
     # Create the signal
