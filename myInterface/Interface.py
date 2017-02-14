@@ -11,7 +11,7 @@ Ui_Form_telaInicial, QtBaseClass = uic.loadUiType("telaInicial.ui")
 Ui_Form_epicsInterface, QtBaseClass = uic.loadUiType("epicsInterface.ui")
 Ui_Form_EPSInterface, QtBaseClass = uic.loadUiType("EPSInterface.ui")
 Ui_Form_TempScreen, QtBaseClass = uic.loadUiType("TempScreen.ui")
-Ui_Form_archiverInterface, QtBaseClass = uic.loadUiType("archiverInterface.ui")    # Archiver Interface. Firt i have to fix the QtWebKitWidgets import ERROR
+Ui_Form_archiverInterface, QtBaseClass = uic.loadUiType("archiverInterface.ui")
 
 # Window #1 Class
 class TelaInicial(QMainWindow, Ui_Form_telaInicial):
