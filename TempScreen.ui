@@ -1,0 +1,3973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1003</width>
+    <height>687</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Temperature Interface</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>images/temperature-icon-png-1.png</normaloff>images/temperature-icon-png-1.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0.488882, y1:0.247, x2:0.484, y2:0.951613, stop:0.0591398 rgba(38, 38, 38, 255), stop:1 rgba(105, 105, 105, 255));
+
+QLineEdit{
+background-color: transparent;
+font: 75 11pt &quot;Utopia&quot;;
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_12">
+   <item row="1" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_19">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_16">
+       <item>
+        <widget class="QLabel" name="label_260">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(226, 226, 226);
+font: 75 20pt &quot;Courier 10 Pitch&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>MS Water Circuit</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_187">
+         <item>
+          <spacer name="horizontalSpacer_42">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Ignored</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>30</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_258">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>Value</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_259">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>Setpoint</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_43">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Ignored</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>30</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_38">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_13">
+             <item>
+              <widget class="QLabel" name="label_11">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>WPR-FIT</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditWprFitValue">
+               <property name="font">
+                <font>
+                 <family>Utopia</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(218, 218, 218);</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_14">
+             <item>
+              <widget class="QLabel" name="label_12">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>WPR-PIT</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditWprPitValue">
+               <property name="font">
+                <font>
+                 <family>Utopia</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(218, 218, 218);</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_15">
+             <item>
+              <widget class="QLabel" name="label_16">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>WPR-TT </string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditWprTtValue">
+               <property name="font">
+                <font>
+                 <family>Utopia</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(218, 218, 218);</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_10">
+             <item>
+              <widget class="QLineEdit" name="lineEditWprFitSetPoint">
+               <property name="font">
+                <font>
+                 <family>Utopia</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(218, 218, 218);</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelWprFitBool">
+               <property name="maximumSize">
+                <size>
+                 <width>21</width>
+                 <height>21</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>images/led_red.png</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_64">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>L/MIB</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <item>
+              <widget class="QLineEdit" name="lineEditWprPitSetPoint">
+               <property name="font">
+                <font>
+                 <family>Utopia</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(218, 218, 218);</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelWprPitBool">
+               <property name="maximumSize">
+                <size>
+                 <width>21</width>
+                 <height>21</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>images/led_red.png</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_66">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>Bar       </string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_12">
+             <item>
+              <widget class="QLineEdit" name="lineEditWprTtSetPoint">
+               <property name="font">
+                <font>
+                 <family>Utopia</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(218, 218, 218);</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelWprTtBool">
+               <property name="maximumSize">
+                <size>
+                 <width>21</width>
+                 <height>21</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>images/led_red.png</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_67">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>ºC         </string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_80">
+         <item>
+          <widget class="QLabel" name="label_9">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(226, 226, 226);
+font: 75 20pt &quot;Courier 10 Pitch&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>WPR-SV</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEditWprSv">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(214, 214, 214);
+border-style: solid;
+border-color: rgb(39, 143, 255);
+border-width: 1px;</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_48">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_186">
+         <item>
+          <spacer name="horizontalSpacer_40">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Ignored</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>30</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_256">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>Value</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_257">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>Setpoint</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_41">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Ignored</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>30</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_49">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_16">
+             <item>
+              <widget class="QLabel" name="label_17">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>WRT-FIT</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditWrtFitValue">
+               <property name="font">
+                <font>
+                 <family>Utopia</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(218, 218, 218);</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_17">
+             <item>
+              <widget class="QLabel" name="label_18">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>WRT-PIT</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditWrtPitValue">
+               <property name="font">
+                <font>
+                 <family>Utopia</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(218, 218, 218);</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_36">
+             <item>
+              <widget class="QLabel" name="label_29">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>WRT-TT </string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditWrtTtValue">
+               <property name="font">
+                <font>
+                 <family>Utopia</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(218, 218, 218);</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_37">
+             <item>
+              <widget class="QLineEdit" name="lineEditWrtFitSetPoint">
+               <property name="font">
+                <font>
+                 <family>Utopia</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(218, 218, 218);</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelWrtFitBool">
+               <property name="maximumSize">
+                <size>
+                 <width>21</width>
+                 <height>21</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>images/led_red.png</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_68">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>L/MIN</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_50">
+             <item>
+              <widget class="QLineEdit" name="lineEditWrtPitSetPoint">
+               <property name="font">
+                <font>
+                 <family>Utopia</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(218, 218, 218);</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelWrtPitBool">
+               <property name="maximumSize">
+                <size>
+                 <width>21</width>
+                 <height>21</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>images/led_red.png</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_69">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>Bar       </string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_51">
+             <item>
+              <widget class="QLineEdit" name="lineEditWrtTtSetPoint">
+               <property name="font">
+                <font>
+                 <family>Utopia</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(218, 218, 218);</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelWrtTtBool">
+               <property name="maximumSize">
+                <size>
+                 <width>21</width>
+                 <height>21</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>images/led_red.png</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_70">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string>ºC         </string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_83">
+         <item>
+          <widget class="QLabel" name="label_79">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(226, 226, 226);
+font: 75 20pt &quot;Courier 10 Pitch&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>WTR-SV</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_4">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(214, 214, 214);
+border-style: solid;
+border-color: rgb(39, 143, 255);
+border-width: 1px;</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_49">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_18">
+       <item>
+        <widget class="QLabel" name="label_267">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(226, 226, 226);
+font: 75 20pt &quot;Courier 10 Pitch&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>COMPRESSED AIR</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_189">
+         <item>
+          <spacer name="horizontalSpacer_46">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Ignored</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>30</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_265">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>Value</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_266">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>Setpoint</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_47">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Ignored</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>30</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_84">
+         <item>
+          <widget class="QLabel" name="label_82">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>CAR-PIT</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEditCarPitValue">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(218, 218, 218);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEditCarPitSetPoint">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(218, 218, 218);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelCarPitBool">
+           <property name="maximumSize">
+            <size>
+             <width>21</width>
+             <height>21</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>images/led_red.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_71">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>Bar</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_17">
+       <item>
+        <widget class="QLabel" name="label_263">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(226, 226, 226);
+font: 75 20pt &quot;Courier 10 Pitch&quot;;
+background-color: transparent;</string>
+         </property>
+         <property name="text">
+          <string>PHOTON SHUTTER</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_188">
+         <item>
+          <spacer name="horizontalSpacer_44">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Ignored</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>30</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_261">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>Value</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_264">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>Offset</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_262">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>Setpoint</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_45">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Ignored</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>30</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_87">
+         <item>
+          <widget class="QLabel" name="label_84">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>PS-TT1</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEditPsTt1Value">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(218, 218, 218);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEditPsTt1Offset">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(218, 218, 218);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEditPsTt1SetPoint">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(218, 218, 218);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelPsTt1Bool">
+           <property name="maximumSize">
+            <size>
+             <width>21</width>
+             <height>21</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>images/led_red.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_72">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+           </property>
+           <property name="text">
+            <string>ºC</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QFrame" name="frameCabecario">
+     <property name="minimumSize">
+      <size>
+       <width>510</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0.521, y1:0.725505, x2:0.521, y2:0.989247, stop:0.198925 rgba(24, 24, 24, 255), stop:0.94086 rgba(76, 76, 76, 255));</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_9">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>61</width>
+          <height>61</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>images/LogoSirius_cortado.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="maximumSize">
+             <size>
+              <width>41</width>
+              <height>41</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 20pt &quot;Courier 10 Pitch&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>BP</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="labelBpBool">
+            <property name="maximumSize">
+             <size>
+              <width>41</width>
+              <height>41</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>images/led_red.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 20pt &quot;Courier 10 Pitch&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>PPS STATUS</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelPpsStatusBool">
+              <property name="maximumSize">
+               <size>
+                <width>41</width>
+                <height>41</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/led_red.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 20pt &quot;Courier 10 Pitch&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>EPS STATUS</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelEpsStatusBool">
+              <property name="maximumSize">
+               <size>
+                <width>41</width>
+                <height>41</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/led_red.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QLabel" name="label_7">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 20pt &quot;Courier 10 Pitch&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>SHUTTER</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditShutter">
+              <property name="font">
+               <font>
+                <family>Utopia</family>
+                <pointsize>11</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(214, 214, 214);
+border-style: solid;
+border-color: rgb(39, 143, 255);
+border-width: 1px;</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_8">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 20pt &quot;Courier 10 Pitch&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>BEAM STATUS</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditBeamStatus">
+              <property name="font">
+               <font>
+                <family>Utopia</family>
+                <pointsize>11</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(214, 214, 214);
+border-style: solid;
+border-color: rgb(39, 143, 255);
+border-width: 1px;</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QSplitter" name="splitter_3">
+     <property name="styleSheet">
+      <string notr="true">background-color: transparent;</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QFrame" name="frameBPM1">
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+
+QLineEdit{
+border-style: solid;
+border-color: rgb(39, 143, 255);
+border-width: 1px;
+}</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="2" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_34">
+            <item>
+             <widget class="QLabel" name="label_39">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>XBPM1-FIT </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditXbpm1FitValue">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_35">
+              <item>
+               <widget class="QLineEdit" name="lineEditXbpm1FitSetPoint">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(218, 218, 218);</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelXbpm1FitBool">
+                <property name="maximumSize">
+                 <size>
+                  <width>21</width>
+                  <height>21</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap>images/led_red.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_59">
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+                </property>
+                <property name="text">
+                 <string>L/MIN</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_24">
+            <item>
+             <widget class="QLabel" name="label_25">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>XBPM1-TT  </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditXbpm1TtValue">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_18">
+              <item>
+               <widget class="QLineEdit" name="lineEditXbpm1TtSetPoint">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(218, 218, 218);</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelXbpm1TtBool">
+                <property name="maximumSize">
+                 <size>
+                  <width>21</width>
+                  <height>21</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap>images/led_red.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_60">
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+                </property>
+                <property name="text">
+                 <string>ºC         </string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_32">
+          <item>
+           <widget class="QLabel" name="label_37">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>XBPM1-TT1</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditXbpm1Tt1Value">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditXbpm1Tt1Offset">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_33">
+            <item>
+             <widget class="QLineEdit" name="lineEditXbpm1Tt1Setpoint">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelXbpm1Tt1Bool">
+              <property name="maximumSize">
+               <size>
+                <width>21</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/led_red.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_61">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>ºC         </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_30">
+          <item>
+           <widget class="QLabel" name="label_35">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>XBPM1-TT2</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditXbpm1Tt2Value">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditXbpm1Tt2Offset">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_31">
+            <item>
+             <widget class="QLineEdit" name="lineEditXbpm1Tt2SetPoint">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="Xbpm1Tt2Bool">
+              <property name="maximumSize">
+               <size>
+                <width>21</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/led_red.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_65">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>ºC         </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="5" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_28">
+          <item>
+           <widget class="QLabel" name="label_33">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>XBPM1-TT3</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditXbpm1Tt3Value">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditXbpm1Tt3Offset">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_29">
+            <item>
+             <widget class="QLineEdit" name="lineEditXbpm1Tt3Setpoint">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelXbpm1Tt3Bool">
+              <property name="maximumSize">
+               <size>
+                <width>21</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/led_red.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_62">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>ºC         </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="6" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_26">
+          <item>
+           <widget class="QLabel" name="label_27">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>XBPM1-TT4</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditXbpm1Tt4Value">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditXbpm1Tt4Offset">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_19">
+            <item>
+             <widget class="QLineEdit" name="lineEditXbpm1Tt4SetPoint">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelXbpm1Tt4Bool">
+              <property name="maximumSize">
+               <size>
+                <width>21</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/led_red.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_63">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>ºC         </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_20">
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Ignored</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>49</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_43">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>Value</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_44">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>Offset</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_45">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>Setpoint</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_21">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(226, 226, 226);
+font: 75 20pt &quot;Courier 10 Pitch&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>BPM1</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QFrame" name="frameBPM1_2">
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+
+QLineEdit{
+border-style: solid;
+border-color: rgb(39, 143, 255);
+border-width: 1px;
+}</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="2" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_76">
+            <item>
+             <widget class="QLabel" name="label_118">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>MSK-FIT </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditMskFitValue">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_11">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_77">
+              <item>
+               <widget class="QLineEdit" name="lineEditMskFitSetPoint">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(218, 218, 218);</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelMskFitBool">
+                <property name="maximumSize">
+                 <size>
+                  <width>21</width>
+                  <height>21</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap>images/led_red.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_192">
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+                </property>
+                <property name="text">
+                 <string>L/MIN</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_78">
+            <item>
+             <widget class="QLabel" name="label_193">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>MSK-TT  </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditMskTtValue">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_12">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_79">
+              <item>
+               <widget class="QLineEdit" name="lineEditMskTtSetPoint">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(218, 218, 218);</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelMskTtBool">
+                <property name="maximumSize">
+                 <size>
+                  <width>21</width>
+                  <height>21</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap>images/led_red.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_195">
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+                </property>
+                <property name="text">
+                 <string>ºC         </string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_91">
+          <item>
+           <widget class="QLabel" name="label_196">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>MSK-TT1</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditMskTt1Value">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditMskTt1Offset">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_92">
+            <item>
+             <widget class="QLineEdit" name="lineEditMskTt1SetPoint">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelMskTt1Bool">
+              <property name="maximumSize">
+               <size>
+                <width>21</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/led_red.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_198">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>ºC         </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_93">
+          <item>
+           <widget class="QLabel" name="label_199">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>MSK-TT2</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditMskTt2Value">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditMskTt2Offset">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_94">
+            <item>
+             <widget class="QLineEdit" name="lineEditMskTt2SetPoint">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelMskTt2Bool">
+              <property name="maximumSize">
+               <size>
+                <width>21</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/led_red.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_201">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>ºC         </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="5" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_95">
+          <item>
+           <widget class="QLabel" name="label_202">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>MSK-TT3</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditMskTt3Value">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditMskTt3Offset">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_96">
+            <item>
+             <widget class="QLineEdit" name="lineEditMskTt3SetPoint">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelMskTt3Bool">
+              <property name="maximumSize">
+               <size>
+                <width>21</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/led_red.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_204">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>ºC         </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="6" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_97">
+          <item>
+           <widget class="QLabel" name="label_205">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>MSK-TT4</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditMskTt4Value">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditMskTt4Offset">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_98">
+            <item>
+             <widget class="QLineEdit" name="lineEditMskTt4SetPoint">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelMskTt4Bool">
+              <property name="maximumSize">
+               <size>
+                <width>21</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/led_red.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_207">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>ºC         </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_99">
+          <item>
+           <spacer name="horizontalSpacer_17">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Ignored</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>49</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_208">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>Value</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_209">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>Offset</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_210">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>Setpoint</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_211">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(226, 226, 226);
+font: 75 20pt &quot;Courier 10 Pitch&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>MASK</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QSplitter" name="splitter_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QFrame" name="frameBPM1_3">
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+
+QLineEdit{
+border-style: solid;
+border-color: rgb(39, 143, 255);
+border-width: 1px;
+}</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_10">
+        <item row="2" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_14">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_100">
+            <item>
+             <widget class="QLabel" name="label_212">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>XBPM2-FIT </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditXbpm2FitValue">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_18">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_101">
+              <item>
+               <widget class="QLineEdit" name="lineEditXbpm2FitSetPoint">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(218, 218, 218);</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelXbpm2FitBool">
+                <property name="maximumSize">
+                 <size>
+                  <width>21</width>
+                  <height>21</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap>images/led_red.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_214">
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+                </property>
+                <property name="text">
+                 <string>L/MIN</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_102">
+            <item>
+             <widget class="QLabel" name="label_215">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>XBPM2-TT  </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditXbpm2TtValue">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_19">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_103">
+              <item>
+               <widget class="QLineEdit" name="lineEditXbpm2TtSetPoint">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(218, 218, 218);</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelXbpm2TtBool">
+                <property name="maximumSize">
+                 <size>
+                  <width>21</width>
+                  <height>21</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap>images/led_red.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_217">
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+                </property>
+                <property name="text">
+                 <string>ºC         </string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_104">
+          <item>
+           <widget class="QLabel" name="label_218">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>XBPM2-TT1</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditXbpm2Tt1Value">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditXbpm2Tt1Offset">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_105">
+            <item>
+             <widget class="QLineEdit" name="lineEditXbpm2Tt1SetPoint">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelXbpm2Tt1Bool">
+              <property name="maximumSize">
+               <size>
+                <width>21</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/led_red.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_220">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>ºC         </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_166">
+          <item>
+           <widget class="QLabel" name="label_221">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>XBPM2-TT2</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditXbpm2Tt2Value">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditXbpm2Tt2Offset">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_167">
+            <item>
+             <widget class="QLineEdit" name="lineEditXbpm2Tt2SetPoint">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelXbpm2Tt2Bool">
+              <property name="maximumSize">
+               <size>
+                <width>21</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/led_red.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_223">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>ºC         </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="5" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_168">
+          <item>
+           <widget class="QLabel" name="label_224">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>XBPM2-TT3</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditXbpm2Tt3Value">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditXbpm2Tt3Offset">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_169">
+            <item>
+             <widget class="QLineEdit" name="lineEditXbpm2Tt3SetPoint">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelXbpm2Tt3Bool">
+              <property name="maximumSize">
+               <size>
+                <width>21</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/led_red.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_226">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>ºC         </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="6" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_170">
+          <item>
+           <widget class="QLabel" name="label_227">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>XBPM2-TT4</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditXbpm2Tt4Value">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditXbpm2Tt4Offset">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_171">
+            <item>
+             <widget class="QLineEdit" name="lineEditXbpm2Tt4Setpoint">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelXbpm2Tt4Bool">
+              <property name="maximumSize">
+               <size>
+                <width>21</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/led_red.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_229">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>ºC         </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_172">
+          <item>
+           <spacer name="horizontalSpacer_20">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Ignored</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>49</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_230">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>Value</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_231">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>Offset</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_232">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>Setpoint</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_233">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(226, 226, 226);
+font: 75 20pt &quot;Courier 10 Pitch&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>BPM2</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QFrame" name="frameBPM1_4">
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+
+QLineEdit{
+border-style: solid;
+border-color: rgb(39, 143, 255);
+border-width: 1px;
+}</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_11">
+        <item row="2" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_15">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_173">
+            <item>
+             <widget class="QLabel" name="label_234">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>SLITS-FIT </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditSlitsFitValue">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_37">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_174">
+              <item>
+               <widget class="QLineEdit" name="lineEditSlitsFitSetPoint">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(218, 218, 218);</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelSlitsFitBool">
+                <property name="maximumSize">
+                 <size>
+                  <width>21</width>
+                  <height>21</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap>images/led_red.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_236">
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+                </property>
+                <property name="text">
+                 <string>L/MIN</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_175">
+            <item>
+             <widget class="QLabel" name="label_237">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>SLITS-TT  </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditSlitsTtValue">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_38">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_176">
+              <item>
+               <widget class="QLineEdit" name="lineEditSlitsTtSetPoint">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(218, 218, 218);</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelSlitsTtBool">
+                <property name="maximumSize">
+                 <size>
+                  <width>21</width>
+                  <height>21</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap>images/led_red.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_239">
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+                </property>
+                <property name="text">
+                 <string>ºC         </string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_177">
+          <item>
+           <widget class="QLabel" name="label_240">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>SLITS-TT1</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditSlitsTt1Value">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditSlitsTt1Offset">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_178">
+            <item>
+             <widget class="QLineEdit" name="lineEditSlitsTt1SetPoint">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelSlitsTt1Bool">
+              <property name="maximumSize">
+               <size>
+                <width>21</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/led_red.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_242">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>ºC         </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_179">
+          <item>
+           <widget class="QLabel" name="label_243">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>SLITS-TT2</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditSlitsTt2Value">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditSlitsTt2Offset">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_180">
+            <item>
+             <widget class="QLineEdit" name="lineEditSlitsTt2SetPoint">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelSlitsTt2Bool">
+              <property name="maximumSize">
+               <size>
+                <width>21</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/led_red.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_245">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>ºC         </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="5" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_181">
+          <item>
+           <widget class="QLabel" name="label_246">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>SLITS-TT3</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditSlitsTt3Value">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditSlitsTt3Offset">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_182">
+            <item>
+             <widget class="QLineEdit" name="lineEditSlitsTt3SetPoint">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelSlitsTt3Bool">
+              <property name="maximumSize">
+               <size>
+                <width>21</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/led_red.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_248">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>ºC         </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="6" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_183">
+          <item>
+           <widget class="QLabel" name="label_249">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>SLITS-TT4</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditSlitsTt4Value">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditSlitsTt4Offset">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(218, 218, 218);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_184">
+            <item>
+             <widget class="QLineEdit" name="lineEditSlitsTt4SetPoint">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(218, 218, 218);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelSlitsTt4Bool">
+              <property name="maximumSize">
+               <size>
+                <width>21</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/led_red.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_251">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+              </property>
+              <property name="text">
+               <string>ºC         </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_185">
+          <item>
+           <spacer name="horizontalSpacer_39">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Ignored</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>49</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_252">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>Value</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_253">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>Offset</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_254">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(226, 226, 226);
+font: 75 13pt &quot;Utopia&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>Setpoint</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_255">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(226, 226, 226);
+font: 75 20pt &quot;Courier 10 Pitch&quot;;
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>SLITS</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_21">
+     <item>
+      <widget class="QPushButton" name="pushButtonBackTempScreen">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(222, 222, 222);</string>
+       </property>
+       <property name="text">
+        <string>BACK</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+  <zorder>splitter_3</zorder>
+  <zorder>frameCabecario</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
