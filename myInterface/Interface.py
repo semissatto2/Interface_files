@@ -1,5 +1,3 @@
-# hello_app_from_ui_mult.py
-
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
 from PyQt5 import uic, QtCore, QtGui
 import sys
@@ -7,13 +5,14 @@ import myEpics
 import time
 from epics import PV
 from pydm import PyDMApplication
+import pydm
 
 # Load UI Files
 Ui_Form_telaInicial, QtBaseClass = uic.loadUiType("telaInicial.ui")
 Ui_Form_epicsInterface, QtBaseClass = uic.loadUiType("epicsInterface.ui")
 Ui_Form_EPSInterface, QtBaseClass = uic.loadUiType("EPSInterface.ui")
 Ui_Form_TempScreen, QtBaseClass = uic.loadUiType("TempScreen.ui")
-Ui_Form_archiverInterface, QtBaseClass = uic.loadUiType("archiverInterface.ui")
+#Ui_Form_archiverInterface, QtBaseClass = uic.loadUiType("archiverInterface.ui")    # Archiver Interface. Firt i have to fix the QtWebKitWidgets import ERROR
 
 # Window #1 Class
 class TelaInicial(QMainWindow, Ui_Form_telaInicial):
@@ -51,12 +50,23 @@ class TelaInicial(QMainWindow, Ui_Form_telaInicial):
     def openPyDM(self):
         app_pydm = PyDMApplication(sys.argv)
         app_pydm.new_window("lineEditTestPyDM.ui")
+        pydm.main_window.PyDMMainWindow.menuBar().setVisible(False)
+        pydm.main_window.PyDMMainWindow.statusBar().setVisible(False)
+        pydm.main_window.PyDMMainWindow.ui.line.setVisible(False)
+
+    # Hide central widgets
+        hlayout = Ppydm.main_window.PyDMMainWindow.ui.horizontalLayout
+        for i in reversed(range(hlayout.count())):
+            try:
+                widgetToHide = hlayout.itemAt(i).widget()
+                widgetToHide.setVisible(False)
+            except: pass  
 
     def openArchiver(self):
         self.archiverInterface = archiverInterface()
         self.archiverInterface.show()
-        self.close()        
-
+        self.close()
+        
 # Window Epics Interface #2 Class
 class EpicsInterface(QWidget, Ui_Form_epicsInterface):
     def __init__(self, parent=None):
@@ -141,7 +151,7 @@ class EPSInterface(QWidget, Ui_Form_EPSInterface):
         self.lineEditAI31.setText(str(AI31))
         self.lineEditAI32.setText(str(AI32))
         
-# Window #4 Class
+# Window TempScreen #4 Class
 class TempScreen(QWidget, Ui_Form_TempScreen):
     def __init__(self, parent=None):
         super(TempScreen, self).__init__(parent)
@@ -220,6 +230,7 @@ class TempScreen(QWidget, Ui_Form_TempScreen):
         else:
             self.labelWprTtBool.setPixmap(QtGui.QPixmap("images/led_red.png"))            
 
+        '''
 # Window archiver Interface #5 Class
 class archiverInterface(QWidget, Ui_Form_epicsInterface):
     def __init__(self, parent=None):
@@ -235,6 +246,7 @@ class archiverInterface(QWidget, Ui_Form_epicsInterface):
         self.close()
         self.window = TelaInicial()
         self.window.show()
+        '''
         
 class ThreadTempScreen(QtCore.QThread):
     # Create the signal
@@ -244,7 +256,7 @@ class ThreadTempScreen(QtCore.QThread):
         super(ThreadTempScreen, self).__init__(parent)
         
     def run(self):
-        myList = list(range(280)) # Range N = numbers of elements to catch from EPICS e send to Interface
+        myList = list(range(280)) # Range N = numbers of elements to catch from EPICS and send to Interface
         while 1:
             '''
             A1 = myEpicsHome.getRandom()
