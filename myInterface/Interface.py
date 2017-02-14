@@ -5,7 +5,6 @@ import myEpics
 import time
 from epics import PV
 from pydm import PyDMApplication
-import pydm
 
 # Load UI Files
 Ui_Form_telaInicial, QtBaseClass = uic.loadUiType("telaInicial.ui")
@@ -31,7 +30,7 @@ class TelaInicial(QMainWindow, Ui_Form_telaInicial):
         self.LinkButtonArchiver.clicked.connect(self.openArchiver)
 
 
-    # My slot's
+    # My slots
     def openEPICS(self):
         self.epicsInterface = EpicsInterface()
         self.epicsInterface.show()
@@ -84,7 +83,7 @@ class EpicsInterface(QWidget, Ui_Form_epicsInterface):
                       self.lineEdit_PvValue.setText('PV not connected')  
 
         
-# WindowEPSInterface #3 Class
+# Window EPSInterface #3 Class
 class EPSInterface(QWidget, Ui_Form_EPSInterface):
     def __init__(self, parent=None):
         super(EPSInterface, self).__init__(parent)
