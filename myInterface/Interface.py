@@ -13,6 +13,7 @@ Ui_Form_telaInicial, QtBaseClass = uic.loadUiType("telaInicial.ui")
 Ui_Form_epicsInterface, QtBaseClass = uic.loadUiType("epicsInterface.ui")
 Ui_Form_EPSInterface, QtBaseClass = uic.loadUiType("EPSInterface.ui")
 Ui_Form_TempScreen, QtBaseClass = uic.loadUiType("TempScreen.ui")
+Ui_Form_archiverInterface, QtBaseClass = uic.loadUiType("archiverInterface.ui")
 
 # Window #1 Class
 class TelaInicial(QMainWindow, Ui_Form_telaInicial):
@@ -28,6 +29,7 @@ class TelaInicial(QMainWindow, Ui_Form_telaInicial):
         self.LinkButtonEPS.clicked.connect(self.openEPS)
         self.LinkButtonTempScreen.clicked.connect(self.openTempScreen)
         self.LinkButtonPyDM.clicked.connect(self.openPyDM)
+        self.LinkButtonArchiver.clicked.connect(self.openArchiver)
 
 
     # My slot's
@@ -45,11 +47,17 @@ class TelaInicial(QMainWindow, Ui_Form_telaInicial):
         self.TempScreen = TempScreen()
         self.TempScreen.show()
         self.close()
+        
     def openPyDM(self):
         app_pydm = PyDMApplication(sys.argv)
         app_pydm.new_window("lineEditTestPyDM.ui")
 
-# Window #2 Class
+    def openArchiver(self):
+        self.archiverInterface = archiverInterface()
+        self.archiverInterface.show()
+        self.close()        
+
+# Window Epics Interface #2 Class
 class EpicsInterface(QWidget, Ui_Form_epicsInterface):
     def __init__(self, parent=None):
         super(EpicsInterface, self).__init__(parent)
@@ -77,7 +85,7 @@ class EpicsInterface(QWidget, Ui_Form_epicsInterface):
                       self.lineEdit_PvValue.setText('PV not connected')  
 
         
-# Window #3 Class
+# WindowEPSInterface #3 Class
 class EPSInterface(QWidget, Ui_Form_EPSInterface):
     def __init__(self, parent=None):
         super(EPSInterface, self).__init__(parent)
@@ -212,7 +220,22 @@ class TempScreen(QWidget, Ui_Form_TempScreen):
         else:
             self.labelWprTtBool.setPixmap(QtGui.QPixmap("images/led_red.png"))            
 
-    
+# Window archiver Interface #5 Class
+class archiverInterface(QWidget, Ui_Form_epicsInterface):
+    def __init__(self, parent=None):
+        super(archiverInterface, self).__init__(parent)
+        super(Ui_Form_archiversInterface, self).__init__()
+        self.setupUi(self)
+
+        # Bind signal to slot
+        self.LinkButtonBack.clicked.connect(self.onClickBack)
+        
+    # My slots
+    def onClickBack(self):
+        self.close()
+        self.window = TelaInicial()
+        self.window.show()
+        
 class ThreadTempScreen(QtCore.QThread):
     # Create the signal
     sig = QtCore.pyqtSignal(list)
