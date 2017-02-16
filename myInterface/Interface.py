@@ -100,47 +100,40 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         
        # Bind signal to method
         self.pushButtonBack.clicked.connect(self.onClickBack)
-        #self.threadclass.sig.connect(self.updateAI)
+        self.threadclass.sig.connect(self.updateScreen)
     
     def onClickBack(self):
         self.close()
         self.window = TelaInicial()
         self.window.show()
 
-    def updateAI(self):
-        '''self.lineEditAI1.setText(str(AI1))
-        self.lineEditAI2.setText(str(AI2))
-        self.lineEditAI3.setText(str(AI3))
-        self.lineEditAI4.setText(str(AI4))
-        self.lineEditAI5.setText(str(AI5))
-        self.lineEditAI6.setText(str(AI6))
-        self.lineEditAI7.setText(str(AI7))
-        self.lineEditAI8.setText(str(AI8))
-        self.lineEditAI9.setText(str(AI9))
-        self.lineEditAI10.setText(str(AI10))
-        self.lineEditAI11.setText(str(AI11))
-        self.lineEditAI12.setText(str(AI12))
-        self.lineEditAI13.setText(str(AI13))
-        self.lineEditAI14.setText(str(AI14))
-        self.lineEditAI15.setText(str(AI15))
-        self.lineEditAI16.setText(str(AI16))
-        self.lineEditAI17.setText(str(AI17))
-        self.lineEditAI18.setText(str(AI18))
-        self.lineEditAI19.setText(str(AI19))
-        self.lineEditAI20.setText(str(AI20))
-        self.lineEditAI21.setText(str(AI21))
-        self.lineEditAI22.setText(str(AI22))
-        self.lineEditAI23.setText(str(AI23))
-        self.lineEditAI24.setText(str(AI24))
-        self.lineEditAI25.setText(str(AI25))
-        self.lineEditAI26.setText(str(AI26))
-        self.lineEditAI27.setText(str(AI27))
-        self.lineEditAI28.setText(str(AI28))
-        self.lineEditAI29.setText(str(AI29))
-        self.lineEditAI30.setText(str(AI30))
-        self.lineEditAI31.setText(str(AI31))
-        self.lineEditAI32.setText(str(AI32))'''
-        pass
+    def updateScreen(self, EPSList):
+        self.lineEditXbpm1.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM1-TT1')].value))
+        self.lineEditXbpm1_2.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM1-TT2')].value))
+        self.lineEditXbpm1_3.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM1-TT3')].value))
+        self.lineEditXbpm1_4.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM1-TT4')].value))
+        self.lineEditXbpm1_5.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM1-FIT')].value))
+        self.lineEditXbpm1_6.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM1-TT')].value))
+        self.lineEditXbpm2.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM2-TT1')].value))
+        self.lineEditXbpm2_2.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM2-TT2')].value))
+        self.lineEditXbpm2_3.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM2-TT3')].value))
+        self.lineEditXbpm2_4.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM2-TT4')].value))        
+        self.lineEditXbpm2_5.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM2-FIT')].value))
+        self.lineEditXbpm2_6.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM2-TT')].value))
+        self.lineEditMsk.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-MSK-TT1')].value))
+        self.lineEditMsk_2.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-MSK-TT2')].value))
+        self.lineEditMsk_3.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-MSK-TT3')].value))
+        self.lineEditMsk_4.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-MSK-TT4')].value))
+        self.lineEditMsk_5.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-MSK-FIT')].value))
+        self.lineEditMsk_6.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-MSK-TT')].value))
+        self.lineEditSlits.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS-TT1')].value))
+        self.lineEditSlits_2.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS1-TT2')].value))
+        self.lineEditSlits_3.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS-TT3')].value))
+        self.lineEditSlits_4.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS-TT4')].value))
+        self.lineEditSlits_5.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS-FIT')].value))
+        self.lineEditSlits_6.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS-TT')].value))
+        self.lineEditPhoton.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-PS-TT1')].value))
+        
         
 # Window TempScreen #4 Class
 class TempScreen(QWidget, Ui_Form_TempScreen):
@@ -249,68 +242,27 @@ class ThreadTempScreen(QtCore.QThread):
     def run(self):
         myList = list(range(280)) # Range N = numbers of elements to catch from EPICS and send to Interface
         while 1:
-            '''
-            A1 = myEpicsHome.getRandom()
-            myList[0] = myEpicsHome.getBool()
-            myList[1] = myEpicsHome.getBool()
-            myList[2] = myEpicsHome.getBool()
-            myList[3] = myEpicsHome.getBool()
-            myList[4] = myEpicsHome.getBool()
-            myList[4] = myEpicsHome.getBool()
-            myList[5] = myEpicsHome.getBool()
-            '''
             myList = myEpics.pv
             time.sleep(0.4)
             
             # Emit the signal
             self.sig.emit(myList)
         
-'''class ThreadClass(QtCore.QThread):
+class ThreadClass(QtCore.QThread):
     # Create the signal
-    #sig = QtCore.pyqtSignal(float, float, float, float,float, float, float, float,float, float, float, float,float, float, float, float,float, float, float, float,float, float, float, float,float, float, float, float,float, float, float, float)
+    sig = QtCore.pyqtSignal(list)
     
     def __init__(self, parent=None):
         super(ThreadClass, self).__init__(parent)
         
     def run(self):
-        pass
-       while 1:
-            AI1 = myEpicsHome.getRandom()
-            AI2 = myEpicsHome.getRandom()
-            AI3 = myEpicsHome.getRandom()
-            AI4 = myEpicsHome.getRandom()
-            AI5 = myEpicsHome.getRandom()
-            AI6 = myEpicsHome.getRandom()
-            AI7 = myEpicsHome.getRandom()
-            AI8 = myEpicsHome.getRandom()
-            AI9 = myEpicsHome.getRandom()
-            AI10 = myEpicsHome.getRandom()
-            AI11 = myEpicsHome.getRandom()
-            AI12 = myEpicsHome.getRandom()
-            AI13 = myEpicsHome.getRandom()
-            AI14 = myEpicsHome.getRandom()
-            AI15 = myEpicsHome.getRandom()
-            AI16 = myEpicsHome.getRandom()
-            AI17 = myEpicsHome.getRandom()
-            AI18 = myEpicsHome.getRandom()
-            AI19 = myEpicsHome.getRandom()
-            AI20 = myEpicsHome.getRandom()
-            AI21 = myEpicsHome.getRandom()
-            AI22 = myEpicsHome.getRandom()
-            AI23 = myEpicsHome.getRandom()
-            AI24 = myEpicsHome.getRandom()
-            AI25 = myEpicsHome.getRandom()
-            AI26 = myEpicsHome.getRandom()
-            AI27 = myEpicsHome.getRandom()
-            AI28 = myEpicsHome.getRandom()
-            AI29 = myEpicsHome.getRandom()
-            AI30 = myEpicsHome.getRandom()
-            AI31 = myEpicsHome.getRandom()
-            AI32 = myEpicsHome.getRandom()     
+        EPSList = list(range(280))
+           while 1:
+            EPSList = myEpics.pv     
             time.sleep(0.4)
        
             # Emit the signal
-            #self.sig.emit(AI1, AI2, AI3, AI4,AI5, AI6, AI7, AI8,AI9, AI10, AI11, AI12,AI13, AI14, AI15, AI16,AI17, AI18, AI19, AI20,AI21, AI22, AI23, AI24,AI25, AI26, AI27, AI28,AI29, AI30, AI31, AI32)'''
+            self.sig.emit(EPSList)
 
 # Init interface
 if __name__ == '__main__':
