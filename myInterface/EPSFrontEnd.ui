@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>2286</width>
+    <width>2015</width>
     <height>795</height>
    </rect>
   </property>
@@ -26,8 +26,8 @@
    <string/>
   </property>
   <layout class="QGridLayout" name="gridLayout_5">
-   <item row="0" column="0" rowspan="2" colspan="2">
-    <widget class="QWidget" name="" native="true">
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
      <property name="minimumSize">
       <size>
        <width>1461</width>
@@ -133,7 +133,7 @@ background-color: transparent;</string>
        </layout>
       </item>
       <item>
-       <widget class="QWidget" name="" native="true">
+       <widget class="QWidget" name="widget" native="true">
         <property name="styleSheet">
          <string notr="true">background-color: rgb(215, 215, 215);</string>
         </property>
@@ -328,7 +328,7 @@ background-color: transparent;</string>
             </layout>
            </item>
            <item>
-            <widget class="QWidget" name="" native="true">
+            <widget class="QWidget" name="widget" native="true">
              <layout class="QHBoxLayout" name="horizontalLayout_36">
               <property name="spacing">
                <number>0</number>
@@ -4348,181 +4348,112 @@ background-color: transparent;</string>
                   </layout>
                  </item>
                  <item>
-                  <layout class="QVBoxLayout" name="verticalLayout_18">
-                   <property name="spacing">
-                    <number>3</number>
-                   </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_11">
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_11">
+                    <widget class="QLineEdit" name="lineEditXbpm1">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                     <property name="readOnly">
-                      <bool>false</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-XBPM1-TT1 </string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_12">
-                     <property name="font">
-                      <font>
-                       <family>Utopia</family>
-                       <pointsize>12</pointsize>
-                       <weight>75</weight>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
                      </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-XBPM1-TT2 </string>
-                     </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_13">
+                    <widget class="QLineEdit" name="lineEditXbpm1_2">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-XBPM1-TT3 </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_14">
+                    <widget class="QLineEdit" name="lineEditXbpm1_3">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-XBPM1-TT4 </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_15">
+                    <widget class="QLineEdit" name="lineEditXbpm1_4">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AS_DEV-XBPM1-FIT </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_16">
+                    <widget class="QLineEdit" name="lineEditXbpm1_5">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
                      </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-XBPM1-TT </string>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="lineEditXbpm1_6">
+                     <property name="font">
+                      <font>
+                       <family>Utopia</family>
+                       <pointsize>11</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="readOnly">
+                      <bool>true</bool>
                      </property>
                     </widget>
                    </item>
@@ -4908,181 +4839,112 @@ background-color: transparent;</string>
                   </layout>
                  </item>
                  <item>
-                  <layout class="QVBoxLayout" name="verticalLayout_24">
-                   <property name="spacing">
-                    <number>3</number>
-                   </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_18">
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_17">
+                    <widget class="QLineEdit" name="lineEditXbpm2">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-XBPM2-TT1 </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_18">
+                    <widget class="QLineEdit" name="lineEditXbpm2_2">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-XBPM2-TT2 </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_19">
+                    <widget class="QLineEdit" name="lineEditXbpm2_3">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-XBPM2-TT3 </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_20">
+                    <widget class="QLineEdit" name="lineEditXbpm2_4">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-XBPM2-TT4 </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_21">
+                    <widget class="QLineEdit" name="lineEditXbpm2_5">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AS_DEV-XBPM2-FIT </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_22">
+                    <widget class="QLineEdit" name="lineEditXbpm2_6">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-XBPM2-TT </string>
                      </property>
                     </widget>
                    </item>
@@ -5468,181 +5330,112 @@ background-color: transparent;</string>
                   </layout>
                  </item>
                  <item>
-                  <layout class="QVBoxLayout" name="verticalLayout_27">
-                   <property name="spacing">
-                    <number>3</number>
-                   </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_24">
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_23">
+                    <widget class="QLineEdit" name="lineEditMsk">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-MSK-TT1 </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_24">
+                    <widget class="QLineEdit" name="lineEditMsk_2">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-MSK-TT2 </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_25">
+                    <widget class="QLineEdit" name="lineEditMsk_3">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-MSK-TT3 </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_26">
+                    <widget class="QLineEdit" name="lineEditMsk_4">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-MSK-TT4 </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_27">
+                    <widget class="QLineEdit" name="lineEditMsk_5">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AS_DEV-MSK-FIT </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_28">
+                    <widget class="QLineEdit" name="lineEditMsk_6">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-MSK-TT </string>
                      </property>
                     </widget>
                    </item>
@@ -6028,181 +5821,112 @@ background-color: transparent;</string>
                   </layout>
                  </item>
                  <item>
-                  <layout class="QVBoxLayout" name="verticalLayout_45">
-                   <property name="spacing">
-                    <number>3</number>
-                   </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_27">
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_48">
+                    <widget class="QLineEdit" name="lineEditSlits">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-SLITS-TT1 </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_49">
+                    <widget class="QLineEdit" name="lineEditSlits_2">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-SLITS-TT2 </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_50">
+                    <widget class="QLineEdit" name="lineEditSlits_3">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-SLITS-TT3 </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_51">
+                    <widget class="QLineEdit" name="lineEditSlits_4">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-SLITS-TT4 </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_52">
+                    <widget class="QLineEdit" name="lineEditSlits_5">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AS_DEV-SLITS-FIT </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_53">
+                    <widget class="QLineEdit" name="lineEditSlits_6">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-SLITS-TT </string>
                      </property>
                     </widget>
                    </item>
@@ -6493,31 +6217,20 @@ background-color: transparent;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="PyDMLineEdit" name="PyDMLineEdit_60">
+                    <widget class="QLineEdit" name="lineEditPhoton">
                      <property name="font">
                       <font>
                        <family>Utopia</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
-                     <property name="toolTip">
-                      <string/>
-                     </property>
-                     <property name="whatsThis">
-                      <string>
-    Writeable text field to send and display channel values
-    </string>
-                     </property>
                      <property name="alignment">
-                      <set>Qt::AlignCenter</set>
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
-                     </property>
-                     <property name="channel" stdset="0">
-                      <string>ca://IVUFE:EPS:AI_DEV-PS-TT1 </string>
                      </property>
                     </widget>
                    </item>
@@ -6559,6 +6272,19 @@ background-color: transparent;</string>
                     </widget>
                    </item>
                   </layout>
+                 </item>
+                 <item>
+                  <spacer name="verticalSpacer">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
                  </item>
                 </layout>
                </item>
@@ -6614,70 +6340,19 @@ background-color: transparent;</string>
      </layout>
     </widget>
    </item>
-   <item row="1" column="1">
-    <widget class="QWidget" name="widget" native="true">
-     <layout class="QVBoxLayout" name="verticalLayout_2"/>
-    </widget>
-   </item>
   </layout>
-  <zorder>layoutWidget</zorder>
-  <zorder>layoutWidget</zorder>
-  <zorder>layoutWidget</zorder>
-  <zorder>pushButtonBack</zorder>
-  <zorder>widget_2</zorder>
-  <zorder>layoutWidget_7</zorder>
-  <zorder>widget_5</zorder>
-  <zorder>layoutWidget_9</zorder>
-  <zorder>widget</zorder>
-  <zorder>layoutWidget</zorder>
-  <zorder>label_114</zorder>
-  <zorder>label_2</zorder>
-  <zorder>label_2</zorder>
-  <zorder>label_3</zorder>
-  <zorder>label_4</zorder>
-  <zorder>label_5</zorder>
-  <zorder>label_6</zorder>
-  <zorder>layoutWidget_2</zorder>
-  <zorder>layoutWidget_3</zorder>
-  <zorder>layoutWidget_2</zorder>
-  <zorder>label_7</zorder>
-  <zorder>widget_2</zorder>
-  <zorder>layoutWidget_9</zorder>
-  <zorder>horizontalSpacer_56</zorder>
-  <zorder></zorder>
-  <zorder>widget_3</zorder>
-  <zorder>widget_4</zorder>
-  <zorder>widget_5</zorder>
-  <zorder>verticalSpacer_3</zorder>
-  <zorder>widget_2</zorder>
-  <zorder></zorder>
-  <zorder></zorder>
-  <zorder></zorder>
-  <zorder>layoutWidget_3</zorder>
-  <zorder>layoutWidget_4</zorder>
-  <zorder>layoutWidget_5</zorder>
-  <zorder>layoutWidget</zorder>
-  <zorder>layoutWidget</zorder>
-  <zorder>verticalSpacer_3</zorder>
-  <zorder>layoutWidget_6</zorder>
-  <zorder>label_7</zorder>
-  <zorder>layoutWidget_2</zorder>
-  <zorder>layoutWidget_7</zorder>
-  <zorder>layoutWidget_8</zorder>
-  <zorder>label_19</zorder>
-  <zorder>layoutWidget_10</zorder>
-  <zorder>label_21</zorder>
-  <zorder>horizontalSpacer_39</zorder>
-  <zorder>horizontalSpacer_40</zorder>
-  <zorder></zorder>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>1145</x>
+     <y>400</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2"/>
+  </widget>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>PyDMLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>pydm.widgets.line_edit</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>
