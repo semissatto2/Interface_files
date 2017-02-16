@@ -127,7 +127,7 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         self.lineEditMsk_5.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AS_DEV-MSK-FIT')].value))
         self.lineEditMsk_6.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-MSK-TT')].value))
         self.lineEditSlits.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS-TT1')].value))
-        self.lineEditSlits_2.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS1-TT2')].value))
+        self.lineEditSlits_2.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS-TT2')].value))
         self.lineEditSlits_3.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS-TT3')].value))
         self.lineEditSlits_4.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS-TT4')].value))
         self.lineEditSlits_5.setText(str(EPSList[myEpics.getIndexPV('IVUFE:EPS:AS_DEV-SLITS-FIT')].value))
