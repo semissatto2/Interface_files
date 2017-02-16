@@ -93,8 +93,8 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         self.setupUi(self)
 
         # Add things to my Window
-        #self.threadclass = ThreadClass()
-        #self.threadclass.start()
+        self.threadclass = ThreadClass()
+        self.threadclass.start()
 
        # Set things to my Window
         
