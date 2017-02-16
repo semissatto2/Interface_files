@@ -257,7 +257,7 @@ class ThreadClass(QtCore.QThread):
         
     def run(self):
         EPSList = list(range(280))
-           while 1:
+        while 1:
             EPSList = myEpics.pv     
             time.sleep(0.4)
        
