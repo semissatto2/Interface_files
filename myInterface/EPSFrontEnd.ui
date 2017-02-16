@@ -30,13 +30,13 @@
     <rect>
      <x>7</x>
      <y>7</y>
-     <width>1041</width>
-     <height>92</height>
+     <width>1281</width>
+     <height>110</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QFrame" name="">
+     <widget class="QFrame" name="frame">
       <property name="styleSheet">
        <string notr="true">background-color: qlineargradient(spread:pad, x1:0.484, y1:0.747505, x2:0.489, y2:1, stop:0.182796 rgba(22, 61, 90, 255), stop:0.811828 rgba(53, 123, 213, 255));</string>
       </property>
@@ -468,8 +468,8 @@ background-color: transparent;</string>
     <rect>
      <x>440</x>
      <y>420</y>
-     <width>81</width>
-     <height>54</height>
+     <width>123</width>
+     <height>66</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_16">
@@ -963,8 +963,8 @@ background-color: transparent;</string>
     <rect>
      <x>780</x>
      <y>400</y>
-     <width>101</width>
-     <height>54</height>
+     <width>123</width>
+     <height>66</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_20">
@@ -1458,8 +1458,8 @@ background-color: transparent;</string>
     <rect>
      <x>80</x>
      <y>140</y>
-     <width>81</width>
-     <height>54</height>
+     <width>123</width>
+     <height>66</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_29">
@@ -1613,7 +1613,7 @@ background-color: transparent;</string>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="" native="true">
+  <widget class="QWidget" name="widget" native="true">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -1676,13 +1676,13 @@ background-color: transparent;</string>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>290</x>
      <y>420</y>
-     <width>81</width>
-     <height>54</height>
+     <width>123</width>
+     <height>66</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -2171,12 +2171,12 @@ background-color: transparent;</string>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>80</x>
      <y>220</y>
-     <width>1069</width>
+     <width>771</width>
      <height>181</height>
     </rect>
    </property>
@@ -2204,13 +2204,13 @@ background-color: transparent;</string>
           </property>
           <property name="minimumSize">
            <size>
-            <width>50</width>
+            <width>20</width>
             <height>2</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>100</width>
+            <width>50</width>
             <height>2</height>
            </size>
           </property>
@@ -2438,7 +2438,7 @@ background-color: transparent;</string>
               </property>
               <property name="minimumSize">
                <size>
-                <width>3</width>
+                <width>20</width>
                 <height>2</height>
                </size>
               </property>
@@ -2475,7 +2475,7 @@ background-color: transparent;</string>
               </property>
               <property name="minimumSize">
                <size>
-                <width>3</width>
+                <width>20</width>
                 <height>2</height>
                </size>
               </property>
@@ -2639,7 +2639,7 @@ background-color: transparent;</string>
           </property>
           <property name="minimumSize">
            <size>
-            <width>3</width>
+            <width>20</width>
             <height>2</height>
            </size>
           </property>
@@ -2695,13 +2695,13 @@ background-color: transparent;</string>
           </property>
           <property name="minimumSize">
            <size>
-            <width>3</width>
+            <width>20</width>
             <height>2</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>100</width>
+            <width>50</width>
             <height>2</height>
            </size>
           </property>
@@ -2740,13 +2740,13 @@ background-color: transparent;</string>
           </property>
           <property name="minimumSize">
            <size>
-            <width>62</width>
+            <width>20</width>
             <height>2</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>100</width>
+            <width>50</width>
             <height>2</height>
            </size>
           </property>
@@ -2802,7 +2802,7 @@ background-color: transparent;</string>
           </property>
           <property name="minimumSize">
            <size>
-            <width>3</width>
+            <width>20</width>
             <height>2</height>
            </size>
           </property>
@@ -2974,7 +2974,7 @@ background-color: transparent;</string>
               </property>
               <property name="minimumSize">
                <size>
-                <width>3</width>
+                <width>20</width>
                 <height>2</height>
                </size>
               </property>
@@ -3011,7 +3011,7 @@ background-color: transparent;</string>
               </property>
               <property name="minimumSize">
                <size>
-                <width>3</width>
+                <width>20</width>
                 <height>2</height>
                </size>
               </property>
@@ -3175,7 +3175,7 @@ background-color: transparent;</string>
           </property>
           <property name="minimumSize">
            <size>
-            <width>3</width>
+            <width>20</width>
             <height>2</height>
            </size>
           </property>
@@ -3231,13 +3231,13 @@ background-color: transparent;</string>
           </property>
           <property name="minimumSize">
            <size>
-            <width>3</width>
+            <width>20</width>
             <height>2</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>100</width>
+            <width>50</width>
             <height>2</height>
            </size>
           </property>
@@ -3267,13 +3267,13 @@ background-color: transparent;</string>
             </property>
             <property name="minimumSize">
              <size>
-              <width>50</width>
+              <width>20</width>
               <height>2</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>100</width>
+              <width>50</width>
               <height>2</height>
              </size>
             </property>
@@ -3329,44 +3329,13 @@ background-color: transparent;</string>
             </property>
             <property name="minimumSize">
              <size>
-              <width>3</width>
+              <width>10</width>
               <height>2</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>200</width>
-              <height>2</height>
-             </size>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="pixmap">
-             <pixmap>images/barra_preta_v2.png</pixmap>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_19">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>50</width>
-              <height>2</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>100</width>
+              <width>25</width>
               <height>2</height>
              </size>
             </property>
@@ -3401,13 +3370,13 @@ background-color: transparent;</string>
                 </property>
                 <property name="minimumSize">
                  <size>
-                  <width>3</width>
+                  <width>10</width>
                   <height>2</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>100</width>
+                  <width>25</width>
                   <height>2</height>
                  </size>
                 </property>
@@ -3463,7 +3432,7 @@ background-color: transparent;</string>
                 </property>
                 <property name="minimumSize">
                  <size>
-                  <width>3</width>
+                  <width>20</width>
                   <height>2</height>
                  </size>
                 </property>
@@ -3635,7 +3604,7 @@ background-color: transparent;</string>
                     </property>
                     <property name="minimumSize">
                      <size>
-                      <width>3</width>
+                      <width>20</width>
                       <height>2</height>
                      </size>
                     </property>
@@ -3672,7 +3641,7 @@ background-color: transparent;</string>
                     </property>
                     <property name="minimumSize">
                      <size>
-                      <width>3</width>
+                      <width>20</width>
                       <height>2</height>
                      </size>
                     </property>
@@ -3836,7 +3805,7 @@ background-color: transparent;</string>
                 </property>
                 <property name="minimumSize">
                  <size>
-                  <width>3</width>
+                  <width>20</width>
                   <height>2</height>
                  </size>
                 </property>
@@ -3895,13 +3864,13 @@ background-color: transparent;</string>
                 </property>
                 <property name="minimumSize">
                  <size>
-                  <width>3</width>
+                  <width>20</width>
                   <height>2</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>100</width>
+                  <width>50</width>
                   <height>2</height>
                  </size>
                 </property>
@@ -3928,13 +3897,13 @@ background-color: transparent;</string>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>570</x>
      <y>470</y>
-     <width>101</width>
-     <height>24</height>
+     <width>124</width>
+     <height>29</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_47">
@@ -4013,16 +3982,19 @@ background-color: transparent;</string>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>510</y>
-     <width>881</width>
-     <height>262</height>
+     <x>80</x>
+     <y>530</y>
+     <width>971</width>
+     <height>181</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_63">
+    <property name="spacing">
+     <number>0</number>
+    </property>
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_62">
       <property name="spacing">
@@ -6401,114 +6373,19 @@ background-color: transparent;</string>
    </layout>
   </widget>
   <zorder>layoutWidget</zorder>
-  <zorder>label_15</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>layoutWidget</zorder>
   <zorder>pushButton</zorder>
-  <zorder>label_3</zorder>
-  <zorder>label_10</zorder>
-  <zorder>verticalSpacer</zorder>
-  <zorder>label_11</zorder>
-  <zorder>label_9</zorder>
-  <zorder>label_19</zorder>
-  <zorder>label_29</zorder>
-  <zorder>horizontalSpacer</zorder>
-  <zorder>horizontalSpacer_2</zorder>
-  <zorder>label_19</zorder>
-  <zorder>label_29</zorder>
-  <zorder>horizontalSpacer_3</zorder>
-  <zorder>horizontalSpacer_4</zorder>
-  <zorder>horizontalSpacer_5</zorder>
-  <zorder>horizontalSpacer_6</zorder>
-  <zorder>label_31</zorder>
-  <zorder>label_32</zorder>
-  <zorder></zorder>
-  <zorder>label_13</zorder>
-  <zorder>label_14</zorder>
-  <zorder>label_19</zorder>
-  <zorder>label_34</zorder>
-  <zorder>label_35</zorder>
-  <zorder>label_36</zorder>
-  <zorder>label_37</zorder>
-  <zorder>label_38</zorder>
-  <zorder>label_39</zorder>
-  <zorder>label_3</zorder>
-  <zorder>horizontalSpacer</zorder>
-  <zorder>horizontalSpacer_2</zorder>
-  <zorder>label_31</zorder>
-  <zorder>label_3</zorder>
-  <zorder>label_32</zorder>
-  <zorder>label_31</zorder>
-  <zorder>label_31</zorder>
-  <zorder>label_32</zorder>
-  <zorder>horizontalSpacer_3</zorder>
-  <zorder>horizontalSpacer_4</zorder>
-  <zorder>horizontalSpacer_5</zorder>
-  <zorder>horizontalSpacer_6</zorder>
-  <zorder>horizontalSpacer_6</zorder>
-  <zorder></zorder>
-  <zorder>PyDMLineEdit</zorder>
-  <zorder>PyDMLineEdit_2</zorder>
-  <zorder>PyDMLineEdit_3</zorder>
-  <zorder>PyDMLineEdit_4</zorder>
-  <zorder>label_41</zorder>
-  <zorder>label_42</zorder>
-  <zorder>label_43</zorder>
-  <zorder>label_44</zorder>
-  <zorder></zorder>
-  <zorder></zorder>
-  <zorder></zorder>
-  <zorder>label_45</zorder>
-  <zorder>label_46</zorder>
-  <zorder>label_47</zorder>
-  <zorder>label_48</zorder>
-  <zorder>label_48</zorder>
-  <zorder>label_49</zorder>
-  <zorder>label_50</zorder>
-  <zorder>label_51</zorder>
-  <zorder>label_52</zorder>
-  <zorder>label_45</zorder>
-  <zorder>label_46</zorder>
-  <zorder>label_47</zorder>
-  <zorder>horizontalSpacer_7</zorder>
-  <zorder>horizontalSpacer_8</zorder>
-  <zorder>layoutWidget_2</zorder>
-  <zorder>label_45</zorder>
-  <zorder>label_46</zorder>
-  <zorder>verticalSpacer_2</zorder>
-  <zorder>verticalSpacer_3</zorder>
-  <zorder>verticalSpacer_4</zorder>
-  <zorder>verticalSpacer_5</zorder>
-  <zorder>horizontalSpacer_11</zorder>
-  <zorder>horizontalSpacer_12</zorder>
-  <zorder>horizontalSpacer_13</zorder>
-  <zorder>horizontalSpacer_14</zorder>
-  <zorder>layoutWidget_2</zorder>
   <zorder>widget_2</zorder>
-  <zorder>horizontalSpacer</zorder>
-  <zorder>widget_2</zorder>
-  <zorder>widget_2</zorder>
-  <zorder>label_38</zorder>
-  <zorder>label_64</zorder>
-  <zorder>PyDMLineEdit_9</zorder>
-  <zorder>label_65</zorder>
-  <zorder>label_66</zorder>
-  <zorder>PyDMLineEdit_10</zorder>
-  <zorder>label_67</zorder>
-  <zorder>layoutWidget_3</zorder>
   <zorder>widget_3</zorder>
   <zorder>layoutWidget_6</zorder>
   <zorder>widget_4</zorder>
   <zorder>layoutWidget_7</zorder>
-  <zorder>layoutWidget_8</zorder>
   <zorder>widget_5</zorder>
   <zorder>layoutWidget_9</zorder>
-  <zorder>layoutWidget_10</zorder>
-  <zorder>label_145</zorder>
-  <zorder>PyDMLineEdit_33</zorder>
-  <zorder>label_146</zorder>
-  <zorder>layoutWidget_11</zorder>
-  <zorder></zorder>
-  <zorder>layoutWidget_8</zorder>
-  <zorder></zorder>
+  <zorder>widget</zorder>
+  <zorder>layoutWidget</zorder>
  </widget>
  <customwidgets>
   <customwidget>
