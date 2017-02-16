@@ -298,7 +298,6 @@ def getPvValue(pvName):
 def getRandom():
     return random.uniform(0,100)
 
-#	Returns the value of index n
 def getPVValueByIndex(n):
     return pv[n].value
 
@@ -307,3 +306,10 @@ def getPVValueByName(name):
 
 def tamanhoArrayPVs():
     return len(readAIValues())
+
+def getIndexPV(name):
+    for i in range (len(pv)):
+        if pv[i].pvname == name:
+            return i
+    else:
+        print("There isnt PV with ", name, "name \n\r")

@@ -12,6 +12,8 @@ Ui_Form_epicsInterface, QtBaseClass = uic.loadUiType("epicsInterface.ui")
 Ui_Form_EPSInterface, QtBaseClass = uic.loadUiType("EPSInterface.ui")
 Ui_Form_TempScreen, QtBaseClass = uic.loadUiType("TempScreen.ui")
 Ui_Form_archiverInterface, QtBaseClass = uic.loadUiType("archiverInterface.ui")
+Ui_Form_EPSFrontEndInterface, QtBaseClass = uic.loadUiType("EPSFrontEnd.ui")
+
 
 # Window #1 Class
 class TelaInicial(QMainWindow, Ui_Form_telaInicial):
@@ -37,9 +39,11 @@ class TelaInicial(QMainWindow, Ui_Form_telaInicial):
         self.close()
 
     def openEPS(self):
-        self.EPSInterface = EPSInterface()
-        self.EPSInterface.show()
-        self.close()
+        #app_pydm = PyDMApplication(sys.argv)
+        #app_pydm.new_window("EPSFrontEnd.ui")
+        self.EPSFrontEndInterface = EPSFrontEndInterface()
+        self.EPSFrontEndInterface.show()
+        self.close()        
     
     def openTempScreen(self):
         self.TempScreen = TempScreen()
@@ -53,9 +57,9 @@ class TelaInicial(QMainWindow, Ui_Form_telaInicial):
 
     def openPyDM(self):
         app_pydm = PyDMApplication(sys.argv)
-        app_pydm.new_window("lineEditTestPyDM.ui")        
+        app_pydm.new_window("lineEditTestPyDM.ui")
         
-# Window Epics Interface #2 Class
+        # Window Epics Interface #2 Class
 class EpicsInterface(QWidget, Ui_Form_epicsInterface):
     def __init__(self, parent=None):
         super(EpicsInterface, self).__init__(parent)
@@ -83,30 +87,30 @@ class EpicsInterface(QWidget, Ui_Form_epicsInterface):
                       self.lineEdit_PvValue.setText('PV not connected')  
 
         
-# Window EPSInterface #3 Class
-class EPSInterface(QWidget, Ui_Form_EPSInterface):
+# Window EPSFrontEndInterface #3 Class
+class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
     def __init__(self, parent=None):
-        super(EPSInterface, self).__init__(parent)
-        super(Ui_Form_EPSInterface, self).__init__()
+        super(EPSFrontEndInterface, self).__init__(parent)
+        super(Ui_Form_EPSFrontEndInterface, self).__init__()
         self.setupUi(self)
 
         # Add things to my Window
-        self.threadclass = ThreadClass()
-        self.threadclass.start()
+        #self.threadclass = ThreadClass()
+        #self.threadclass.start()
 
        # Set things to my Window
-
         
        # Bind signal to method
-        self.threadclass.sig.connect(self.updateAI)
+        self.pushButtonBack.clicked.connect(self.onClickBack)
+        #self.threadclass.sig.connect(self.updateAI)
     
     def onClickBack(self):
         self.close()
         self.window = TelaInicial()
         self.window.show()
 
-    def updateAI(self, AI1, AI2, AI3, AI4,AI5, AI6, AI7, AI8,AI9, AI10, AI11, AI12,AI13, AI14, AI15, AI16,AI17, AI18, AI19, AI20,AI21, AI22, AI23, AI24,AI25, AI26, AI27, AI28,AI29, AI30, AI31, AI32):
-        self.lineEditAI1.setText(str(AI1))
+    def updateAI(self):
+        '''self.lineEditAI1.setText(str(AI1))
         self.lineEditAI2.setText(str(AI2))
         self.lineEditAI3.setText(str(AI3))
         self.lineEditAI4.setText(str(AI4))
@@ -137,7 +141,8 @@ class EPSInterface(QWidget, Ui_Form_EPSInterface):
         self.lineEditAI29.setText(str(AI29))
         self.lineEditAI30.setText(str(AI30))
         self.lineEditAI31.setText(str(AI31))
-        self.lineEditAI32.setText(str(AI32))
+        self.lineEditAI32.setText(str(AI32))'''
+        pass
         
 # Window TempScreen #4 Class
 class TempScreen(QWidget, Ui_Form_TempScreen):
@@ -262,15 +267,16 @@ class ThreadTempScreen(QtCore.QThread):
             # Emit the signal
             self.sig.emit(myList)
         
-class ThreadClass(QtCore.QThread):
+'''class ThreadClass(QtCore.QThread):
     # Create the signal
-    sig = QtCore.pyqtSignal(float, float, float, float,float, float, float, float,float, float, float, float,float, float, float, float,float, float, float, float,float, float, float, float,float, float, float, float,float, float, float, float)
+    #sig = QtCore.pyqtSignal(float, float, float, float,float, float, float, float,float, float, float, float,float, float, float, float,float, float, float, float,float, float, float, float,float, float, float, float,float, float, float, float)
     
     def __init__(self, parent=None):
         super(ThreadClass, self).__init__(parent)
         
     def run(self):
-        while 1:
+        pass
+       while 1:
             AI1 = myEpicsHome.getRandom()
             AI2 = myEpicsHome.getRandom()
             AI3 = myEpicsHome.getRandom()
@@ -302,15 +308,11 @@ class ThreadClass(QtCore.QThread):
             AI29 = myEpicsHome.getRandom()
             AI30 = myEpicsHome.getRandom()
             AI31 = myEpicsHome.getRandom()
-            AI32 = myEpicsHome.getRandom()
-            
-
+            AI32 = myEpicsHome.getRandom()     
             time.sleep(0.4)
-
-
-            
+       
             # Emit the signal
-            self.sig.emit(AI1, AI2, AI3, AI4,AI5, AI6, AI7, AI8,AI9, AI10, AI11, AI12,AI13, AI14, AI15, AI16,AI17, AI18, AI19, AI20,AI21, AI22, AI23, AI24,AI25, AI26, AI27, AI28,AI29, AI30, AI31, AI32)
+            #self.sig.emit(AI1, AI2, AI3, AI4,AI5, AI6, AI7, AI8,AI9, AI10, AI11, AI12,AI13, AI14, AI15, AI16,AI17, AI18, AI19, AI20,AI21, AI22, AI23, AI24,AI25, AI26, AI27, AI28,AI29, AI30, AI31, AI32)'''
 
 # Init interface
 if __name__ == '__main__':
