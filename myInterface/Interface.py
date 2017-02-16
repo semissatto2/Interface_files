@@ -39,8 +39,6 @@ class TelaInicial(QMainWindow, Ui_Form_telaInicial):
         self.close()
 
     def openEPS(self):
-        #app_pydm = PyDMApplication(sys.argv)
-        #app_pydm.new_window("EPSFrontEnd.ui")
         self.EPSFrontEndInterface = EPSFrontEndInterface()
         self.EPSFrontEndInterface.show()
         self.close()        
