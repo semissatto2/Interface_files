@@ -108,33 +108,68 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         self.window.show()
 
     def updateScreen(self, EPSList):
-        self.lineEditXbpm1.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM1-TT1')].value))
-        self.lineEditXbpm1_2.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM1-TT2')].value))
-        self.lineEditXbpm1_3.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM1-TT3')].value))
-        self.lineEditXbpm1_4.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM1-TT4')].value))
-        self.lineEditXbpm1_5.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AS_DEV-XBPM1-FIT')].value))
-        self.lineEditXbpm1_6.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM1-TT')].value))
-        self.lineEditXbpm2.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM2-TT1')].value))
-        self.lineEditXbpm2_2.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM2-TT2')].value))
-        self.lineEditXbpm2_3.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM2-TT3')].value))
-        self.lineEditXbpm2_4.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM2-TT4')].value))        
-        self.lineEditXbpm2_5.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AS_DEV-XBPM2-FIT')].value))
-        self.lineEditXbpm2_6.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM2-TT')].value))
-        self.lineEditMsk.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-MSK-TT1')].value))
-        self.lineEditMsk_2.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-MSK-TT2')].value))
-        self.lineEditMsk_3.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-MSK-TT3')].value))
-        self.lineEditMsk_4.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-MSK-TT4')].value))
-        self.lineEditMsk_5.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AS_DEV-MSK-FIT')].value))
-        self.lineEditMsk_6.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-MSK-TT')].value))
-        self.lineEditSlits.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS-TT1')].value))
-        self.lineEditSlits_2.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS-TT2')].value))
-        self.lineEditSlits_3.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS-TT3')].value))
-        self.lineEditSlits_4.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS-TT4')].value))
-        self.lineEditSlits_5.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AS_DEV-SLITS-FIT')].value))
-        self.lineEditSlits_6.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS-TT')].value))
-        self.lineEditPhoton.setText(str.format("{0:.10f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-PS-TT1')].value))
-        
-        
+        # Update TT[i], FIT
+        self.lineEditXbpm1.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM1-TT1')].value)+" ºC")
+        self.lineEditXbpm1_2.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM1-TT2')].value)+" ºC")
+        self.lineEditXbpm1_3.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM1-TT3')].value)+" ºC")
+        self.lineEditXbpm1_4.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM1-TT4')].value)+" ºC")
+        self.lineEditXbpm1_5.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AS_DEV-XBPM1-FIT')].value)+" L/Min")
+        self.lineEditXbpm1_6.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM1-TT')].value)+" ºC")
+        self.lineEditXbpm2.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM2-TT1')].value)+" ºC")
+        self.lineEditXbpm2_2.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM2-TT2')].value)+" ºC")
+        self.lineEditXbpm2_3.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM2-TT3')].value)+" ºC")
+        self.lineEditXbpm2_4.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM2-TT4')].value)+" ºC")        
+        self.lineEditXbpm2_5.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AS_DEV-XBPM2-FIT')].value)+" L/Min")
+        self.lineEditXbpm2_6.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM2-TT')].value)+" ºC")
+        self.lineEditMsk.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-MSK-TT1')].value)+" ºC")
+        self.lineEditMsk_2.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-MSK-TT2')].value)+" ºC")
+        self.lineEditMsk_3.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-MSK-TT3')].value)+" ºC")
+        self.lineEditMsk_4.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-MSK-TT4')].value)+" ºC")
+        self.lineEditMsk_5.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AS_DEV-MSK-FIT')].value)+" L/Min")
+        self.lineEditMsk_6.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-MSK-TT')].value)+" ºC")
+        self.lineEditSlits.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS-TT1')].value)+" ºC")
+        self.lineEditSlits_2.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS-TT2')].value)+" ºC")
+        self.lineEditSlits_3.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS-TT3')].value)+" ºC")
+        self.lineEditSlits_4.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS-TT4')].value)+" ºC")
+        self.lineEditSlits_5.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AS_DEV-SLITS-FIT')].value)+" L/Min")
+        self.lineEditSlits_6.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS-TT')].value)+" ºC")
+        self.lineEditPhoton.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-PS-TT1')].value)+" ºC")
+
+        # Update VG's bools
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG1')].value == 1:
+            self.labelVG1.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+        else:
+            self.labelVG1.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG2')].value == 1:
+            self.labelVG1_2.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+        else:
+            self.labelVG1_2.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
+        '''if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG3')].value) == 1:
+            self.labelVG1_3.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+        else:
+            self.labelVG1_3.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))'''
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG3')].value == 1:
+            self.labelVG1_4.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+        else:
+            self.labelVG1_4.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
+       if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG4')].value == 1:
+            self.labelVG_5.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+        else:
+            self.labelVG1_5.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
+       if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG5')].value == 1:
+            self.labelVG1_6.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+        else:
+            self.labelVG1_6.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
+       if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG6')].value == 1:
+            self.labelVG1_7.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+        else:
+            self.labelVG1_7.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
+       if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG7')].value == 1:
+            self.labelVG1_8.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+        else:
+            self.labelVG1_8.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))            
+            
+            
 # Window TempScreen #4 Class
 class TempScreen(QWidget, Ui_Form_TempScreen):
     def __init__(self, parent=None):
