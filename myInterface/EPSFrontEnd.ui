@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>2015</width>
-    <height>795</height>
+    <height>799</height>
    </rect>
   </property>
   <property name="cursor">
@@ -380,7 +380,7 @@ background-color: transparent;</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="label_34">
+                     <widget class="QLabel" name="labelGV1">
                       <property name="minimumSize">
                        <size>
                         <width>30</width>
@@ -449,6 +449,31 @@ background-color: transparent;</string>
                      <number>0</number>
                     </property>
                     <item>
+                     <widget class="QLabel" name="label_10">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>22</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>22</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string>TextLabel</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <layout class="QHBoxLayout" name="horizontalLayout_7">
                       <property name="spacing">
                        <number>0</number>
@@ -467,7 +492,7 @@ background-color: transparent;</string>
                        </spacer>
                       </item>
                       <item>
-                       <widget class="QLabel" name="label_31">
+                       <widget class="QLabel" name="labelPS1">
                         <property name="sizePolicy">
                          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                           <horstretch>0</horstretch>
@@ -730,7 +755,7 @@ background-color: transparent;</string>
                        </spacer>
                       </item>
                       <item>
-                       <widget class="QLabel" name="label_32">
+                       <widget class="QLabel" name="labelVG1">
                         <property name="minimumSize">
                          <size>
                           <width>20</width>
@@ -775,6 +800,9 @@ background-color: transparent;</string>
                        </spacer>
                       </item>
                      </layout>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="lineEdit_5"/>
                     </item>
                    </layout>
                   </item>
@@ -870,31 +898,6 @@ background-color: transparent;</string>
                       </property>
                      </widget>
                     </item>
-                    <item>
-                     <widget class="QLabel" name="label_10">
-                      <property name="minimumSize">
-                       <size>
-                        <width>3</width>
-                        <height>0</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>5</width>
-                        <height>250</height>
-                       </size>
-                      </property>
-                      <property name="text">
-                       <string/>
-                      </property>
-                      <property name="pixmap">
-                       <pixmap>images/barra_preta_v2.png</pixmap>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>true</bool>
-                      </property>
-                     </widget>
-                    </item>
                    </layout>
                   </item>
                  </layout>
@@ -941,7 +944,7 @@ background-color: transparent;</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="label_41">
+                     <widget class="QLabel" name="labelGV2">
                       <property name="minimumSize">
                        <size>
                         <width>30</width>
@@ -1028,7 +1031,7 @@ background-color: transparent;</string>
                        </spacer>
                       </item>
                       <item>
-                       <widget class="QLabel" name="label_33">
+                       <widget class="QLabel" name="labelPS2">
                         <property name="sizePolicy">
                          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                           <horstretch>0</horstretch>
@@ -1089,8 +1092,8 @@ background-color: transparent;</string>
                         <property name="spacing">
                          <number>0</number>
                         </property>
-                        <item row="0" column="0">
-                         <spacer name="horizontalSpacer_15">
+                        <item row="2" column="2">
+                         <spacer name="horizontalSpacer_18">
                           <property name="orientation">
                            <enum>Qt::Horizontal</enum>
                           </property>
@@ -1132,6 +1135,60 @@ background-color: transparent;</string>
                         </item>
                         <item row="0" column="2">
                          <spacer name="horizontalSpacer_16">
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                           <size>
+                            <width>40</width>
+                            <height>20</height>
+                           </size>
+                          </property>
+                         </spacer>
+                        </item>
+                        <item row="2" column="0">
+                         <spacer name="horizontalSpacer_17">
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                           <size>
+                            <width>40</width>
+                            <height>20</height>
+                           </size>
+                          </property>
+                         </spacer>
+                        </item>
+                        <item row="2" column="1">
+                         <widget class="QLabel" name="label_52">
+                          <property name="minimumSize">
+                           <size>
+                            <width>2</width>
+                            <height>50</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>2</width>
+                            <height>150</height>
+                           </size>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="pixmap">
+                           <pixmap>images/barra_preta_v2.png</pixmap>
+                          </property>
+                          <property name="scaledContents">
+                           <bool>true</bool>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="0" column="0">
+                         <spacer name="horizontalSpacer_15">
                           <property name="orientation">
                            <enum>Qt::Horizontal</enum>
                           </property>
@@ -1214,60 +1271,6 @@ background-color: transparent;</string>
                           </property>
                          </widget>
                         </item>
-                        <item row="2" column="0">
-                         <spacer name="horizontalSpacer_17">
-                          <property name="orientation">
-                           <enum>Qt::Horizontal</enum>
-                          </property>
-                          <property name="sizeHint" stdset="0">
-                           <size>
-                            <width>40</width>
-                            <height>20</height>
-                           </size>
-                          </property>
-                         </spacer>
-                        </item>
-                        <item row="2" column="1">
-                         <widget class="QLabel" name="label_52">
-                          <property name="minimumSize">
-                           <size>
-                            <width>2</width>
-                            <height>50</height>
-                           </size>
-                          </property>
-                          <property name="maximumSize">
-                           <size>
-                            <width>2</width>
-                            <height>150</height>
-                           </size>
-                          </property>
-                          <property name="text">
-                           <string/>
-                          </property>
-                          <property name="pixmap">
-                           <pixmap>images/barra_preta_v2.png</pixmap>
-                          </property>
-                          <property name="scaledContents">
-                           <bool>true</bool>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                         </widget>
-                        </item>
-                        <item row="2" column="2">
-                         <spacer name="horizontalSpacer_18">
-                          <property name="orientation">
-                           <enum>Qt::Horizontal</enum>
-                          </property>
-                          <property name="sizeHint" stdset="0">
-                           <size>
-                            <width>40</width>
-                            <height>20</height>
-                           </size>
-                          </property>
-                         </spacer>
-                        </item>
                        </layout>
                       </item>
                      </layout>
@@ -1291,7 +1294,7 @@ background-color: transparent;</string>
                        </spacer>
                       </item>
                       <item>
-                       <widget class="QLabel" name="label_43">
+                       <widget class="QLabel" name="labelVG2">
                         <property name="minimumSize">
                          <size>
                           <width>20</width>
@@ -1432,31 +1435,6 @@ background-color: transparent;</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="label_12">
-                      <property name="minimumSize">
-                       <size>
-                        <width>3</width>
-                        <height>0</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>5</width>
-                        <height>250</height>
-                       </size>
-                      </property>
-                      <property name="text">
-                       <string/>
-                      </property>
-                      <property name="pixmap">
-                       <pixmap>images/barra_preta_v2.png</pixmap>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>true</bool>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
                      <layout class="QHBoxLayout" name="horizontalLayout_2">
                       <property name="spacing">
                        <number>0</number>
@@ -1493,7 +1471,7 @@ background-color: transparent;</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLabel" name="label_14">
+                       <widget class="QLabel" name="labelGV3">
                         <property name="minimumSize">
                          <size>
                           <width>30</width>
@@ -1596,7 +1574,7 @@ background-color: transparent;</string>
                            </widget>
                           </item>
                           <item>
-                           <widget class="QLabel" name="label_69">
+                           <widget class="QLabel" name="labelGV4">
                             <property name="minimumSize">
                              <size>
                               <width>30</width>
@@ -1683,7 +1661,7 @@ background-color: transparent;</string>
                              </spacer>
                             </item>
                             <item>
-                             <widget class="QLabel" name="label_71">
+                             <widget class="QLabel" name="labelPS3">
                               <property name="sizePolicy">
                                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                                 <horstretch>0</horstretch>
@@ -1946,7 +1924,7 @@ background-color: transparent;</string>
                              </spacer>
                             </item>
                             <item>
-                             <widget class="QLabel" name="label_76">
+                             <widget class="QLabel" name="labelVG3">
                               <property name="minimumSize">
                                <size>
                                 <width>20</width>
@@ -2089,31 +2067,6 @@ background-color: transparent;</string>
                             </property>
                            </widget>
                           </item>
-                          <item>
-                           <widget class="QLabel" name="label_16">
-                            <property name="minimumSize">
-                             <size>
-                              <width>3</width>
-                              <height>0</height>
-                             </size>
-                            </property>
-                            <property name="maximumSize">
-                             <size>
-                              <width>5</width>
-                              <height>250</height>
-                             </size>
-                            </property>
-                            <property name="text">
-                             <string/>
-                            </property>
-                            <property name="pixmap">
-                             <pixmap>images/barra_preta_v2.png</pixmap>
-                            </property>
-                            <property name="scaledContents">
-                             <bool>true</bool>
-                            </property>
-                           </widget>
-                          </item>
                          </layout>
                         </item>
                        </layout>
@@ -2178,7 +2131,7 @@ background-color: transparent;</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLabel" name="label_104">
+                       <widget class="QLabel" name="labelGV5">
                         <property name="minimumSize">
                          <size>
                           <width>30</width>
@@ -2265,7 +2218,7 @@ background-color: transparent;</string>
                          </spacer>
                         </item>
                         <item>
-                         <widget class="QLabel" name="label_106">
+                         <widget class="QLabel" name="labelPS4">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                             <horstretch>0</horstretch>
@@ -2528,7 +2481,7 @@ background-color: transparent;</string>
                          </spacer>
                         </item>
                         <item>
-                         <widget class="QLabel" name="label_111">
+                         <widget class="QLabel" name="labelVG4">
                           <property name="minimumSize">
                            <size>
                             <width>20</width>
@@ -2727,24 +2680,24 @@ background-color: transparent;</string>
                      </layout>
                     </item>
                     <item>
-                     <widget class="QLabel" name="label_17">
+                     <widget class="QLabel" name="label_26">
                       <property name="minimumSize">
                        <size>
-                        <width>3</width>
-                        <height>0</height>
+                        <width>41</width>
+                        <height>41</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>5</width>
-                        <height>250</height>
+                        <width>41</width>
+                        <height>41</height>
                        </size>
                       </property>
                       <property name="text">
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>images/barra_preta_v2.png</pixmap>
+                       <pixmap>images/photon_shutter_v2.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -2758,225 +2711,6 @@ background-color: transparent;</string>
                     <property name="spacing">
                      <number>0</number>
                     </property>
-                    <item>
-                     <layout class="QHBoxLayout" name="horizontalLayout_43">
-                      <property name="spacing">
-                       <number>0</number>
-                      </property>
-                      <item>
-                       <widget class="QLabel" name="label_134">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="minimumSize">
-                         <size>
-                          <width>20</width>
-                          <height>2</height>
-                         </size>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>50</width>
-                          <height>2</height>
-                         </size>
-                        </property>
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="pixmap">
-                         <pixmap>images/barra_preta_v2.png</pixmap>
-                        </property>
-                        <property name="scaledContents">
-                         <bool>true</bool>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="label_135">
-                        <property name="minimumSize">
-                         <size>
-                          <width>30</width>
-                          <height>20</height>
-                         </size>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>30</width>
-                          <height>20</height>
-                         </size>
-                        </property>
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="pixmap">
-                         <pixmap>images/valvula_vermelha_v2.png</pixmap>
-                        </property>
-                        <property name="scaledContents">
-                         <bool>true</bool>
-                        </property>
-                        <property name="alignment">
-                         <set>Qt::AlignCenter</set>
-                        </property>
-                        <property name="buddy">
-                         <cstring></cstring>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="label_136">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="minimumSize">
-                         <size>
-                          <width>20</width>
-                          <height>2</height>
-                         </size>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>50</width>
-                          <height>2</height>
-                         </size>
-                        </property>
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="pixmap">
-                         <pixmap>images/barra_preta_v2.png</pixmap>
-                        </property>
-                        <property name="scaledContents">
-                         <bool>true</bool>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </item>
-                    <item>
-                     <layout class="QHBoxLayout" name="horizontalLayout_46">
-                      <property name="spacing">
-                       <number>0</number>
-                      </property>
-                      <item>
-                       <widget class="QLabel" name="label_143">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="minimumSize">
-                         <size>
-                          <width>20</width>
-                          <height>2</height>
-                         </size>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>50</width>
-                          <height>2</height>
-                         </size>
-                        </property>
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="pixmap">
-                         <pixmap>images/barra_preta_v2.png</pixmap>
-                        </property>
-                        <property name="scaledContents">
-                         <bool>true</bool>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="label_26">
-                        <property name="minimumSize">
-                         <size>
-                          <width>41</width>
-                          <height>41</height>
-                         </size>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>41</width>
-                          <height>41</height>
-                         </size>
-                        </property>
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="pixmap">
-                         <pixmap>images/photon_shutter_v2.png</pixmap>
-                        </property>
-                        <property name="scaledContents">
-                         <bool>true</bool>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="label_144">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="minimumSize">
-                         <size>
-                          <width>20</width>
-                          <height>2</height>
-                         </size>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>50</width>
-                          <height>2</height>
-                         </size>
-                        </property>
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="pixmap">
-                         <pixmap>images/barra_preta_v2.png</pixmap>
-                        </property>
-                        <property name="scaledContents">
-                         <bool>true</bool>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="label_18">
-                      <property name="minimumSize">
-                       <size>
-                        <width>3</width>
-                        <height>0</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>5</width>
-                        <height>250</height>
-                       </size>
-                      </property>
-                      <property name="text">
-                       <string/>
-                      </property>
-                      <property name="pixmap">
-                       <pixmap>images/barra_preta_v2.png</pixmap>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>true</bool>
-                      </property>
-                     </widget>
-                    </item>
                    </layout>
                   </item>
                  </layout>
@@ -3023,7 +2757,7 @@ background-color: transparent;</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="label_149">
+                     <widget class="QLabel" name="labelGV76">
                       <property name="minimumSize">
                        <size>
                         <width>30</width>
@@ -3110,7 +2844,7 @@ background-color: transparent;</string>
                        </spacer>
                       </item>
                       <item>
-                       <widget class="QLabel" name="label_151">
+                       <widget class="QLabel" name="labelPS5">
                         <property name="sizePolicy">
                          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                           <horstretch>0</horstretch>
@@ -3373,7 +3107,7 @@ background-color: transparent;</string>
                        </spacer>
                       </item>
                       <item>
-                       <widget class="QLabel" name="label_156">
+                       <widget class="QLabel" name="labelVG5">
                         <property name="minimumSize">
                          <size>
                           <width>20</width>
@@ -3458,7 +3192,7 @@ background-color: transparent;</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="label_28">
+                     <widget class="QLabel" name="labelGammaShutter">
                       <property name="minimumSize">
                        <size>
                         <width>41</width>
@@ -3498,7 +3232,7 @@ background-color: transparent;</string>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>100</width>
+                        <width>50</width>
                         <height>2</height>
                        </size>
                       </property>
@@ -3547,7 +3281,7 @@ background-color: transparent;</string>
                              </spacer>
                             </item>
                             <item>
-                             <widget class="QLabel" name="label_170">
+                             <widget class="QLabel" name="labelPS5_2">
                               <property name="sizePolicy">
                                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                                 <horstretch>0</horstretch>
@@ -3810,7 +3544,7 @@ background-color: transparent;</string>
                              </spacer>
                             </item>
                             <item>
-                             <widget class="QLabel" name="label_175">
+                             <widget class="QLabel" name="labelVG6">
                               <property name="minimumSize">
                                <size>
                                 <width>20</width>
@@ -4044,7 +3778,7 @@ background-color: transparent;</string>
                              </spacer>
                             </item>
                             <item>
-                             <widget class="QLabel" name="label_179">
+                             <widget class="QLabel" name="labelVG7">
                               <property name="minimumSize">
                                <size>
                                 <width>20</width>
@@ -4124,7 +3858,7 @@ background-color: transparent;</string>
                          </widget>
                         </item>
                         <item>
-                         <widget class="QLabel" name="label_181">
+                         <widget class="QLabel" name="labelGV7_2">
                           <property name="minimumSize">
                            <size>
                             <width>30</width>
@@ -4206,6 +3940,19 @@ background-color: transparent;</string>
             <layout class="QHBoxLayout" name="horizontalLayout_6">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_3">
+               <item>
+                <spacer name="verticalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
                <item>
                 <widget class="QLabel" name="label_7">
                  <property name="maximumSize">
@@ -4462,13 +4209,13 @@ background-color: transparent;</string>
                  <item>
                   <layout class="QVBoxLayout" name="verticalLayout_19">
                    <property name="spacing">
-                    <number>1</number>
+                    <number>6</number>
                    </property>
                    <property name="sizeConstraint">
                     <enum>QLayout::SetDefaultConstraint</enum>
                    </property>
                    <item>
-                    <widget class="QLabel" name="label_97">
+                    <widget class="QLabel" name="labelXbpm1Bool1">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                        <horstretch>0</horstretch>
@@ -4505,7 +4252,7 @@ background-color: transparent;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_98">
+                    <widget class="QLabel" name="labelXbpm1Bool2">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                        <horstretch>0</horstretch>
@@ -4542,7 +4289,7 @@ background-color: transparent;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_99">
+                    <widget class="QLabel" name="labelXbpm1Bool3">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                        <horstretch>0</horstretch>
@@ -4579,7 +4326,7 @@ background-color: transparent;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_100">
+                    <widget class="QLabel" name="labelXbpm1Bool4">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                        <horstretch>0</horstretch>
@@ -4616,7 +4363,7 @@ background-color: transparent;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_101">
+                    <widget class="QLabel" name="labelXbpm1Bool5">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                        <horstretch>0</horstretch>
@@ -4653,7 +4400,7 @@ background-color: transparent;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_102">
+                    <widget class="QLabel" name="labelXbpm1Bool6">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                        <horstretch>0</horstretch>
@@ -4697,6 +4444,19 @@ background-color: transparent;</string>
              </item>
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_13">
+               <item>
+                <spacer name="verticalSpacer_4">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
                <item>
                 <widget class="QLabel" name="label_8">
                  <property name="maximumSize">
@@ -4953,7 +4713,7 @@ background-color: transparent;</string>
                  <item>
                   <layout class="QVBoxLayout" name="verticalLayout_25">
                    <property name="spacing">
-                    <number>1</number>
+                    <number>6</number>
                    </property>
                    <property name="sizeConstraint">
                     <enum>QLayout::SetDefaultConstraint</enum>
@@ -5188,6 +4948,19 @@ background-color: transparent;</string>
              </item>
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_14">
+               <item>
+                <spacer name="verticalSpacer_5">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
                <item>
                 <widget class="QLabel" name="label_9">
                  <property name="maximumSize">
@@ -5444,7 +5217,7 @@ background-color: transparent;</string>
                  <item>
                   <layout class="QVBoxLayout" name="verticalLayout_28">
                    <property name="spacing">
-                    <number>1</number>
+                    <number>6</number>
                    </property>
                    <property name="sizeConstraint">
                     <enum>QLayout::SetDefaultConstraint</enum>
@@ -5679,6 +5452,19 @@ background-color: transparent;</string>
              </item>
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_15">
+               <item>
+                <spacer name="verticalSpacer_6">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
                <item>
                 <widget class="QLabel" name="label_19">
                  <property name="maximumSize">
@@ -5935,7 +5721,7 @@ background-color: transparent;</string>
                  <item>
                   <layout class="QVBoxLayout" name="verticalLayout_46">
                    <property name="spacing">
-                    <number>1</number>
+                    <number>6</number>
                    </property>
                    <property name="sizeConstraint">
                     <enum>QLayout::SetDefaultConstraint</enum>
