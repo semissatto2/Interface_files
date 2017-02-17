@@ -152,19 +152,19 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
             self.labelVG1_4.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
         else:
             self.labelVG1_4.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
-       if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG4')].value == 1:
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG4')].value == 1:
             self.labelVG_5.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
         else:
             self.labelVG1_5.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
-       if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG5')].value == 1:
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG5')].value == 1:
             self.labelVG1_6.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
         else:
             self.labelVG1_6.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
-       if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG6')].value == 1:
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG6')].value == 1:
             self.labelVG1_7.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
         else:
             self.labelVG1_7.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
-       if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG7')].value == 1:
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG7')].value == 1:
             self.labelVG1_8.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
         else:
             self.labelVG1_8.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))            
