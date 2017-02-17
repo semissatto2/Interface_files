@@ -167,7 +167,124 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG7')].value == 1:
             self.labelVG1_8.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
         else:
-            self.labelVG1_8.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))            
+            self.labelVG1_8.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
+
+        # Update PS's bools (w/ reset logic)
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-PS1')].value == 1:
+            self.labelPS1.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+        else:
+            self.labelPS1.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-PS2')].value == 1:
+            self.labelPS1_2.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+        else:
+            self.labelPS1_2.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-PS3')].value == 1:
+            self.labelPS1_4.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+        else:
+            self.labelPS1_4.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-PS4')].value == 1:
+            self.labelPS1_5.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+        else:
+            self.labelPS1_5.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-PS5')].value == 1:
+            self.labelPS1_6.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+        else:
+            self.labelPS1_6.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-PS6')].value == 1:
+            self.labelPS1_7.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+        else:
+            self.labelPS1_7.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
+
+            # Update Shutter Status
+        '''if EPSList[myEpics.getIndexPV('PV_DO_PPS_GAMMA_SHUTTER')].value == 0:
+            self.labelGammaShutter.setPixmap(QtGui.QPixmap("images/gamma_shutter_open.png"))
+        else:
+            self.labelGammaShuter.setPixmap(QtGui.QPixmap("images/gamma_shuter_closed.png"))'''
+
+        # Update TT[i], FIT bool
+        #Xbpm1 BOOLS
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-XBPM1-TT1')].value == 1:
+            self.labelXbpm1Bool1.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelXbpm1Bool1.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-XBPM1-TT2')].value == 1:
+            self.labelXbpm1Bool2.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelXbpm1Bool2.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-XBPM1-TT3')].value == 1:
+            self.labelXbpm1Bool3.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelXbpm1Bool3.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-XBPM1-TT4')].value == 1:
+            self.labelXbpm1Bool4.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelXbpm1Bool4.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-XBPM1-FIT')].value == 1:
+            self.labelXbpm1Bool5.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelXbpm1Bool5.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-XBPM1-TT')].value == 1:
+            self.labelXbpm1Bool6.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelXbpm1Bool6.setPixmap(QtGui.QPixmap("images/led_red.png"))
+
+        #Xbpm2 BOOLS
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-XBPM2-TT1')].value == 1:
+            self.labelXbpm2Bool.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelXbpm2Bool.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-XBPM2-TT2')].value == 1:
+            self.labelXbpm2Bool_2.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelXbpm2Bool_2.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-XBPM2-TT3')].value == 1:
+            self.labelXbpm2Bool_3.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelXbpm2Bool_3.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-XBPM2-TT4')].value == 1:
+            self.labelXbpm2Bool_4.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelXbpm2Bool_4.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-XBPM2-FIT')].value == 1:
+            self.labelXbpm2Bool_5.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelXbpm2Bool_5.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-XBPM2-TT')].value == 1:
+            self.labelXbpm2Bool_6.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelXbpm2Bool_6.setPixmap(QtGui.QPixmap("images/led_red.png"))
+
+        #Msk BOOLS
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-SLITS-TT1')].value == 1:
+            self.labelSlitsBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelSlitsBool.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-SLITS-TT2')].value == 1:
+            self.labelSlitsBool_2.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelSlitsBool_2.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-SLITS-TT3')].value == 1:
+            self.labelSlitsBool_3.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelSlitsBool_3.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-SLITS-TT4')].value == 1:
+            self.labelSlitsBool_4.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelSlitsBool_4.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-SLITS-FIT')].value == 1:
+            self.labelSlitsBool_5.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelSlitsBool_5.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-SLITS-TT')].value == 1:
+            self.labelSlitsBool_6.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelSlitsBool_6.setPixmap(QtGui.QPixmap("images/led_red.png"))
+
+        # Photon BOOLS
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-PS-TT1')].value == 1:
+            self.labelPhotonBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelPhotonBool.setPixmap(QtGui.QPixmap("images/led_red.png"))        
             
             
 # Window TempScreen #4 Class
