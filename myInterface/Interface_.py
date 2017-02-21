@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QStatusBar
-from PyQt5 import uic, QtCore, QtGui, QtWidgets
+from PyQt5 import uic, QtCore, QtGui
 import sys
 import myEpics
 import time
@@ -97,16 +97,11 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         self.threadclass = ThreadClass()
         self.threadclass.start()
         self.setGeometry(54,-8,1538,878)
-        #self.statusbar = QStatusBar()
-        #self.mylayout = QtWidgets.QVBoxLayout(self)
-        #self.mylayout.addWidget(self.statusbar)
-        #self.statusbar.showMessage('Some status bar message')
-        self.statusbar = QtWidgets.QStatusBar()
-        self.statusbar.setObjectName("statusbar")
+        self.statusbar = QStatusBar()
+        self.statusbar.showMessage('Some status bar message')
         self.mylayout = QtWidgets.QVBoxLayout()
         self.mylayout.addWidget(self.statusbar)
-        self.statusbar.showMessage('Some status bar message')
-
+        
        # Set things to my Window
         
        # Bind signal to method
@@ -190,27 +185,27 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-PS1')].value == 1:
             self.labelPS1.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
         else:
-            self.labelPS1.setPixmap(QtGui.QPixmap("images/retangulo_amarelo.png"))
+            self.labelPS1.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-PS2')].value == 1:
             self.labelPS1_2.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
         else:
-            self.labelPS1_2.setPixmap(QtGui.QPixmap("images/retangulo_amarelo.png"))
+            self.labelPS1_2.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-PS3')].value == 1:
             self.labelPS1_4.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
         else:
-            self.labelPS1_4.setPixmap(QtGui.QPixmap("images/retangulo_amarelo.png"))
+            self.labelPS1_4.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-PS4')].value == 1:
             self.labelPS1_5.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
         else:
-            self.labelPS1_5.setPixmap(QtGui.QPixmap("images/retangulo_amarelo.png"))
+            self.labelPS1_5.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-PS5')].value == 1:
             self.labelPS1_6.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
         else:
-            self.labelPS1_6.setPixmap(QtGui.QPixmap("images/retangulo_amarelo.png"))
+            self.labelPS1_6.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-PS6')].value == 1:
             self.labelPS1_7.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
         else:
-            self.labelPS1_7.setPixmap(QtGui.QPixmap("images/retangulo_amarelo.png"))
+            self.labelPS1_7.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
 
             # Update Shutter Status (0 - OPEN  / 1 - CLOSE)
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:GAMMA_STATUS_PPS')].value == 0:
@@ -239,11 +234,11 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-XBPM1-FIT')].value == 1:
             self.labelXbpm1Bool5.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
-            self.labelXbpm1Bool5.setPixmap(QtGui.QPixmap("images/led_yellow.png"))
+            self.labelXbpm1Bool5.setPixmap(QtGui.QPixmap("images/led_red.png"))
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-XBPM1-TT')].value == 1:
             self.labelXbpm1Bool6.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
-            self.labelXbpm1Bool6.setPixmap(QtGui.QPixmap("images/led_yellow.png"))
+            self.labelXbpm1Bool6.setPixmap(QtGui.QPixmap("images/led_red.png"))
 
         #Xbpm2 BOOLS
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-XBPM2-TT1')].value == 1:
@@ -265,11 +260,11 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-XBPM2-FIT')].value == 1:
             self.labelXbpm2Bool_5.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
-            self.labelXbpm2Bool_5.setPixmap(QtGui.QPixmap("images/led_yellow.png"))
+            self.labelXbpm2Bool_5.setPixmap(QtGui.QPixmap("images/led_red.png"))
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-XBPM2-TT')].value == 1:
             self.labelXbpm2Bool_6.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
-            self.labelXbpm2Bool_6.setPixmap(QtGui.QPixmap("images/led_yellow.png"))
+            self.labelXbpm2Bool_6.setPixmap(QtGui.QPixmap("images/led_red.png"))
 
         # Msk BOOLS
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-MSK-TT1')].value == 1:
@@ -291,11 +286,11 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-MSK-FIT')].value == 1:
             self.labelMskBool_5.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
-            self.labelMskBool_5.setPixmap(QtGui.QPixmap("images/led_yellow.png"))
+            self.labelMskBool_5.setPixmap(QtGui.QPixmap("images/led_red.png"))
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-MSK-TT')].value == 1:
             self.labelMskBool_6.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
-            self.labelMskBool_6.setPixmap(QtGui.QPixmap("images/led_yellow.png"))
+            self.labelMskBool_6.setPixmap(QtGui.QPixmap("images/led_red.png"))
 
         #Slits BOOLS
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-SLITS-TT1')].value == 1:
@@ -317,7 +312,7 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-SLITS-FIT')].value == 1:
             self.labelSlitsBool_5.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
-            self.labelSlitsBool_5.setPixmap(QtGui.QPixmap("images/led_yellow.png"))
+            self.labelSlitsBool_5.setPixmap(QtGui.QPixmap("images/led_red.png"))
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-SLITS-TT')].value == 1:
             self.labelSlitsBool_6.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
@@ -327,7 +322,7 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-PS-TT1')].value == 1:
             self.labelPhotonBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
-            self.labelPhotonBool.setPixmap(QtGui.QPixmap("images/led_yellow.png"))        
+            self.labelPhotonBool.setPixmap(QtGui.QPixmap("images/led_red.png"))        
 
         # GV status. PS: there are 3 states: OPEN (green), CLOSE (red) & ERROR (orange)
         ''' Logica utilizada
@@ -339,49 +334,49 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
             entao eh vermelho'''
                 # Slow GV
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:GV_ER_VAC-GV1')].value == 0:
-            self.labelGV1.setPixmap(QtGui.QPixmap("images/valvula_ERROR_amarela.png"))
+            self.labelGV1.setPixmap(QtGui.QPixmap("images/valvula_ERROR.png"))
         elif EPSList[myEpics.getIndexPV('IVUFE:EPS:VAC-GV1O')].value == 1:
             self.labelGV1.setPixmap(QtGui.QPixmap("images/valvula_verdee_v2.png"))
         else:
             self.labelGV1.setPixmap(QtGui.QPixmap("images/valvula_vermelha_v2.png"))
             
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:GV_ER_VAC-GV2')].value == 0:
-            self.labelGV2.setPixmap(QtGui.QPixmap("images/valvula_ERROR_amarela.png"))
+            self.labelGV2.setPixmap(QtGui.QPixmap("images/valvula_ERROR.png"))
         elif EPSList[myEpics.getIndexPV('IVUFE:EPS:VAC-GV2O')].value == 1:
             self.labelGV2.setPixmap(QtGui.QPixmap("images/valvula_verde_v2.png"))
         else:
             self.labelGV2.setPixmap(QtGui.QPixmap("images/valvula_vermelha_v2.png"))
             
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:GV_ER_M_GV3C')].value == 0:
-            self.labelGV3.setPixmap(QtGui.QPixmap("images/valvula_ERROR_amarela.png"))
+            self.labelGV3.setPixmap(QtGui.QPixmap("images/valvula_ERROR.png"))
         elif EPSList[myEpics.getIndexPV('IVUFE:EPS:VAC-GV3O')].value == 1:
             self.labelGV3.setPixmap(QtGui.QPixmap("images/valvula_verde_v2.png"))
         else:
             self.labelGV3.setPixmap(QtGui.QPixmap("images/valvula_vermelha_v2.png"))
             
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:GV_ER_VAC-GV4')].value == 0:
-            self.labelGV4.setPixmap(QtGui.QPixmap("images/valvula_ERROR_amarela.png"))
+            self.labelGV4.setPixmap(QtGui.QPixmap("images/valvula_ERROR.png"))
         elif EPSList[myEpics.getIndexPV('IVUFE:EPS:VAC-GV4O')].value == 1:
             self.labelGV4.setPixmap(QtGui.QPixmap("images/valvula_verde_v2.png"))
         else:
             self.labelGV4.setPixmap(QtGui.QPixmap("images/valvula_vermelha_v2.png"))
             
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:GV_ER_VAC-GV5')].value == 0:
-            self.labelGV5.setPixmap(QtGui.QPixmap("images/valvula_ERROR_amarela.png"))
+            self.labelGV5.setPixmap(QtGui.QPixmap("images/valvula_ERROR.png"))
         elif EPSList[myEpics.getIndexPV('IVUFE:EPS:VAC-GV5O')].value == 1:
             self.labelGV5.setPixmap(QtGui.QPixmap("images/valvula_verde_v2.png"))
         else:
             self.labelGV5.setPixmap(QtGui.QPixmap("images/valvula_vermelha_v2.png"))
 
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:GV_ER_VAC-GV6')].value == 0:
-            self.labelGV6.setPixmap(QtGui.QPixmap("images/valvula_ERROR_amarela.png"))
+            self.labelGV6.setPixmap(QtGui.QPixmap("images/valvula_ERROR.png"))
         elif EPSList[myEpics.getIndexPV('IVUFE:EPS:VAC-GV6O')].value == 1:
             self.labelGV6.setPixmap(QtGui.QPixmap("images/valvula_verde_v2.png"))
         else:
             self.labelGV6.setPixmap(QtGui.QPixmap("images/valvula_vermelha_v2.png"))            
                 # Fast GVs
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:GV_ER_VAC_FV1SC')].value == 0:
-            self.labelFV1.setPixmap(QtGui.QPixmap("images/valvula_ERROR_amarela_fast.png"))
+            self.labelFV1.setPixmap(QtGui.QPixmap("images/valvula_ERROR.png"))
         elif EPSList[myEpics.getIndexPV( 'IVUFE:EPS:EMA-FOE-VAC-FV1O')].value == 1:
             self.labelFV1.setPixmap(QtGui.QPixmap("images/valvula_verde_v2_FAST.png"))
         else:
