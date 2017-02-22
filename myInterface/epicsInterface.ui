@@ -14,8 +14,8 @@
    <string>EPICS Interface</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="resources.qrc">
-    <normaloff>:/images/logo_659x595.png</normaloff>:/images/logo_659x595.png</iconset>
+   <iconset>
+    <normaloff>images/logo_659x595.png</normaloff>images/logo_659x595.png</iconset>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0" rowspan="5">
@@ -37,8 +37,8 @@
         <string>BACK</string>
        </property>
        <property name="icon">
-        <iconset resource="resources.qrc">
-         <normaloff>:/images/green-back-button-icon-65921.png</normaloff>:/images/green-back-button-icon-65921.png</iconset>
+        <iconset>
+         <normaloff>images/green-back-button-icon-65921.png</normaloff>images/green-back-button-icon-65921.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -72,7 +72,7 @@
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="resources.qrc">:/images/logoSirius.png</pixmap>
+      <pixmap>images/logoSirius.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
