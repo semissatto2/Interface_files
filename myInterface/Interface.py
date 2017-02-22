@@ -80,7 +80,7 @@ class EpicsInterface(QWidget, Ui_Form_epicsInterface):
          if nome_da_pv != '':
              pv = PV(nome_da_pv)
              if pv.connected:
-                      pv_value = str(float(pv.value/10))
+                      pv_value = str(float(pv.value))
                       self.lineEdit_PvValue.setText(pv_value)
              else:
                       self.lineEdit_PvValue.setText('PV not connected')  
@@ -152,16 +152,12 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
             self.labelVG1_2.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
         else:
             self.labelVG1_2.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
-    #if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG3')].value) == 1:
-      #      self.labelVG1_3.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
-      #  else:
-        #    self.labelVG1_3.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))'''
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG3')].value == 1:
             self.labelVG1_4.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
         else:
             self.labelVG1_4.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG4')].value == 1:
-            self.labelVG_5.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+            self.labelVG1_5.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
         else:
             self.labelVG1_5.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG5')].value == 1:
@@ -499,7 +495,7 @@ class ThreadClass(QtCore.QThread):
         EPSList = list(range(280))
         while 1:
             EPSList = myEpics.pv     
-            time.sleep(0.4)
+            time.sleep(0.2)
        
             # Emit the signal
             self.sig.emit(EPSList)

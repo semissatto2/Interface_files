@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>447</width>
+    <height>349</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>60</y>
+     <width>331</width>
+     <height>192</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="showGrid">
+    <bool>true</bool>
+   </property>
+   <property name="gridStyle">
+    <enum>Qt::SolidLine</enum>
+   </property>
+   <property name="rowCount">
+    <number>8</number>
+   </property>
+   <property name="columnCount">
+    <number>12</number>
+   </property>
+   <attribute name="horizontalHeaderCascadingSectionResizes">
+    <bool>false</bool>
+   </attribute>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <column>
+    <property name="text">
+     <string>Item</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Event Date</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Alarm Text</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Alarm Class</string>
+    </property>
+   </column>
+   <column/>
+   <column/>
+   <column/>
+   <column/>
+   <column/>
+   <column/>
+   <column/>
+   <column/>
+   <item row="0" column="0">
+    <property name="text">
+     <string>fdsfsd</string>
+    </property>
+   </item>
+   <item row="0" column="4">
+    <property name="text">
+     <string/>
+    </property>
+   </item>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

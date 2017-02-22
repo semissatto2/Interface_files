@@ -335,7 +335,6 @@ def tamanhoArrayPVs():
     return len(readAIValues())
 
 def getIndexPV(name):
-    return pv.index(name)
     for i in range (len(pv)):
         if pv[i].pvname == name:
             return i

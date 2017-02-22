@@ -1,3 +1,12 @@
+'''
+    This code generates 3 lists from reading a .xls file.
+        1st list contains PV's names
+        2nd list contains alarm text of PV's names
+        3th list constains alarm class of PV's names
+    The index of each list corresponds to the same PV properties
+
+'''
+
 import pyexcel as pe
 
 records = pe.iget_records(file_name="Tabela_AlarmeEPICS.xls")
