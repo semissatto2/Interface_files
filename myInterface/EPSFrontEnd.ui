@@ -197,7 +197,7 @@ background-color: transparent;</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(192, 192, 192);
+            <string notr="true">background-color: transparent;
 border-color: rgb(64, 64, 64);
 border-width: 3px;</string>
            </property>

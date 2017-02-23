@@ -6,19 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>447</width>
+    <width>613</width>
     <height>349</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Alarm Screen - EPS Front End</string>
   </property>
   <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
      <x>30</x>
      <y>60</y>
-     <width>331</width>
+     <width>491</width>
      <height>192</height>
     </rect>
    </property>
@@ -35,7 +35,7 @@
     <number>8</number>
    </property>
    <property name="columnCount">
-    <number>12</number>
+    <number>6</number>
    </property>
    <attribute name="horizontalHeaderCascadingSectionResizes">
     <bool>false</bool>
@@ -55,7 +55,7 @@
    </column>
    <column>
     <property name="text">
-     <string>Event Date</string>
+     <string>Alarm Hour</string>
     </property>
    </column>
    <column>
@@ -68,22 +68,75 @@
      <string>Alarm Class</string>
     </property>
    </column>
-   <column/>
-   <column/>
-   <column/>
-   <column/>
-   <column/>
-   <column/>
-   <column/>
-   <column/>
-   <item row="0" column="0">
+   <column>
     <property name="text">
-     <string>fdsfsd</string>
+     <string>Alarm Date</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Index</string>
+    </property>
+   </column>
+   <item row="4" column="3">
+    <property name="background">
+     <brush brushstyle="SolidPattern">
+      <color alpha="255">
+       <red>0</red>
+       <green>255</green>
+       <blue>0</blue>
+      </color>
+     </brush>
     </property>
    </item>
-   <item row="0" column="4">
+   <item row="5" column="3">
+    <property name="background">
+     <brush brushstyle="SolidPattern">
+      <color alpha="255">
+       <red>255</red>
+       <green>85</green>
+       <blue>0</blue>
+      </color>
+     </brush>
+    </property>
+   </item>
+   <item row="6" column="0">
     <property name="text">
-     <string/>
+     <string>TESTE0</string>
+    </property>
+   </item>
+   <item row="6" column="1">
+    <property name="text">
+     <string>TESTE1</string>
+    </property>
+   </item>
+   <item row="6" column="2">
+    <property name="text">
+     <string>TESTE2</string>
+    </property>
+   </item>
+   <item row="6" column="3">
+    <property name="text">
+     <string>TESTE3</string>
+    </property>
+    <property name="background">
+     <brush brushstyle="SolidPattern">
+      <color alpha="255">
+       <red>255</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </brush>
+    </property>
+   </item>
+   <item row="6" column="4">
+    <property name="text">
+     <string>TESTE4</string>
+    </property>
+   </item>
+   <item row="6" column="5">
+    <property name="text">
+     <string>TESTE5</string>
     </property>
    </item>
   </widget>

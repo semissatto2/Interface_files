@@ -5,6 +5,7 @@
         3th list constains alarm class of PV's names
     The index of each list corresponds to the same PV properties
 
+Guilherme Teixeira Semissatto
 '''
 
 import pyexcel as pe
@@ -19,8 +20,8 @@ for record in records:
     lista_alarmText.append(record['Alarm text [en-US], Alarm text'])
     lista_alarmClass.append(record['Class'])
 
-def getAlarmClass(name):
+def alarmClass(name):
     return lista_alarmClass[lista_alarmName.index(name)]
 
-def getAlarmText(name):
+def alarmText(name):
     return lista_alarmText[lista_alarmName.index(name)]
