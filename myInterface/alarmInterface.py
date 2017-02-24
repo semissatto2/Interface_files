@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
 from PyQt5 import uic, QtCore, QtGui, QtWidgets
 import sys
 import myAlarm
-
+import time
 #Load UI FIles
 Ui_Form_alarmScreen, QtBaseClass = uic.loadUiType("alarmScreen.ui")
 
@@ -20,9 +20,45 @@ class AlarmScreen(QWidget, Ui_Form_alarmScreen):
         # Binds signals  - slots
         self.threadclass.sig.connect(self.updateAlarmScreen)
         # My slots
-    def updateAlarmScreen(self, myAlarmHandler()):
-        pass  # Deve ter toda logica de atualizacao da tabela
-    
+    def updateAlarmScreen( self, lista):
+         # Deve ter toda logica de atualizacao da tabela
+        #Para cada vetor properties_alarms[global_count] preencher uma linha da tabela
+         #Se o indice alarm_count foi incrementado,
+         #Joga os valores dos estados anteriores uma linha para baixo
+         #E cria uma nova linha, atribuindo os valores de lista[i][j]
+        self.tableWidget.setRowCount(10)
+        #print(type(lista[0][0]))
+        #itemItem = self.tableWidget.item(6,0)
+        #itemItem.setText(str(lista[0]))
+#        itemItem = self.tableWidget.item(6,0)
+#        itemItem.setText(str(lista[0]))
+
+        for i in range(len(lista)):
+            print (lista[i][i])
+            self.tableWidget.item(0,0).setText(str(lista[0][0]))
+#            self.tableWidget.item(i,1).setText(str(lista[i][1]))
+#            self.tableWidget.item(i,2).setText(str(lista[i][2]))
+#            self.tableWidget.item(i,3).setText(str(lista[i][3]))
+#            self.tableWidget.item(i,4).setText(str(lista[i][4]))
+#            self.tableWidget.item(i,5).setText(str(lista[i][5]))
+        
+            
+#        itemItem = self.tableWidget.item(6,0)
+#        self.tableWidget.item(6,0).setText(str(lista[0][0]))     #>>>>>THIS LINE WORKS ALONE
+        #itemAlarmHour = self.tableWidget.item(6,1)
+        #itemAlarmHour.setText(str(lista[4]))
+        #itemAlarmText = self.tableWidget.item(6,2)
+        #itemAlarmText.setText(str(lista[1]))
+        #itemAlarmClass = self.tableWidget.item(6,3)
+        #itemAlarmClass.setText(str(lista[2]))
+        #itemAlarmDate = self.tableWidget.item(6,4)
+        #itemAlarmDate.setText(str(lista[3]))        
+        #itemIndex = self.tableWidget.item(6,5)
+        #itemIndex.setText(str(lista[5]))
+        #self.lineEditCount.setText(str(lista))
+                 
+        print ("Pass update AlarmScreen")
+        
 # My Thread Alarm Handler Class
 class ThreadAlarmPoll(QtCore.QThread):
     # Create signals
@@ -32,14 +68,16 @@ class ThreadAlarmPoll(QtCore.QThread):
         super(ThreadAlarmPoll, self).__init__(parent)
 
     def run(self):
-        myAlarm.alarmPoll()
-
-        #Emit the signal
-        self.sig.emit(myAlarm.alarmHandler())
+        myAlarm.createAlarms()
+        while 1:
+            lista = myAlarm.properties_alarms
+            #Emit the signal
+            self.sig.emit(lista)
+            time.sleep(0.4)
 
 # Init Interface
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    window = AlarmSCreen()
+    window = AlarmScreen()
     window.show()
-    sys.exit(app_exec_())
+    sys.exit(app.exec_())
