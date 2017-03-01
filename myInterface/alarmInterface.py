@@ -1,83 +1,118 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
 from PyQt5 import uic, QtCore, QtGui, QtWidgets
 import sys
-import myAlarm
+import myAlarmHome
 import time
-#Load UI FIles
-Ui_Form_alarmScreen, QtBaseClass = uic.loadUiType("alarmScreen.ui")
+
+# Load UI FIles
+
+(Ui_Form_alarmScreen, QtBaseClass) = uic.loadUiType('alarmScreen.ui')
+
 
 # Window #1 Class
+
 class AlarmScreen(QWidget, Ui_Form_alarmScreen):
+
     def __init__(self, parent=None):
         super(AlarmScreen, self).__init__(parent)
         super(Ui_Form_alarmScreen, self).__init__()
         self.setupUi(self)
 
         # Add things to my WIndow
+
         self.threadclass = ThreadAlarmPoll()
         self.threadclass.start()
-        
-        # Binds signals  - slots
-        self.threadclass.sig.connect(self.updateAlarmScreen)
-        # My slots
-    def updateAlarmScreen( self, lista):
-         # Deve ter toda logica de atualizacao da tabela
-        #Para cada vetor properties_alarms[global_count] preencher uma linha da tabela
-         #Se o indice alarm_count foi incrementado,
-         #Joga os valores dos estados anteriores uma linha para baixo
-         #E cria uma nova linha, atribuindo os valores de lista[i][j]
-        self.tableWidget.setRowCount(10)
-        #print(type(lista[0][0]))
-        #itemItem = self.tableWidget.item(6,0)
-        #itemItem.setText(str(lista[0]))
-#        itemItem = self.tableWidget.item(6,0)
-#        itemItem.setText(str(lista[0]))
 
-        for i in range(len(lista)):
-            print (lista[i][i])
-            self.tableWidget.item(0,0).setText(str(lista[0][0]))
-#            self.tableWidget.item(i,1).setText(str(lista[i][1]))
-#            self.tableWidget.item(i,2).setText(str(lista[i][2]))
-#            self.tableWidget.item(i,3).setText(str(lista[i][3]))
-#            self.tableWidget.item(i,4).setText(str(lista[i][4]))
-#            self.tableWidget.item(i,5).setText(str(lista[i][5]))
+        # Binds signals  - slots
+
+        self.threadclass.sig.connect(self.updateAlarmScreen)
+
+    # My slots
+
+    def updateAlarmScreen(
+        self,
+        counter,
+        item_name,
+        data,
+        hora,
+        classe,
+        texto,
+        ):
         
-            
-#        itemItem = self.tableWidget.item(6,0)
-#        self.tableWidget.item(6,0).setText(str(lista[0][0]))     #>>>>>THIS LINE WORKS ALONE
-        #itemAlarmHour = self.tableWidget.item(6,1)
-        #itemAlarmHour.setText(str(lista[4]))
-        #itemAlarmText = self.tableWidget.item(6,2)
-        #itemAlarmText.setText(str(lista[1]))
-        #itemAlarmClass = self.tableWidget.item(6,3)
-        #itemAlarmClass.setText(str(lista[2]))
-        #itemAlarmDate = self.tableWidget.item(6,4)
-        #itemAlarmDate.setText(str(lista[3]))        
-        #itemIndex = self.tableWidget.item(6,5)
-        #itemIndex.setText(str(lista[5]))
-        #self.lineEditCount.setText(str(lista))
-                 
-        print ("Pass update AlarmScreen")
-        
+        aux = 0
+        self.tableWidget.setRowCount(counter)
+        for i in reversed(range(counter)):
+            for j in range(6):
+                item = QtWidgets.QTableWidgetItem()
+                if j == 0:
+                    item.setText(str(item_name[i]))
+                if j == 1:
+                    item.setText(str(hora[i]))
+                if j == 2:
+                    item.setText(str(texto[i]))
+                if j == 3:
+                    item.setText(str(classe[i]))
+                if j == 4:
+                    item.setText(str(data[i]))
+                if j == 5:
+                    item.setText(str(aux))
+                    aux += 1                    
+                self.tableWidget.setItem(aux,j, item)
+
+    print ('Pass update AlarmScreen')
+
+
 # My Thread Alarm Handler Class
+
 class ThreadAlarmPoll(QtCore.QThread):
+
     # Create signals
-    sig = QtCore.pyqtSignal(list)
-    
-    def __init__(self, parent = None):
+
+    sig = QtCore.pyqtSignal(
+        int,
+        list,
+        list,
+        list,
+        list,
+        list,
+        )
+
+    def __init__(self, parent=None):
         super(ThreadAlarmPoll, self).__init__(parent)
 
     def run(self):
-        myAlarm.createAlarms()
+        i = 0
         while 1:
-            lista = myAlarm.properties_alarms
-            #Emit the signal
-            self.sig.emit(lista)
+            myAlarmHome.alarmHandler(str(i))
+            i += 1
+
+            # Emit the signal
+
+            counter = myAlarmHome.alarm_count
+            data = myAlarmHome.data
+            hora = myAlarmHome.hora
+            texto = myAlarmHome.alarmText
+            classe = myAlarmHome.alarmClass
+            item_name = myAlarmHome.pvname
+            self.sig.emit(
+                counter,
+                item_name,
+                data,
+                hora,
+                classe,
+                texto,
+                )
             time.sleep(0.4)
 
+
 # Init Interface
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = AlarmScreen()
     window.show()
     sys.exit(app.exec_())
+
+			
