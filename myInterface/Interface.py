@@ -173,31 +173,31 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         else:
             self.labelVG1_8.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
         
-        # Update PS's bools (w/ reset logic)
+        # Update PS's bools (w/ reset logic) TROCAR retangulo por circulo
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-PS1')].value == 1:
-            self.labelPS1.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+            self.labelPS1.setPixmap(QtGui.QPixmap("images/circulo_verde_v2.png"))
         else:
-            self.labelPS1.setPixmap(QtGui.QPixmap("images/retangulo_amarelo.png"))
+            self.labelPS1.setPixmap(QtGui.QPixmap("images/circulo_vermelho_v2.png"))
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-PS2')].value == 1:
-            self.labelPS1_2.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+            self.labelPS1_2.setPixmap(QtGui.QPixmap("images/circulo_verde_v2.png.png"))
         else:
-            self.labelPS1_2.setPixmap(QtGui.QPixmap("images/retangulo_amarelo.png"))
+            self.labelPS1_2.setPixmap(QtGui.QPixmap("images/circulo_vermelho_v2.png"))
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-PS3')].value == 1:
-            self.labelPS1_4.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+            self.labelPS1_4.setPixmap(QtGui.QPixmap("images/circulo_verde_v2.png.png"))
         else:
-            self.labelPS1_4.setPixmap(QtGui.QPixmap("images/retangulo_amarelo.png"))
+            self.labelPS1_4.setPixmap(QtGui.QPixmap("images/circulo_vermelho_v2.png"))
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-PS4')].value == 1:
-            self.labelPS1_5.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+            self.labelPS1_5.setPixmap(QtGui.QPixmap("images/circulo_verde_v2.png.png"))
         else:
-            self.labelPS1_5.setPixmap(QtGui.QPixmap("images/retangulo_amarelo.png"))
+            self.labelPS1_5.setPixmap(QtGui.QPixmap("images/circulo_vermelho_v2.png"))
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-PS5')].value == 1:
-            self.labelPS1_6.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+            self.labelPS1_6.setPixmap(QtGui.QPixmap("images/circulo_verde_v2.png.png"))
         else:
-            self.labelPS1_6.setPixmap(QtGui.QPixmap("images/retangulo_amarelo.png"))
+            self.labelPS1_6.setPixmap(QtGui.QPixmap("images/circulo_vermelho_v2.png"))
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-PS6')].value == 1:
-            self.labelPS1_7.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
+            self.labelPS1_7.setPixmap(QtGui.QPixmap("images/circulo_verde_v2.png.png"))
         else:
-            self.labelPS1_7.setPixmap(QtGui.QPixmap("images/retangulo_amarelo.png"))
+            self.labelPS1_7.setPixmap(QtGui.QPixmap("images/circulo_vermelho_v2.png"))
 
             # Update Shutter Status (0 - OPEN  / 1 - CLOSE)
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:GAMMA_STATUS_PPS')].value == 0:
