@@ -6,31 +6,103 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>613</width>
+    <width>509</width>
     <height>349</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Alarm Screen - EPS Front End</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2">
-   <item>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QLineEdit" name="lineEditCount">
-       <property name="readOnly">
-        <bool>true</bool>
+      <widget class="QFrame" name="frame">
+       <property name="maximumSize">
+        <size>
+         <width>850</width>
+         <height>90</height>
+        </size>
        </property>
-       <property name="placeholderText">
-        <string extracomment="Alarm counter"/>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:0.484, y1:0.747505, x2:0.489, y2:1, stop:0.182796 rgba(22, 61, 90, 255), stop:0.811828 rgba(53, 123, 213, 255));</string>
        </property>
-       <property name="clearButtonEnabled">
-        <bool>true</bool>
-       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="label_15">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>81</width>
+            <height>81</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>images/LogoSirius_cortado.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Utopia</family>
+            <pointsize>22</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(231, 231, 231);
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string> ALARM SCREEN - EPS FRONT END</string>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </item>
      <item>
       <widget class="QTableWidget" name="tableWidget">
+       <property name="maximumSize">
+        <size>
+         <width>850</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
        <property name="autoFillBackground">
         <bool>false</bool>
        </property>
@@ -41,21 +113,14 @@
         <enum>Qt::SolidLine</enum>
        </property>
        <property name="rowCount">
-        <number>8</number>
+        <number>1</number>
        </property>
        <property name="columnCount">
-        <number>6</number>
+        <number>5</number>
        </property>
        <attribute name="horizontalHeaderCascadingSectionResizes">
         <bool>false</bool>
        </attribute>
-       <row/>
-       <row/>
-       <row/>
-       <row/>
-       <row/>
-       <row/>
-       <row/>
        <row/>
        <column>
         <property name="text">
@@ -82,81 +147,9 @@
          <string>Alarm Date</string>
         </property>
        </column>
-       <column>
-        <property name="text">
-         <string>Index</string>
-        </property>
-       </column>
        <item row="0" column="0">
         <property name="text">
-         <string>TESTE_0</string>
-        </property>
-       </item>
-       <item row="4" column="3">
-        <property name="text">
          <string/>
-        </property>
-        <property name="background">
-         <brush brushstyle="SolidPattern">
-          <color alpha="255">
-           <red>0</red>
-           <green>255</green>
-           <blue>0</blue>
-          </color>
-         </brush>
-        </property>
-       </item>
-       <item row="5" column="3">
-        <property name="text">
-         <string/>
-        </property>
-        <property name="background">
-         <brush brushstyle="SolidPattern">
-          <color alpha="255">
-           <red>255</red>
-           <green>85</green>
-           <blue>0</blue>
-          </color>
-         </brush>
-        </property>
-       </item>
-       <item row="6" column="0">
-        <property name="text">
-         <string>TESTE0</string>
-        </property>
-       </item>
-       <item row="6" column="1">
-        <property name="text">
-         <string>TESTE1</string>
-        </property>
-       </item>
-       <item row="6" column="2">
-        <property name="text">
-         <string>TESTE2</string>
-        </property>
-       </item>
-       <item row="6" column="3">
-        <property name="text">
-         <string>TESTE3</string>
-        </property>
-        <property name="background">
-         <brush brushstyle="SolidPattern">
-          <color alpha="255">
-           <red>255</red>
-           <green>0</green>
-           <blue>0</blue>
-          </color>
-         </brush>
-        </property>
-       </item>
-       <item row="6" column="4">
-        <property name="text">
-         <string>TESTE4</string>
-        </property>
-       </item>
-       <item row="6" column="5">
-        <property name="text">
-         <string>TESTE5</string>
         </property>
        </item>
       </widget>

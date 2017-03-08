@@ -3,7 +3,7 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
 from PyQt5 import uic, QtCore, QtGui, QtWidgets
 import sys
-import myAlarmHome
+import myAlarm
 import time
 
 # Load UI FIles
@@ -54,14 +54,22 @@ class AlarmScreen(QWidget, Ui_Form_alarmScreen):
                     item.setText(str(texto[i]))
                 if j == 3:
                     item.setText(str(classe[i]))
+                    if classe[i] == 'Defeito':
+                        brush = QtGui.QBrush(QtGui.QColor(255, 255, 0))
+                        brush.setStyle(QtCore.Qt.SolidPattern)
+                        item.setBackground(brush)
+                    if classe[i] == 'Falha':
+                        brush = QtGui.QBrush(QtGui.QColor(255, 0, 0))
+                        brush.setStyle(QtCore.Qt.SolidPattern)
+                        item.setBackground(brush)
                 if j == 4:
                     item.setText(str(data[i]))
                 if j == 5:
                     item.setText(str(aux))
-                    aux += 1                    
+                    aux += 1
+                                       
                 self.tableWidget.setItem(aux,j, item)
 
-    print ('Pass update AlarmScreen')
 
 
 # My Thread Alarm Handler Class
@@ -83,28 +91,21 @@ class ThreadAlarmPoll(QtCore.QThread):
         super(ThreadAlarmPoll, self).__init__(parent)
 
     def run(self):
-        i = 0
+        myAlarm.createAlarms()
         while 1:
-            myAlarmHome.alarmHandler(str(i))
-            i += 1
-
-            # Emit the signal
-
-            counter = myAlarmHome.alarm_count
-            data = myAlarmHome.data
-            hora = myAlarmHome.hora
-            texto = myAlarmHome.alarmText
-            classe = myAlarmHome.alarmClass
-            item_name = myAlarmHome.pvname
-            self.sig.emit(
-                counter,
-                item_name,
-                data,
-                hora,
-                classe,
-                texto,
-                )
-            time.sleep(0.4)
+            
+            #pass
+            # Emit the signal if alarms was created with sucess
+            if myAlarm.flag_alarmes_criados:
+                counter = myAlarm.alarm_count
+                data = myAlarm.data
+                hora = myAlarm.hora
+                texto = myAlarm.alarmText
+                classe = myAlarm.alarmClass
+                item_name = myAlarm.pv_names
+                self.sig.emit(counter,item_name,data, hora,classe,texto)
+                #print (counter)
+            time.sleep(10)
 
 
 # Init Interface
