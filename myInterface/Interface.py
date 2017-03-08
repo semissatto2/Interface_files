@@ -341,7 +341,7 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         else:
             self.labelGV2.setPixmap(QtGui.QPixmap("images/valvula_vermelha_v2.png"))
             
-        if EPSList[myEpics.getIndexPV('IVUFE:EPS:GV_ER_GV3')].value == 0:
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:GV_ER_VAC-GV3')].value == 0:
             self.labelGV3.setPixmap(QtGui.QPixmap("images/valvula_ERROR_amarela.png"))
         elif EPSList[myEpics.getIndexPV('IVUFE:EPS:VAC-GV3O')].value == 1:
            self.labelGV3.setPixmap(QtGui.QPixmap("images/valvula_verde_v2.png"))
