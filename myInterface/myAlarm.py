@@ -42,6 +42,7 @@ Cria um objeto Alarm.alarm do EPICS para cada nome de alarme lido da planilha do
 def createAlarms():
      print ("Creating alarms objects...")
      global flag_alarmes_criados
+     flag_alarmes_criados = 0     
      for i in range(len(myExcel.lista_alarmName)):
          lista_alarms[i] = Alarm(pvname= pv_alarm_names[i], comparison = 'eq', callback = alarmHandler, trip_point = 0, alert_delay = 0.1)
      flag_alarmes_criados = 1

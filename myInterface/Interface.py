@@ -1,7 +1,10 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QStatusBar
 from PyQt5 import uic, QtCore, QtGui, QtWidgets
 import sys
 import myEpics
+import myAlarm
 import time
 from epics import PV
 from pydm import PyDMApplication
@@ -96,6 +99,8 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         # Add things to my Window
         self.threadclass = ThreadClass()
         self.threadclass.start()
+        self.threadclass_alarms = ThreadAlarmPoll()
+        self.threadclass_alarms.start()
         self.setGeometry(54,-8,1538,878)
         
        # Set things to my Window
@@ -104,6 +109,7 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         self.pushButtonBack.clicked.connect(self.onClickBack)
         self.pushButtonOpenArchiver.clicked.connect(self.openArchiver)
         self.threadclass.sig.connect(self.updateScreen)
+        self.threadclass_alarms.sig_alarms.connect(self.updateAlarmScreen)        
     
     def onClickBack(self):
         self.close()
@@ -114,6 +120,45 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         self.archiverInterface = archiverInterface()
         self.archiverInterface.show()
         #self.close()
+
+    def updateAlarmScreen(
+        self,
+        counter,
+        item_name,
+        data,
+        hora,
+        classe,
+        texto,
+        ):
+        
+        aux = 0
+        self.tableWidget.setRowCount(counter)
+        for i in reversed(range(counter)):
+            for j in range(6):
+                item = QtWidgets.QTableWidgetItem()
+                if j == 0:
+                    item.setText(str(item_name[i]))
+                if j == 1:
+                    item.setText(str(hora[i]))
+                if j == 2:
+                    item.setText(str(texto[i]))
+                if j == 3:
+                    item.setText(str(classe[i]))
+                    if classe[i] == 'Defeito':
+                        brush = QtGui.QBrush(QtGui.QColor(255, 255, 0))
+                        brush.setStyle(QtCore.Qt.SolidPattern)
+                        item.setBackground(brush)
+                    if classe[i] == 'Falha':
+                        brush = QtGui.QBrush(QtGui.QColor(255, 0, 0))
+                        brush.setStyle(QtCore.Qt.SolidPattern)
+                        item.setBackground(brush)
+                if j == 4:
+                    item.setText(str(data[i]))
+                if j == 5:
+                    item.setText(str(aux))
+                    aux += 1
+                                       
+                self.tableWidget.setItem(aux,j, item)        
 
     def updateScreen(self, EPSList):
         # Update TT[i], FIT
@@ -467,7 +512,8 @@ class archiverInterface(QWidget, Ui_Form_archiverInterface):
         self.window = TelaInicial()
         self.window.show()
         
-        
+# Threads
+
 class ThreadTempScreen(QtCore.QThread):
     # Create the signal
     sig = QtCore.pyqtSignal(list)
@@ -499,6 +545,41 @@ class ThreadClass(QtCore.QThread):
        
             # Emit the signal
             self.sig.emit(EPSList)
+
+# My Thread Alarm Handler Class
+
+class ThreadAlarmPoll(QtCore.QThread):
+
+    # Create signals
+
+    sig_alarms = QtCore.pyqtSignal(
+        int,
+        list,
+        list,
+        list,
+        list,
+        list,
+        )
+
+    def __init__(self, parent=None):
+        super(ThreadAlarmPoll, self).__init__(parent)
+
+    def run(self):
+        myAlarm.createAlarms()
+        while 1:
+            
+            #pass
+            # Emit the signal if alarms was created with sucess
+            if myAlarm.flag_alarmes_criados:
+                counter = myAlarm.alarm_count
+                data = myAlarm.data
+                hora = myAlarm.hora
+                texto = myAlarm.alarmText
+                classe = myAlarm.alarmClass
+                item_name = myAlarm.pv_names
+                self.sig_alarms.emit(counter,item_name,data, hora,classe,texto)
+                #print (counter)
+            time.sleep(10)            
 
 # Init interface
 if __name__ == '__main__':
