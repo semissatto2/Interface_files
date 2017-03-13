@@ -213,10 +213,11 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
             self.labelVG1_7.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
         else:
             self.labelVG1_7.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
-        if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG7')].value == 1:
+       # This section is commented because the automation system declared a VG variable without necessity     
+        '''if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG7')].value == 1:
             self.labelVG1_8.setPixmap(QtGui.QPixmap("images/retangulo_verde_v2.png"))
         else:
-            self.labelVG1_8.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))
+            self.labelVG1_8.setPixmap(QtGui.QPixmap("images/retangulo_vermelho_v2.png"))'''
         
         # Update PS's bools (w/ reset logic) TROCAR retangulo por circulo
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-PS1')].value == 1:

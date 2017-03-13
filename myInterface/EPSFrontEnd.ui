@@ -242,35 +242,107 @@ border-width: 3px;</string>
                </widget>
               </item>
               <item>
-               <widget class="QLabel" name="labelGV1">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>30</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="pixmap">
-                 <pixmap>images/valvula_vermelha_v2.png</pixmap>
-                </property>
-                <property name="scaledContents">
-                 <bool>true</bool>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="buddy">
-                 <cstring>Temperaturas</cstring>
-                </property>
-               </widget>
+               <layout class="QVBoxLayout" name="verticalLayout_42">
+                <item>
+                 <spacer name="verticalSpacer_9">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_44">
+                  <property name="font">
+                   <font>
+                    <family>Sans Serif</family>
+                    <pointsize>8</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="textFormat">
+                   <enum>Qt::AutoText</enum>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="labelGV1">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap>images/valvula_vermelha_v2.png</pixmap>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="buddy">
+                   <cstring>Temperaturas</cstring>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_45">
+                  <property name="font">
+                   <font>
+                    <family>Sans Serif</family>
+                    <pointsize>8</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>GV1</string>
+                  </property>
+                  <property name="textFormat">
+                   <enum>Qt::AutoText</enum>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_10">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
               </item>
              </layout>
             </item>
@@ -318,7 +390,7 @@ border-width: 3px;</string>
                    <string notr="true">background-color: transparent;</string>
                   </property>
                   <property name="text">
-                   <string/>
+                   <string>PS1</string>
                   </property>
                  </widget>
                 </item>
@@ -845,35 +917,107 @@ border-width: 3px;</string>
                </layout>
               </item>
               <item>
-               <widget class="QLabel" name="labelGV2">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>30</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="pixmap">
-                 <pixmap>images/valvula_vermelha_v2.png</pixmap>
-                </property>
-                <property name="scaledContents">
-                 <bool>true</bool>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="buddy">
-                 <cstring>Temperaturas</cstring>
-                </property>
-               </widget>
+               <layout class="QVBoxLayout" name="verticalLayout_43">
+                <item>
+                 <spacer name="verticalSpacer_11">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_46">
+                  <property name="font">
+                   <font>
+                    <family>Sans Serif</family>
+                    <pointsize>8</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="textFormat">
+                   <enum>Qt::AutoText</enum>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="labelGV2">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap>images/valvula_vermelha_v2.png</pixmap>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="buddy">
+                   <cstring>Temperaturas</cstring>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_50">
+                  <property name="font">
+                   <font>
+                    <family>Sans Serif</family>
+                    <pointsize>8</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>GV2</string>
+                  </property>
+                  <property name="textFormat">
+                   <enum>Qt::AutoText</enum>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_12">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
               </item>
              </layout>
             </item>
@@ -921,7 +1065,7 @@ border-width: 3px;</string>
                    <string notr="true">background-color: transparent;</string>
                   </property>
                   <property name="text">
-                   <string/>
+                   <string>PS2</string>
                   </property>
                  </widget>
                 </item>
@@ -1445,68 +1589,6 @@ border-width: 3px;</string>
                </layout>
               </item>
               <item>
-               <widget class="QLabel" name="labelGV3">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>30</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="pixmap">
-                 <pixmap>images/valvula_vermelha_v2.png</pixmap>
-                </property>
-                <property name="scaledContents">
-                 <bool>true</bool>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="buddy">
-                 <cstring>Temperaturas</cstring>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="labelLinha_8">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>20</width>
-                  <height>2</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>2</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="pixmap">
-                 <pixmap>images/barra_preta_v2.png</pixmap>
-                </property>
-                <property name="scaledContents">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
                <layout class="QVBoxLayout" name="verticalLayout_38">
                 <item>
                  <spacer name="verticalSpacer_4">
@@ -1525,10 +1607,10 @@ border-width: 3px;</string>
                  <widget class="QLabel" name="label_37">
                   <property name="font">
                    <font>
-                    <family>Utopia</family>
-                    <pointsize>10</pointsize>
-                    <weight>75</weight>
-                    <bold>true</bold>
+                    <family>Sans Serif</family>
+                    <pointsize>8</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
                    </font>
                   </property>
                   <property name="text">
@@ -1577,10 +1659,92 @@ border-width: 3px;</string>
                  <widget class="QLabel" name="label_39">
                   <property name="font">
                    <font>
-                    <family>Utopia</family>
-                    <pointsize>10</pointsize>
-                    <weight>75</weight>
-                    <bold>true</bold>
+                    <family>Sans Serif</family>
+                    <pointsize>8</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>FV1</string>
+                  </property>
+                  <property name="textFormat">
+                   <enum>Qt::AutoText</enum>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_5">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelLinha_8">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>20</width>
+                  <height>2</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>50</width>
+                  <height>2</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap>images/barra_preta_v2.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_44">
+                <item>
+                 <spacer name="verticalSpacer_13">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_51">
+                  <property name="font">
+                   <font>
+                    <family>Sans Serif</family>
+                    <pointsize>8</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
                    </font>
                   </property>
                   <property name="text">
@@ -1595,7 +1759,59 @@ border-width: 3px;</string>
                  </widget>
                 </item>
                 <item>
-                 <spacer name="verticalSpacer_5">
+                 <widget class="QLabel" name="labelGV3">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap>images/valvula_vermelha_v2.png</pixmap>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="buddy">
+                   <cstring>Temperaturas</cstring>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_53">
+                  <property name="font">
+                   <font>
+                    <family>Sans Serif</family>
+                    <pointsize>8</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>GV3</string>
+                  </property>
+                  <property name="textFormat">
+                   <enum>Qt::AutoText</enum>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_14">
                   <property name="orientation">
                    <enum>Qt::Vertical</enum>
                   </property>
@@ -1655,7 +1871,7 @@ border-width: 3px;</string>
                    <string notr="true">background-color: transparent;</string>
                   </property>
                   <property name="text">
-                   <string/>
+                   <string>PS3</string>
                   </property>
                  </widget>
                 </item>
@@ -2182,35 +2398,107 @@ border-width: 3px;</string>
                </layout>
               </item>
               <item>
-               <widget class="QLabel" name="labelGV4">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>30</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="pixmap">
-                 <pixmap>images/valvula_vermelha_v2.png</pixmap>
-                </property>
-                <property name="scaledContents">
-                 <bool>true</bool>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="buddy">
-                 <cstring>Temperaturas</cstring>
-                </property>
-               </widget>
+               <layout class="QVBoxLayout" name="verticalLayout_45">
+                <item>
+                 <spacer name="verticalSpacer_15">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_54">
+                  <property name="font">
+                   <font>
+                    <family>Sans Serif</family>
+                    <pointsize>8</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="textFormat">
+                   <enum>Qt::AutoText</enum>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="labelGV4">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap>images/valvula_vermelha_v2.png</pixmap>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="buddy">
+                   <cstring>Temperaturas</cstring>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_55">
+                  <property name="font">
+                   <font>
+                    <family>Sans Serif</family>
+                    <pointsize>8</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>GV4</string>
+                  </property>
+                  <property name="textFormat">
+                   <enum>Qt::AutoText</enum>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_16">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
               </item>
              </layout>
             </item>
@@ -2258,7 +2546,7 @@ border-width: 3px;</string>
                    <string notr="true">background-color: transparent;</string>
                   </property>
                   <property name="text">
-                   <string/>
+                   <string>PS4</string>
                   </property>
                  </widget>
                 </item>
@@ -2894,35 +3182,107 @@ border-width: 3px;</string>
                </widget>
               </item>
               <item>
-               <widget class="QLabel" name="labelGV5">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>30</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="pixmap">
-                 <pixmap>images/valvula_vermelha_v2.png</pixmap>
-                </property>
-                <property name="scaledContents">
-                 <bool>true</bool>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="buddy">
-                 <cstring>Temperaturas</cstring>
-                </property>
-               </widget>
+               <layout class="QVBoxLayout" name="verticalLayout_46">
+                <item>
+                 <spacer name="verticalSpacer_17">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_56">
+                  <property name="font">
+                   <font>
+                    <family>Sans Serif</family>
+                    <pointsize>8</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="textFormat">
+                   <enum>Qt::AutoText</enum>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="labelGV1_8">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap>images/valvula_vermelha_v2.png</pixmap>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="buddy">
+                   <cstring>Temperaturas</cstring>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_58">
+                  <property name="font">
+                   <font>
+                    <family>Sans Serif</family>
+                    <pointsize>8</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>GV5</string>
+                  </property>
+                  <property name="textFormat">
+                   <enum>Qt::AutoText</enum>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_18">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
               </item>
              </layout>
             </item>
@@ -2970,7 +3330,7 @@ border-width: 3px;</string>
                    <string notr="true">background-color: transparent;</string>
                   </property>
                   <property name="text">
-                   <string/>
+                   <string>PS5</string>
                   </property>
                  </widget>
                 </item>
@@ -3194,56 +3554,18 @@ border-width: 3px;</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="2" column="0">
-                   <spacer name="horizontalSpacer_75">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>40</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                  <item row="2" column="1">
-                   <widget class="QLabel" name="label_68">
-                    <property name="minimumSize">
-                     <size>
-                      <width>2</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>2</width>
-                      <height>150</height>
-                     </size>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap>images/barra_preta_v2.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                    <property name="alignment">
-                     <set>Qt::AlignCenter</set>
-                    </property>
-                   </widget>
-                  </item>
                   <item row="2" column="2">
-                   <spacer name="horizontalSpacer_76">
+                   <spacer name="verticalSpacer_3">
                     <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeType">
+                     <enum>QSizePolicy::Maximum</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
-                      <width>40</width>
-                      <height>20</height>
+                      <width>20</width>
+                      <height>168</height>
                      </size>
                     </property>
                    </spacer>
@@ -3257,64 +3579,6 @@ border-width: 3px;</string>
                 <property name="spacing">
                  <number>0</number>
                 </property>
-                <item>
-                 <spacer name="horizontalSpacer_77">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QLabel" name="labelVG1_6">
-                  <property name="minimumSize">
-                   <size>
-                    <width>20</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>20</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-color: transparent;
-</string>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="pixmap">
-                   <pixmap>images/retangulo_vermelho_v2.png</pixmap>
-                  </property>
-                  <property name="scaledContents">
-                   <bool>true</bool>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignCenter</set>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_78">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
                </layout>
               </item>
               <item>
@@ -3331,39 +3595,6 @@ border-width: 3px;</string>
                    </size>
                   </property>
                  </spacer>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEditVG_6">
-                  <property name="minimumSize">
-                   <size>
-                    <width>60</width>
-                    <height>22</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>60</width>
-                    <height>22</height>
-                   </size>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <family>Utopia</family>
-                    <pointsize>11</pointsize>
-                    <weight>75</weight>
-                    <bold>true</bold>
-                   </font>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignCenter</set>
-                  </property>
-                  <property name="readOnly">
-                   <bool>true</bool>
-                  </property>
-                  <property name="placeholderText">
-                   <string>Pressure</string>
-                  </property>
-                 </widget>
                 </item>
                 <item>
                  <spacer name="horizontalSpacer_80">
@@ -3518,7 +3749,7 @@ border-width: 3px;</string>
                    <string notr="true">background-color: transparent;</string>
                   </property>
                   <property name="text">
-                   <string/>
+                   <string>PS6</string>
                   </property>
                  </widget>
                 </item>
@@ -3819,7 +4050,7 @@ border-width: 3px;</string>
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLabel" name="labelVG1_7">
+                 <widget class="QLabel" name="labelVG1_6">
                   <property name="minimumSize">
                    <size>
                     <width>20</width>
@@ -4167,7 +4398,7 @@ border-width: 3px;</string>
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLabel" name="labelVG1_8">
+                 <widget class="QLabel" name="labelVG1_7">
                   <property name="minimumSize">
                    <size>
                     <width>20</width>
@@ -4284,35 +4515,107 @@ border-width: 3px;</string>
                <number>0</number>
               </property>
               <item>
-               <widget class="QLabel" name="labelGV6">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>30</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="pixmap">
-                 <pixmap>images/valvula_vermelha_v2.png</pixmap>
-                </property>
-                <property name="scaledContents">
-                 <bool>true</bool>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="buddy">
-                 <cstring>Temperaturas</cstring>
-                </property>
-               </widget>
+               <layout class="QVBoxLayout" name="verticalLayout_49">
+                <item>
+                 <spacer name="verticalSpacer_19">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_59">
+                  <property name="font">
+                   <font>
+                    <family>Sans Serif</family>
+                    <pointsize>8</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="textFormat">
+                   <enum>Qt::AutoText</enum>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="labelGV1_9">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap>images/valvula_vermelha_v2.png</pixmap>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="buddy">
+                   <cstring>Temperaturas</cstring>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_62">
+                  <property name="font">
+                   <font>
+                    <family>Sans Serif</family>
+                    <pointsize>8</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>GV6</string>
+                  </property>
+                  <property name="textFormat">
+                   <enum>Qt::AutoText</enum>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_20">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
               </item>
               <item>
                <widget class="QLabel" name="labelLinha_23">
@@ -4404,7 +4707,7 @@ border-width: 3px;</string>
            <item>
             <widget class="QWidget" name="Temperaturas" native="true">
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(192, 192, 192);</string>
+              <string notr="true">background-color: transparent;</string>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_6">
               <item>
@@ -4584,6 +4887,12 @@ border-width: 3px;</string>
                    <layout class="QVBoxLayout" name="verticalLayout_11">
                     <item>
                      <widget class="QLineEdit" name="lineEditXbpm1">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -4602,6 +4911,12 @@ border-width: 3px;</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEditXbpm1_2">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -4620,6 +4935,12 @@ border-width: 3px;</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEditXbpm1_3">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -4638,6 +4959,12 @@ border-width: 3px;</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEditXbpm1_4">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -4656,6 +4983,12 @@ border-width: 3px;</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEditXbpm1_5">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -4674,6 +5007,12 @@ border-width: 3px;</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEditXbpm1_6">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -5105,6 +5444,12 @@ border-width: 3px;</string>
                    <layout class="QVBoxLayout" name="verticalLayout_18">
                     <item>
                      <widget class="QLineEdit" name="lineEditXbpm2">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -5123,6 +5468,12 @@ border-width: 3px;</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEditXbpm2_2">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -5141,6 +5492,12 @@ border-width: 3px;</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEditXbpm2_3">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -5159,6 +5516,12 @@ border-width: 3px;</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEditXbpm2_4">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -5177,6 +5540,12 @@ border-width: 3px;</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEditXbpm2_5">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -5195,6 +5564,12 @@ border-width: 3px;</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEditXbpm2_6">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -5626,6 +6001,12 @@ border-width: 3px;</string>
                    <layout class="QVBoxLayout" name="verticalLayout_24">
                     <item>
                      <widget class="QLineEdit" name="lineEditMsk">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -5644,6 +6025,12 @@ border-width: 3px;</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEditMsk_2">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -5662,6 +6049,12 @@ border-width: 3px;</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEditMsk_3">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -5680,6 +6073,12 @@ border-width: 3px;</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEditMsk_4">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -5698,6 +6097,12 @@ border-width: 3px;</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEditMsk_5">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -5716,6 +6121,12 @@ border-width: 3px;</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEditMsk_6">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -6147,6 +6558,12 @@ border-width: 3px;</string>
                    <layout class="QVBoxLayout" name="verticalLayout_37">
                     <item>
                      <widget class="QLineEdit" name="lineEditSlits">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -6165,6 +6582,12 @@ border-width: 3px;</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEditSlits_2">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -6183,6 +6606,12 @@ border-width: 3px;</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEditSlits_3">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -6201,6 +6630,12 @@ border-width: 3px;</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEditSlits_4">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -6219,6 +6654,12 @@ border-width: 3px;</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEditSlits_5">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -6237,6 +6678,12 @@ border-width: 3px;</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEditSlits_6">
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <family>Utopia</family>
@@ -6573,6 +7020,12 @@ border-width: 3px;</string>
                       </item>
                       <item>
                        <widget class="QLineEdit" name="lineEditPhoton">
+                        <property name="maximumSize">
+                         <size>
+                          <width>150</width>
+                          <height>16777215</height>
+                         </size>
+                        </property>
                         <property name="font">
                          <font>
                           <family>Utopia</family>
@@ -6774,68 +7227,6 @@ border-width: 3px;</string>
                 </item>
                </layout>
               </item>
-              <item>
-               <widget class="QFrame" name="frame">
-                <property name="styleSheet">
-                 <string notr="true">border-style: solid;
-border-width: 1px;</string>
-                </property>
-                <layout class="QVBoxLayout" name="verticalLayout_36">
-                 <item>
-                  <widget class="QLabel" name="label_35">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>150</width>
-                     <height>150</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Utopia</family>
-                     <pointsize>18</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>REFERENCE</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="label_5">
-                   <property name="maximumSize">
-                    <size>
-                     <width>150</width>
-                     <height>150</height>
-                    </size>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">border-width: 0px;</string>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="pixmap">
-                    <pixmap>images/ref_tts.png</pixmap>
-                   </property>
-                   <property name="scaledContents">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
              </layout>
             </widget>
            </item>
@@ -6863,7 +7254,7 @@ border-width: 1px;</string>
             <widget class="QGroupBox" name="groupBox_2">
              <property name="maximumSize">
               <size>
-               <width>500</width>
+               <width>639</width>
                <height>130</height>
               </size>
              </property>
@@ -6871,7 +7262,13 @@ border-width: 1px;</string>
               <string>Reference</string>
              </property>
              <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_55">
               <property name="spacing">
@@ -6988,10 +7385,10 @@ border-width: 1px;</string>
                  <widget class="QLabel" name="label_106">
                   <property name="font">
                    <font>
-                    <family>Sans Serif</family>
-                    <pointsize>10</pointsize>
-                    <weight>50</weight>
-                    <bold>false</bold>
+                    <family>Ubuntu</family>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="text">
@@ -7006,10 +7403,10 @@ border-width: 1px;</string>
                  <widget class="QLabel" name="label_107">
                   <property name="font">
                    <font>
-                    <family>Sans Serif</family>
-                    <pointsize>10</pointsize>
-                    <weight>50</weight>
-                    <bold>false</bold>
+                    <family>Ubuntu</family>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="text">
@@ -7024,10 +7421,10 @@ border-width: 1px;</string>
                  <widget class="QLabel" name="label_108">
                   <property name="font">
                    <font>
-                    <family>Sans Serif</family>
-                    <pointsize>10</pointsize>
-                    <weight>50</weight>
-                    <bold>false</bold>
+                    <family>Ubuntu</family>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="text">
@@ -7122,10 +7519,10 @@ border-width: 1px;</string>
                  <widget class="QLabel" name="label_109">
                   <property name="font">
                    <font>
-                    <family>Sans Serif</family>
-                    <pointsize>10</pointsize>
-                    <weight>50</weight>
-                    <bold>false</bold>
+                    <family>Ubuntu</family>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="text">
@@ -7141,10 +7538,10 @@ in Vacuum gauge</string>
                  <widget class="QLabel" name="label_110">
                   <property name="font">
                    <font>
-                    <family>Sans Serif</family>
-                    <pointsize>10</pointsize>
-                    <weight>50</weight>
-                    <bold>false</bold>
+                    <family>Ubuntu</family>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="text">
@@ -7249,10 +7646,10 @@ in Vacuum gauge</string>
                  <widget class="QLabel" name="label_111">
                   <property name="font">
                    <font>
-                    <family>Sans Serif</family>
-                    <pointsize>10</pointsize>
-                    <weight>50</weight>
-                    <bold>false</bold>
+                    <family>Ubuntu</family>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="text">
@@ -7268,10 +7665,10 @@ in Ion pump</string>
                  <widget class="QLabel" name="label_112">
                   <property name="font">
                    <font>
-                    <family>Sans Serif</family>
-                    <pointsize>10</pointsize>
-                    <weight>50</weight>
-                    <bold>false</bold>
+                    <family>Ubuntu</family>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="text">
@@ -7365,10 +7762,10 @@ in Ion pump</string>
                  <widget class="QLabel" name="label_113">
                   <property name="font">
                    <font>
-                    <family>Sans Serif</family>
-                    <pointsize>10</pointsize>
-                    <weight>50</weight>
-                    <bold>false</bold>
+                    <family>Ubuntu</family>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="text">
@@ -7383,10 +7780,10 @@ in Ion pump</string>
                  <widget class="QLabel" name="label_114">
                   <property name="font">
                    <font>
-                    <family>Sans Serif</family>
-                    <pointsize>10</pointsize>
-                    <weight>50</weight>
-                    <bold>false</bold>
+                    <family>Ubuntu</family>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="text">
@@ -7399,6 +7796,38 @@ in Ion pump</string>
                 </item>
                </layout>
               </item>
+              <item>
+               <widget class="QFrame" name="frame">
+                <property name="styleSheet">
+                 <string notr="true">border-style: solid;
+border-width: 1px;</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_36">
+                 <item>
+                  <widget class="QLabel" name="label_5">
+                   <property name="maximumSize">
+                    <size>
+                     <width>150</width>
+                     <height>150</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border-width: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap>images/ref_tts.png</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
              </layout>
             </widget>
            </item>
@@ -7409,7 +7838,7 @@ in Ion pump</string>
              </property>
              <property name="sizeHint" stdset="0">
               <size>
-               <width>40</width>
+               <width>44</width>
                <height>20</height>
               </size>
              </property>
