@@ -6,7 +6,7 @@ import sys
 import myEpics
 import myAlarm
 import time
-from epics import PV
+from epics import PV, caget
 from pydm import PyDMApplication
 
 # Load UI Files
@@ -101,6 +101,8 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         self.threadclass.start()
         self.threadclass_alarms = ThreadAlarmPoll()
         self.threadclass_alarms.start()
+        self.threadconn = ThreadConn()
+        self.threadconn.start()
         self.setGeometry(54,-8,1538,878)
         
        # Set things to my Window
@@ -109,7 +111,8 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         self.pushButtonBack.clicked.connect(self.onClickBack)
         self.pushButtonOpenArchiver.clicked.connect(self.openArchiver)
         self.threadclass.sig.connect(self.updateScreen)
-        self.threadclass_alarms.sig_alarms.connect(self.updateAlarmScreen)        
+        self.threadclass_alarms.sig_alarms.connect(self.updateAlarmScreen)
+        self.threadconn.sig_conn.connect(self.updateConnStatus)
     
     def onClickBack(self):
         self.close()
@@ -120,7 +123,15 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         self.archiverInterface = archiverInterface()
         self.archiverInterface.show()
         #self.close()
-
+        
+    def updateConnStatus(self, connStatus):
+        print (type(connStatus))
+        print (connStatus)
+        if connStatus == True:
+            self.labelConnection_2.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelConnection_2.setPixmap(QtGui.QPixmap("images/led_red.png"))
+        
     def updateAlarmScreen(
         self,
         counter,
@@ -161,6 +172,12 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
                 self.tableWidget.setItem(aux,j, item)        
 
     def updateScreen(self, EPSList):
+        #EPICS Connection Status Bool
+        if myEpics.pv[329].value == 1: #PV 329 é a pv de status, feita na mão       if myEpics.pv[329].connect()  == True and 
+            self.labelConnection.setPixmap(QtGui.QPixmap("images/led_green.png"))
+        else:
+            self.labelConnection.setPixmap(QtGui.QPixmap("images/led_red.png"))
+                
         # Update TT[i], FIT
         self.lineEditXbpm1.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM1-TT1')].value)+" ºC")
         self.lineEditXbpm1_2.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM1-TT2')].value)+" ºC")
@@ -581,6 +598,21 @@ class ThreadAlarmPoll(QtCore.QThread):
                 self.sig_alarms.emit(counter,item_name,data, hora,classe,texto)
                 #print (counter)
             time.sleep(10)            
+
+class ThreadConn(QtCore.QThread):
+    # Create the signal
+    sig_conn = QtCore.pyqtSignal(bool)
+    
+    def __init__(self, parent=None):
+        super(ThreadConn, self).__init__(parent)
+        
+    def run(self):
+        while 1:
+            connStatus = myEpics.pv[myEpics.getIndexPV('IVUFE:EPS:status')].connected
+            time.sleep(5)
+       
+            # Emit the signal
+            self.sig_conn.emit(connStatus)
 
 # Init interface
 if __name__ == '__main__':
