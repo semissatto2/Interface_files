@@ -3439,7 +3439,7 @@ border-width: 3px;</string>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLabel" name="label_26">
+                   <widget class="QLabel" name="labelPhotonShutter">
                     <property name="minimumSize">
                      <size>
                       <width>41</width>

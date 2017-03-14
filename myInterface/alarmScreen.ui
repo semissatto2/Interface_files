@@ -149,7 +149,18 @@ background-color: transparent;</string>
        </column>
        <item row="0" column="0">
         <property name="text">
-         <string/>
+         <string>sdf</string>
+        </property>
+        <property name="font">
+         <font>
+          <family>Utopia</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
         </property>
        </item>
       </widget>

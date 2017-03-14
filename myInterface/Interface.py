@@ -159,21 +159,50 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
                         brush = QtGui.QBrush(QtGui.QColor(255, 255, 0))
                         brush.setStyle(QtCore.Qt.SolidPattern)
                         item.setBackground(brush)
+                        item.setTextAlignment(QtCore.Qt.AlignCenter)
+                        font = QtGui.QFont()
+                        font.setFamily("Utopia")
+                        font.setPointSize(10)
+                        font.setBold(True)
+                        font.setWeight(75)
+                        item.setFont(font)
+                        
                     if classe[i] == 'Falha':
                         brush = QtGui.QBrush(QtGui.QColor(255, 0, 0))
                         brush.setStyle(QtCore.Qt.SolidPattern)
                         item.setBackground(brush)
+                        item.setTextAlignment(QtCore.Qt.AlignCenter)
+                        font = QtGui.QFont()
+                        font.setFamily("Utopia")
+                        font.setPointSize(10)
+                        font.setBold(True)
+                        font.setWeight(75)
+                        item.setFont(font)
+                        
+                    if classe[i][len(classe[i])-7:] == ' solved':
+                        brush = QtGui.QBrush(QtGui.QColor(0, 255, 0))
+                        brush.setStyle(QtCore.Qt.SolidPattern)
+                        item.setBackground(brush)
+                        item.setTextAlignment(QtCore.Qt.AlignCenter)
+                        font = QtGui.QFont()
+                        font.setFamily("Utopia")
+                        font.setPointSize(10)
+                        font.setBold(True)
+                        font.setWeight(75)
+                        item.setFont(font)                        
+                        
+                        
                 if j == 4:
                     item.setText(str(data[i]))
                 if j == 5:
                     item.setText(str(aux))
                     aux += 1
                                        
-                self.tableWidget.setItem(aux,j, item)        
+                self.tableWidget.setItem(aux, j, item)        
 
     def updateScreen(self, EPSList):
         #EPICS Connection Status Bool
-        if myEpics.pv[329].value == 1: #PV 329 é a pv de status, feita na mão       if myEpics.pv[329].connect()  == True and 
+        if myEpics.pv[myEpics.getIndexPV('IVUFE:EPS:status')].value == 1: #PV 329 é a pv de status, feita na mão       if myEpics.pv[329].connect()  == True and 
             self.labelConnection.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
             self.labelConnection.setPixmap(QtGui.QPixmap("images/led_red.png"))
@@ -597,8 +626,9 @@ class ThreadAlarmPoll(QtCore.QThread):
                 item_name = myAlarm.pv_names
                 self.sig_alarms.emit(counter,item_name,data, hora,classe,texto)
                 #print (counter)
-            time.sleep(10)            
+            time.sleep(1)            
 
+# My Thread Polling IOC Status connection
 class ThreadConn(QtCore.QThread):
     # Create the signal
     sig_conn = QtCore.pyqtSignal(bool)
@@ -609,7 +639,7 @@ class ThreadConn(QtCore.QThread):
     def run(self):
         while 1:
             connStatus = myEpics.pv[myEpics.getIndexPV('IVUFE:EPS:status')].connected
-            time.sleep(5)
+            time.sleep(1)
        
             # Emit the signal
             self.sig_conn.emit(connStatus)
