@@ -406,7 +406,13 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_DEV-PS-TT1')].value == 1:
             self.labelPhotonBool.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
-            self.labelPhotonBool.setPixmap(QtGui.QPixmap("images/led_yellow.png"))        
+            self.labelPhotonBool.setPixmap(QtGui.QPixmap("images/led_yellow.png"))
+
+        # Photon Shutter
+        if EPSList[myEpics.getIndexPV('IVUFE:EPS:PHOTON_STATUS_PPS')].value == 1:
+            self.labelPhotonShutter.setPixmap(QtGui.QPixmap("images/photon_shutter_closed.png"))
+        else:
+            self.labelPhotonShutter.setPixmap(QtGui.QPixmap("images/photon_shutter_open.png"))               
 
         # GV status. PS: there are 3 states: OPEN (green), CLOSE (red) & ERROR (orange)
 
