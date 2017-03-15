@@ -125,8 +125,8 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         #self.close()
         
     def updateConnStatus(self, connStatus):
-        print (type(connStatus))
-        print (connStatus)
+        #print (type(connStatus))
+        #print (connStatus)
         if connStatus == True:
             self.labelConnection_2.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
