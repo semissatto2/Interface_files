@@ -7,11 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>901</width>
-    <height>670</height>
+    <height>753</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>PPS Screen</string>
+   <string>General Carnauba Screen</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(227, 227, 227);</string>
@@ -290,20 +290,20 @@
     </layout>
    </item>
    <item row="2" column="0">
-    <widget class="QGroupBox" name="">
+    <widget class="QGroupBox" name="groupBox">
      <layout class="QHBoxLayout" name="horizontalLayout_32">
       <item>
        <widget class="QGroupBox" name="groupBox_2">
         <property name="minimumSize">
          <size>
           <width>211</width>
-          <height>201</height>
+          <height>225</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
           <width>420</width>
-          <height>280</height>
+          <height>289</height>
          </size>
         </property>
         <property name="font">
@@ -798,7 +798,7 @@ color: rgb(241, 241, 241);</string>
        </property>
        <property name="text">
         <string>Integrated Utilities Supervisory
- PPS VIEW  - CARNAÚBA</string>
+ General View  - CARNAÚBA</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
