@@ -7,7 +7,7 @@ import myEpics
 import myAlarm
 import time
 from epics import PV, caget
-from pydm import PyDMApplication
+#from pydm import PyDMApplication
 
 # Load UI Files
 Ui_Form_telaInicial, QtBaseClass = uic.loadUiType("telaInicial.ui")
@@ -31,8 +31,8 @@ class TelaInicial(QMainWindow, Ui_Form_telaInicial):
         # Bind signal to slot
         self.LinkButtonEPICS.clicked.connect(self.openEPICS)
         self.LinkButtonEPS.clicked.connect(self.openEPS)
-        self.LinkButtonTempScreen.clicked.connect(self.openTempScreen)
-        self.LinkButtonPyDM.clicked.connect(self.openPyDM)
+        #self.LinkButtonTempScreen.clicked.connect(self.openTempScreen)
+        #self.LinkButtonPyDM.clicked.connect(self.openPyDM)
         self.LinkButtonArchiver.clicked.connect(self.openArchiver)
 
 
@@ -47,19 +47,19 @@ class TelaInicial(QMainWindow, Ui_Form_telaInicial):
         self.EPSFrontEndInterface.showMaximized()
         self.close()        
     
-    def openTempScreen(self):
+    '''def openTempScreen(self):
         self.TempScreen = TempScreen()
         self.TempScreen.show()
-        self.close()   
+        self.close()'''   
 
     def openArchiver(self):
         self.archiverInterface = archiverInterface()
         self.archiverInterface.show()
         self.close()
 
-    def openPyDM(self):
+    '''def openPyDM(self):
         app_pydm = PyDMApplication(sys.argv)
-        app_pydm.new_window("lineEditTestPyDM.ui")
+        app_pydm.new_window("lineEditTestPyDM.ui")'''
         
         # Window Epics Interface #2 Class
 class EpicsInterface(QWidget, Ui_Form_epicsInterface):
@@ -233,6 +233,15 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         self.lineEditSlits_5.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AS_DEV-SLITS-FIT')].value)+" L/Min")
         self.lineEditSlits_6.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-SLITS-TT')].value)+" ºC")
         self.lineEditPhoton.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-PS-TT1')].value)+" ºC")
+
+        # Update Utilities
+        self.lineEditWprtt.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_UTL-WPR-TT')].value)+" ºC")
+        self.lineEditWprfit.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AS_UTL-WPR-FIT')].value)+" L/Min")
+        self.lineEditWprpit.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AS_UTL-WPR-PIT')].value)+" Bar")
+        self.lineEditWrttt.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_UTL-WRT-TT')].value)+" ºC")
+        self.lineEditWrtpit.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AS_UTL-WRT-PIT')].value)+" Bar")
+        self.lineEditWrtfit.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AS_UTL-WRT-FIT')].value)+" L/Min")
+        self.lineEditCarpit.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AS_UTL-CAR-PIT')].value)+" Bar")        
 
         # Update VG's bools
         if EPSList[myEpics.getIndexPV('IVUFE:EPS:ER_VAC-VG1')].value == 1:
@@ -643,8 +652,19 @@ class ThreadConn(QtCore.QThread):
         super(ThreadConn, self).__init__(parent)
         
     def run(self):
+        i = 0
+        connStatus_ant = True
+        
         while 1:
+            if connStatus_ant == False and myEpics.pv[myEpics.getIndexPV('IVUFE:EPS:status')].connected == True:
+                i += 1
+                if i > 1:
+                    aux = "vezes."
+                else:
+                    aux = "vez."
+                print ("IOC foi reiniciada", i, aux)                
             connStatus = myEpics.pv[myEpics.getIndexPV('IVUFE:EPS:status')].connected
+            self.IOCrecemcriada = connStatus
             time.sleep(1)
        
             # Emit the signal

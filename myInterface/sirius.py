@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from PyQt5 import uic, QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication, QWidget
-#import myEpics
+import myEpics
 import sys
 import time
 
@@ -47,18 +47,18 @@ class ThreadClass(QtCore.QThread):
         super(ThreadClass, self).__init__(parent)
         
     def run(self):
-        #corrente =  str(myEpics.pv[330].value)
-        #tempovida = myEpics.pv[331].value
-        #temporeal = myEpics.pv[332].value
+        corrente =  str(myEpics.pv[330].value)
+        tempovida = myEpics.pv[331].value
+        temporeal = myEpics.pv[332].value
         
         while 1:
-            #corrente =  str(myEpics.pv[330].value)
-            #tempovida = myEpics.pv[331].value
-            #temporeal = myEpics.pv[332].value
-            print ("Thread emits")
-            corrente =  '212'
-            tempovida = '18:15'
-            temporeal = '20:15:08'            
+            corrente =  str(myEpics.pv[330].value)
+            tempovida = myEpics.pv[331].value
+            temporeal = myEpics.pv[332].value
+            #print ("Thread emits")
+            #corrente =  '212'
+            #tempovida = '18:15'
+            #temporeal = '20:15:08'            
             time.sleep(0.2)
        
             # Emit the signal

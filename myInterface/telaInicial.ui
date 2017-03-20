@@ -14,7 +14,7 @@
    <string>Tela Inicial</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="resources.qrc">
+   <iconset>
     <normaloff>:/images/logoSirius.png</normaloff>:/images/logoSirius.png</iconset>
   </property>
   <property name="autoFillBackground">
@@ -50,7 +50,7 @@
          <string>EPICS Interface</string>
         </property>
         <property name="icon">
-         <iconset resource="resources.qrc">
+         <iconset>
           <normaloff>:/images/logo_659x595.png</normaloff>:/images/logo_659x595.png</iconset>
         </property>
         <property name="iconSize">
@@ -89,30 +89,6 @@
        </widget>
       </item>
       <item>
-       <widget class="QCommandLinkButton" name="LinkButtonTempScreen">
-        <property name="font">
-         <font>
-          <pointsize>14</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Temp. Interface</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCommandLinkButton" name="LinkButtonPyDM">
-        <property name="font">
-         <font>
-          <pointsize>14</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>PyDM Interface</string>
-        </property>
-       </widget>
-      </item>
-      <item>
        <widget class="QCommandLinkButton" name="LinkButtonArchiver">
         <property name="font">
          <font>
@@ -134,7 +110,7 @@
      <x>0</x>
      <y>0</y>
      <width>586</width>
-     <height>25</height>
+     <height>17</height>
     </rect>
    </property>
   </widget>
