@@ -6,6 +6,7 @@ import sys
 import myEpics
 import myAlarm
 import time
+import datetime
 from epics import PV, caget
 #from pydm import PyDMApplication
 
@@ -104,33 +105,132 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         self.threadconn = ThreadConn()
         self.threadconn.start()
         self.setGeometry(54,-8,1538,878)
+        self.k = 0  # Control Variable for Alarm filtering
+        self.filter = 0 # Control Variable for Alarm filtering
+        self.aux_blink = 0 #Control Variable for blinking led
+        self.tempo_inferior = 0
+        self.tempo_superior = 0
         
        # Set things to my Window
         
        # Bind signal to method
         self.pushButtonBack.clicked.connect(self.onClickBack)
+        self.box.stateChanged.connect(self.checkChecked)
+        self.pushButtonNow.clicked.connect(self.setNow)
         self.pushButtonOpenArchiver.clicked.connect(self.openArchiver)
         self.threadclass.sig.connect(self.updateScreen)
         self.threadclass_alarms.sig_alarms.connect(self.updateAlarmScreen)
         self.threadconn.sig_conn.connect(self.updateConnStatus)
-    
+     
     def onClickBack(self):
         self.close()
         self.window = TelaInicial()
         self.window.show()
 
+    def checkChecked(self):
+        if self.k%2 == 0:
+            self.filter = 2
+            if self.lineEditAnoInf.text() != '':
+                ano_inferior = int(self.lineEditAnoInf.text())
+            else:
+                ano_inferior = 2000
+                
+            if self.lineEditMesInf.text() != '':            
+                mes_inferior = int(self.lineEditMesInf.text())
+            else:
+                mes_inferior = 0
+            
+            if self.lineEditDiaInf.text() != '':
+                dia_inferior = int(self.lineEditDiaInf.text())
+            else:
+                dia_inferior = 0
+            
+            if self.lineEditHoraInf.text() != '':
+                hora_inferior = int(self.lineEditHoraInf.text())
+            else:
+                hora_inferior = 0
+            
+            if self.lineEditMinutoInf.text() != '':
+                minuto_inferior = int(self.lineEditMinutoInf.text())
+            else:
+                minuto_inferior = 0
+            
+            if self.lineEditSegundoInf.text() != '':
+                segundo_inferior = int(self.lineEditSegundoInf.text())
+            else:
+                segundo_inferior = 0
+            
+            if self.lineEditAnoSup.text() != '':
+                ano_superior = int(self.lineEditAnoSup.text())
+            else:
+                ano_superior = 2000
+            
+            if self.lineEditMesSup.text() != '':
+                mes_superior = int(self.lineEditMesSup.text())
+            else:
+                mes_superior = 0
+            
+            if self.lineEditDiaSup.text() != '':
+                dia_superior = int(self.lineEditDiaSup.text())
+            else:
+                dia_superior = 0
+            
+            if self.lineEditHoraSup.text() != '':
+                hora_superior = int(self.lineEditHoraSup.text())
+            else:
+                hora_superior = 0
+            
+            if self.lineEditMinutoSup.text() != '':
+                minuto_superior = int(self.lineEditMinutoSup.text())
+            else:
+                minuto_superior = 0
+            
+            if self.lineEditSegundoSup.text() != '':
+                segundo_superior = int(self.lineEditSegundoSup.text())
+            else:
+                segundo_superior = 0
+                
+            self.tempo_inferior = (ano_inferior-2000)*365*24 + dia_inferior*24 + mes_inferior*30*24 + hora_inferior + minuto_inferior/60 + segundo_inferior/3600 # Tempo fisico do limite inferior total em horas
+            self.tempo_superior = (ano_superior-2000)*365*24 + dia_superior*24 + mes_superior*30*24 + hora_superior + minuto_superior/60 + segundo_superior/3600 # Tempo fisico do limite inferior total em horas
+        else:
+            self.filter = 1
+        self.k += 1
+    
+    def setNow(self):
+        Y =datetime.datetime.now().strftime("%Y")
+        self.lineEditAnoSup.setText(Y)
+        month = datetime.datetime.now().strftime("%m")
+        self.lineEditMesSup.setText(month)
+        d =datetime.datetime.now().strftime("%d")
+        self.lineEditDiaSup.setText(d)
+        H =datetime.datetime.now().strftime("%H")
+        self.lineEditHoraSup.setText(H)
+        minute =datetime.datetime.now().strftime("%M")
+        self.lineEditMinutoSup.setText(minute)
+        S =datetime.datetime.now().strftime("%S")
+        self.lineEditSegundoSup.setText(S)        
+        
     def openArchiver(self):
         self.archiverInterface = archiverInterface()
         self.archiverInterface.show()
         #self.close()
         
-    def updateConnStatus(self, connStatus):
-        #print (type(connStatus))
-        #print (connStatus)
-        if connStatus == True:
+    def updateConnStatus(self, connStatus, alarmStatus):
+        connStatus_ =  myEpics.pv[myEpics.getIndexPV('IVUFE:EPS:status')].connected
+        print ("connStatus_: ", connStatus_)
+        self.aux_blink += 1
+        if connStatus_ ==  True:
             self.labelConnection_2.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
-            self.labelConnection_2.setPixmap(QtGui.QPixmap("images/led_red.png"))
+            if self.aux_blink%2 == 0:
+                self.labelConnection_2.setPixmap(QtGui.QPixmap("images/led_red.png"))
+            else:
+                self.labelConnection_2.setPixmap(QtGui.QPixmap("images/led_yellow.png"))
+            
+        if myAlarm.flag_alarmes_criados == 1:
+            self.lineEditAlarmstatus.setText("Alarms has been\ncreated successfully.")
+        else:
+            self.lineEditAlarmstatus.setText("Creating alarms ...")
         
     def updateAlarmScreen(
         self,
@@ -140,73 +240,144 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         hora,
         classe,
         texto,
+        tempo_total_list
         ):
         
-        aux = 0
-        self.tableWidget.setRowCount(counter)
-        for i in reversed(range(counter)):
-            for j in range(6):
-                item = QtWidgets.QTableWidgetItem()
-                if j == 0:
-                    item.setText(str(item_name[i]))
-                if j == 1:
-                    item.setText(str(hora[i]))
-                if j == 2:
-                    item.setText(str(texto[i]))
-                if j == 3:
-                    item.setText(str(classe[i]))
-                    if classe[i] == 'Defeito':
-                        brush = QtGui.QBrush(QtGui.QColor(255, 255, 0))
-                        brush.setStyle(QtCore.Qt.SolidPattern)
-                        item.setBackground(brush)
-                        item.setTextAlignment(QtCore.Qt.AlignCenter)
-                        font = QtGui.QFont()
-                        font.setFamily("Utopia")
-                        font.setPointSize(10)
-                        font.setBold(True)
-                        font.setWeight(75)
-                        item.setFont(font)
-                        
-                    if classe[i] == 'Falha':
-                        brush = QtGui.QBrush(QtGui.QColor(255, 0, 0))
-                        brush.setStyle(QtCore.Qt.SolidPattern)
-                        item.setBackground(brush)
-                        item.setTextAlignment(QtCore.Qt.AlignCenter)
-                        font = QtGui.QFont()
-                        font.setFamily("Utopia")
-                        font.setPointSize(10)
-                        font.setBold(True)
-                        font.setWeight(75)
-                        item.setFont(font)
-                        
-                    if classe[i][len(classe[i])-7:] == ' solved':
-                        brush = QtGui.QBrush(QtGui.QColor(0, 255, 0))
-                        brush.setStyle(QtCore.Qt.SolidPattern)
-                        item.setBackground(brush)
-                        item.setTextAlignment(QtCore.Qt.AlignCenter)
-                        font = QtGui.QFont()
-                        font.setFamily("Utopia")
-                        font.setPointSize(10)
-                        font.setBold(True)
-                        font.setWeight(75)
-                        item.setFont(font)                        
-                        
-                        
-                if j == 4:
-                    item.setText(str(data[i]))
-                if j == 5:
-                    item.setText(str(aux))
-                    aux += 1
-                                       
-                self.tableWidget.setItem(aux, j, item)        
+        if self.filter == 2:
+            aux = 0
+            aux_2 = 0
+            numero_elementos_filtrados = 0
+            for k in range(len(tempo_total_list)):
+                if tempo_total_list[k] < self.tempo_superior and tempo_total_list[k] > self.tempo_inferior :
+                    numero_elementos_filtrados += 1
+            self.tableWidget.setRowCount(numero_elementos_filtrados)                    
+            for i in reversed(range(counter)):
+                if tempo_total_list[i] < self.tempo_superior and tempo_total_list[i] > self.tempo_inferior : #troquei aux_2 por i
+                    for j in range(6):
+                        item = QtWidgets.QTableWidgetItem()
+                        if j == 0:
+                            item.setText(str(item_name[i])) #i
+                        if j == 1:
+                            item.setText(str(hora[i]))#i
+                        if j == 2:
+                            item.setText(str(texto[i]))#i
+                        if j == 3:
+                            item.setText(str(classe[i]))#i
+                            if classe[i] == 'Defeito': #i
+                                brush = QtGui.QBrush(QtGui.QColor(255, 255, 0))
+                                brush.setStyle(QtCore.Qt.SolidPattern)
+                                item.setBackground(brush)
+                                item.setTextAlignment(QtCore.Qt.AlignCenter)
+                                font = QtGui.QFont()
+                                font.setFamily("Utopia")
+                                font.setPointSize(10)
+                                font.setBold(True)
+                                font.setWeight(75)
+                                item.setFont(font)
+                                
+                            if classe[i] == 'Falha': #i
+                                brush = QtGui.QBrush(QtGui.QColor(255, 0, 0))
+                                brush.setStyle(QtCore.Qt.SolidPattern)
+                                item.setBackground(brush)
+                                item.setTextAlignment(QtCore.Qt.AlignCenter)
+                                font = QtGui.QFont()
+                                font.setFamily("Utopia")
+                                font.setPointSize(10)
+                                font.setBold(True)
+                                font.setWeight(75)
+                                item.setFont(font)
+                                
+                            if classe[i][len(classe[i])-7:] == ' solved':#i
+                                brush = QtGui.QBrush(QtGui.QColor(0, 255, 0))
+                                brush.setStyle(QtCore.Qt.SolidPattern)
+                                item.setBackground(brush)
+                                item.setTextAlignment(QtCore.Qt.AlignCenter)
+                                font = QtGui.QFont()
+                                font.setFamily("Utopia")
+                                font.setPointSize(10)
+                                font.setBold(True)
+                                font.setWeight(75)
+                                item.setFont(font)
+                                
+                        if j == 4:
+                            item.setText(str(data[i])) #i
+                        if j == 5:
+                            item.setText(str(aux))
+                            aux += 1
 
+                        self.tableWidget.setItem(aux, j, item)
+                aux_2 += 1
+                
+        elif self.filter ==  1 or self.filter == 0: #Show all alarms if _Check box_ is unchecked
+            aux_else = 0
+            self.tableWidget.setRowCount(counter)
+            for i in reversed(range(counter)):
+                if True :
+                    for j in range(6):
+                        item = QtWidgets.QTableWidgetItem()
+                        if j == 0:
+                            item.setText(str(item_name[i]))
+                        if j == 1:
+                            item.setText(str(hora[i]))
+                        if j == 2:
+                            item.setText(str(texto[i]))
+                        if j == 3:
+                            item.setText(str(classe[i]))
+                            if classe[i] == 'Defeito':
+                                brush = QtGui.QBrush(QtGui.QColor(255, 255, 0))
+                                brush.setStyle(QtCore.Qt.SolidPattern)
+                                item.setBackground(brush)
+                                item.setTextAlignment(QtCore.Qt.AlignCenter)
+                                font = QtGui.QFont()
+                                font.setFamily("Utopia")
+                                font.setPointSize(10)
+                                font.setBold(True)
+                                font.setWeight(75)
+                                item.setFont(font)
+                                
+                            if classe[i] == 'Falha':
+                                brush = QtGui.QBrush(QtGui.QColor(255, 0, 0))
+                                brush.setStyle(QtCore.Qt.SolidPattern)
+                                item.setBackground(brush)
+                                item.setTextAlignment(QtCore.Qt.AlignCenter)
+                                font = QtGui.QFont()
+                                font.setFamily("Utopia")
+                                font.setPointSize(10)
+                                font.setBold(True)
+                                font.setWeight(75)
+                                item.setFont(font)
+                                
+                            if classe[i][len(classe[i])-7:] == ' solved':
+                                brush = QtGui.QBrush(QtGui.QColor(0, 255, 0))
+                                brush.setStyle(QtCore.Qt.SolidPattern)
+                                item.setBackground(brush)
+                                item.setTextAlignment(QtCore.Qt.AlignCenter)
+                                font = QtGui.QFont()
+                                font.setFamily("Utopia")
+                                font.setPointSize(10)
+                                font.setBold(True)
+                                font.setWeight(75)
+                                item.setFont(font)                        
+                                
+                                
+                        if j == 4:
+                            item.setText(str(data[i]))
+                        if j == 5:
+                            item.setText(str(aux_else))
+                            aux_else += 1
+                                               
+                        self.tableWidget.setItem(aux_else, j, item)
+                        
     def updateScreen(self, EPSList):
         #EPICS Connection Status Bool
-        if myEpics.pv[myEpics.getIndexPV('IVUFE:EPS:status')].value == 1: #PV 329 é a pv de status, feita na mão       if myEpics.pv[329].connect()  == True and 
+        if myEpics.pv[myEpics.getIndexPV('IVUFE:EPS:status')].value == 1: 
             self.labelConnection.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
             self.labelConnection.setPixmap(QtGui.QPixmap("images/led_red.png"))
-                
+            
+        # Update Real time
+        self.lineEditTemporeal.setText(str(datetime.datetime.now()))
+        
         # Update TT[i], FIT
         self.lineEditXbpm1.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM1-TT1')].value)+" ºC")
         self.lineEditXbpm1_2.setText(str.format("{0:.3f}",EPSList[myEpics.getIndexPV('IVUFE:EPS:AI_DEV-XBPM1-TT2')].value)+" ºC")
@@ -600,9 +771,9 @@ class ThreadClass(QtCore.QThread):
         super(ThreadClass, self).__init__(parent)
         
     def run(self):
-        EPSList = list(range(280))
+        EPSList = list()
         while 1:
-            EPSList = myEpics.pv     
+            EPSList = myEpics.pv
             time.sleep(0.2)
        
             # Emit the signal
@@ -613,9 +784,9 @@ class ThreadClass(QtCore.QThread):
 class ThreadAlarmPoll(QtCore.QThread):
 
     # Create signals
-
     sig_alarms = QtCore.pyqtSignal(
         int,
+        list,
         list,
         list,
         list,
@@ -631,44 +802,48 @@ class ThreadAlarmPoll(QtCore.QThread):
         while 1:
             
             #pass
-            # Emit the signal if alarms was created with sucess
-            if myAlarm.flag_alarmes_criados:
+            # Emit the signal if alarms was created with sucess                
+            if myAlarm.flag_alarmes_criados:                
                 counter = myAlarm.alarm_count
                 data = myAlarm.data
                 hora = myAlarm.hora
                 texto = myAlarm.alarmText
                 classe = myAlarm.alarmClass
                 item_name = myAlarm.pv_names
-                self.sig_alarms.emit(counter,item_name,data, hora,classe,texto)
-                #print (counter)
+                tempo_total_list = myAlarm.tempo_total_list
+                self.sig_alarms.emit(counter,item_name,data, hora,classe,texto, tempo_total_list)
             time.sleep(1)            
 
 # My Thread Polling IOC Status connection
 class ThreadConn(QtCore.QThread):
     # Create the signal
-    sig_conn = QtCore.pyqtSignal(bool)
+    sig_conn = QtCore.pyqtSignal(bool, int)
     
     def __init__(self, parent=None):
         super(ThreadConn, self).__init__(parent)
-        
     def run(self):
-        i = 0
         connStatus_ant = True
         
         while 1:
+            #IOC Status handler
             if connStatus_ant == False and myEpics.pv[myEpics.getIndexPV('IVUFE:EPS:status')].connected == True:
-                i += 1
-                if i > 1:
-                    aux = "vezes."
-                else:
-                    aux = "vez."
-                print ("IOC foi reiniciada", i, aux)                
-            connStatus = myEpics.pv[myEpics.getIndexPV('IVUFE:EPS:status')].connected
-            self.IOCrecemcriada = connStatus
-            time.sleep(1)
-       
+                myAlarm.recebeInt(True)
+                time.sleep(3) #Tempo empirico para se reconhecer que a IOC foi recem iniciada
+            elif connStatus_ant == True and myEpics.pv[myEpics.getIndexPV('IVUFE:EPS:status')].connected == False:
+                myAlarm.recebeInt(True)
+                time.sleep(3) #Tempo empirico para se reconhecer que a IOC foi recem iniciada
+            else:
+                myAlarm.recebeInt(False)               
+                connStatus = myEpics.pv[myEpics.getIndexPV('IVUFE:EPS:status')].connected
+                connStatus_ant = connStatus
+                time.sleep(0.1)
+
+            #Alarm Status Handler
+            alarmStatus = myAlarm.flag_alarmes_criados
+            
             # Emit the signal
-            self.sig_conn.emit(connStatus)
+            self.sig_conn.emit(connStatus, alarmStatus)
+            time.sleep(0.1)
 
 # Init interface
 if __name__ == '__main__':
