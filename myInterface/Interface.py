@@ -107,7 +107,6 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
         self.setGeometry(54,-8,1538,878)
         self.k = 0  # Control Variable for Alarm filtering
         self.filter = 0 # Control Variable for Alarm filtering
-        self.aux_blink = 0 #Control Variable for blinking led
         self.tempo_inferior = 0
         self.tempo_superior = 0
         
@@ -130,7 +129,25 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
     def checkChecked(self):
         if self.k%2 == 0:
             self.filter = 2
+            try:
+                ano_inferior = int(self.lineEditAnoInf.text())
+                mes_inferior = int(self.lineEditMesInf.text())
+                dia_inferior = int(self.lineEditDiaInf.text())
+                hora_inferior = int(self.lineEditHoraInf.text())
+                minuto_inferior = int(self.lineEditMinutoInf.text())
+                segundo_inferior = int(self.lineEditSegundoInf.text())
+                ano_superior = int(self.lineEditAnoSup.text())
+                mes_superior = int(self.lineEditMesSup.text())
+                dia_superior = int(self.lineEditDiaSup.text())
+                hora_superior = int(self.lineEditHoraSup.text())
+                minuto_superior = int(self.lineEditMinutoSup.text())
+                segundo_superior = int(self.lineEditSegundoSup.text())
+            except ValueError:
+                self.lineEditAlarmstatus_2.setText("That's not a valid date. Try again!")
+                return None
+            
             if self.lineEditAnoInf.text() != '':
+                self.lineEditAlarmstatus_2.setText("That's a valid date.")
                 ano_inferior = int(self.lineEditAnoInf.text())
             else:
                 ano_inferior = 2000
@@ -218,14 +235,10 @@ class EPSFrontEndInterface(QWidget, Ui_Form_EPSFrontEndInterface):
     def updateConnStatus(self, connStatus, alarmStatus):
         connStatus_ =  myEpics.pv[myEpics.getIndexPV('IVUFE:EPS:status')].connected
         print ("connStatus_: ", connStatus_)
-        self.aux_blink += 1
         if connStatus_ ==  True:
             self.labelConnection_2.setPixmap(QtGui.QPixmap("images/led_green.png"))
         else:
-            if self.aux_blink%2 == 0:
-                self.labelConnection_2.setPixmap(QtGui.QPixmap("images/led_red.png"))
-            else:
-                self.labelConnection_2.setPixmap(QtGui.QPixmap("images/led_yellow.png"))
+            self.labelConnection_2.setPixmap(QtGui.QPixmap("images/led_red.png"))
             
         if myAlarm.flag_alarmes_criados == 1:
             self.lineEditAlarmstatus.setText("Alarms has been\ncreated successfully.")
@@ -828,10 +841,10 @@ class ThreadConn(QtCore.QThread):
             #IOC Status handler
             if connStatus_ant == False and myEpics.pv[myEpics.getIndexPV('IVUFE:EPS:status')].connected == True:
                 myAlarm.recebeInt(True)
-                time.sleep(3) #Tempo empirico para se reconhecer que a IOC foi recem iniciada
+                time.sleep(5) #Tempo empirico para se reconhecer que a IOC foi recem iniciada
             elif connStatus_ant == True and myEpics.pv[myEpics.getIndexPV('IVUFE:EPS:status')].connected == False:
                 myAlarm.recebeInt(True)
-                time.sleep(3) #Tempo empirico para se reconhecer que a IOC foi recem iniciada
+                time.sleep(5) #Tempo empirico para se reconhecer que a IOC foi recem iniciada
             else:
                 myAlarm.recebeInt(False)               
                 connStatus = myEpics.pv[myEpics.getIndexPV('IVUFE:EPS:status')].connected
@@ -843,7 +856,6 @@ class ThreadConn(QtCore.QThread):
             
             # Emit the signal
             self.sig_conn.emit(connStatus, alarmStatus)
-            time.sleep(0.1)
 
 # Init interface
 if __name__ == '__main__':

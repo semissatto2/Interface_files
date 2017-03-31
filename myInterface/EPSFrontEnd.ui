@@ -8334,6 +8334,21 @@ background-color: transparent;</string>
                 <property name="autoFillBackground">
                  <bool>false</bool>
                 </property>
+                <property name="verticalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOn</enum>
+                </property>
+                <property name="horizontalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOn</enum>
+                </property>
+                <property name="sizeAdjustPolicy">
+                 <enum>QAbstractScrollArea::AdjustIgnored</enum>
+                </property>
+                <property name="alternatingRowColors">
+                 <bool>true</bool>
+                </property>
+                <property name="textElideMode">
+                 <enum>Qt::ElideMiddle</enum>
+                </property>
                 <property name="showGrid">
                  <bool>true</bool>
                 </property>
@@ -8439,13 +8454,6 @@ background-color: transparent;</string>
                </widget>
               </item>
               <item>
-               <widget class="QCheckBox" name="box">
-                <property name="text">
-                 <string>Filter</string>
-                </property>
-               </widget>
-              </item>
-              <item>
                <widget class="QWidget" name="widget_4" native="true">
                 <property name="minimumSize">
                  <size>
@@ -8461,6 +8469,9 @@ background-color: transparent;</string>
                    </property>
                    <item>
                     <layout class="QVBoxLayout" name="verticalLayout_52">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
                      <item>
                       <widget class="QLabel" name="label_106">
                        <property name="maximumSize">
@@ -8520,7 +8531,7 @@ background-color: transparent;</string>
                       <widget class="QLabel" name="label_107">
                        <property name="maximumSize">
                         <size>
-                         <width>13</width>
+                         <width>10</width>
                          <height>16777215</height>
                         </size>
                        </property>
@@ -8545,7 +8556,7 @@ background-color: transparent;</string>
                    <item>
                     <layout class="QVBoxLayout" name="verticalLayout_55">
                      <property name="spacing">
-                      <number>0</number>
+                      <number>1</number>
                      </property>
                      <item>
                       <widget class="QLabel" name="label_108">
@@ -8606,7 +8617,7 @@ background-color: transparent;</string>
                       <widget class="QLabel" name="label_109">
                        <property name="maximumSize">
                         <size>
-                         <width>13</width>
+                         <width>10</width>
                          <height>16777215</height>
                         </size>
                        </property>
@@ -8630,6 +8641,9 @@ background-color: transparent;</string>
                    </item>
                    <item>
                     <layout class="QVBoxLayout" name="verticalLayout_57">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
                      <item>
                       <widget class="QLabel" name="label_110">
                        <property name="maximumSize">
@@ -8692,7 +8706,7 @@ background-color: transparent;</string>
                       <widget class="QLabel" name="label_111">
                        <property name="maximumSize">
                         <size>
-                         <width>13</width>
+                         <width>10</width>
                          <height>16777215</height>
                         </size>
                        </property>
@@ -8716,6 +8730,9 @@ background-color: transparent;</string>
                    </item>
                    <item>
                     <layout class="QVBoxLayout" name="verticalLayout_59">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
                      <item>
                       <widget class="QLabel" name="label_112">
                        <property name="maximumSize">
@@ -8775,7 +8792,7 @@ background-color: transparent;</string>
                       <widget class="QLabel" name="label_113">
                        <property name="maximumSize">
                         <size>
-                         <width>13</width>
+                         <width>10</width>
                          <height>16777215</height>
                         </size>
                        </property>
@@ -8799,6 +8816,9 @@ background-color: transparent;</string>
                    </item>
                    <item>
                     <layout class="QVBoxLayout" name="verticalLayout_62">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
                      <item>
                       <widget class="QLabel" name="label_114">
                        <property name="maximumSize">
@@ -8858,7 +8878,7 @@ background-color: transparent;</string>
                       <widget class="QLabel" name="label_115">
                        <property name="maximumSize">
                         <size>
-                         <width>13</width>
+                         <width>10</width>
                          <height>16777215</height>
                         </size>
                        </property>
@@ -8882,6 +8902,9 @@ background-color: transparent;</string>
                    </item>
                    <item>
                     <layout class="QVBoxLayout" name="verticalLayout_91">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
                      <item>
                       <widget class="QLabel" name="label_116">
                        <property name="maximumSize">
@@ -8976,6 +8999,9 @@ background-color: transparent;</string>
                    </property>
                    <item>
                     <layout class="QVBoxLayout" name="verticalLayout_93">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
                      <item>
                       <widget class="QLabel" name="label_124">
                        <property name="maximumSize">
@@ -9035,7 +9061,7 @@ background-color: transparent;</string>
                       <widget class="QLabel" name="label_125">
                        <property name="maximumSize">
                         <size>
-                         <width>13</width>
+                         <width>10</width>
                          <height>16777215</height>
                         </size>
                        </property>
@@ -9060,7 +9086,7 @@ background-color: transparent;</string>
                    <item>
                     <layout class="QVBoxLayout" name="verticalLayout_95">
                      <property name="spacing">
-                      <number>0</number>
+                      <number>1</number>
                      </property>
                      <item>
                       <widget class="QLabel" name="label_126">
@@ -9121,7 +9147,7 @@ background-color: transparent;</string>
                       <widget class="QLabel" name="label_127">
                        <property name="maximumSize">
                         <size>
-                         <width>13</width>
+                         <width>10</width>
                          <height>16777215</height>
                         </size>
                        </property>
@@ -9145,6 +9171,9 @@ background-color: transparent;</string>
                    </item>
                    <item>
                     <layout class="QVBoxLayout" name="verticalLayout_97">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
                      <item>
                       <widget class="QLabel" name="label_128">
                        <property name="maximumSize">
@@ -9207,7 +9236,7 @@ background-color: transparent;</string>
                       <widget class="QLabel" name="label_141">
                        <property name="maximumSize">
                         <size>
-                         <width>13</width>
+                         <width>10</width>
                          <height>16777215</height>
                         </size>
                        </property>
@@ -9231,6 +9260,9 @@ background-color: transparent;</string>
                    </item>
                    <item>
                     <layout class="QVBoxLayout" name="verticalLayout_99">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
                      <item>
                       <widget class="QLabel" name="label_142">
                        <property name="maximumSize">
@@ -9290,7 +9322,7 @@ background-color: transparent;</string>
                       <widget class="QLabel" name="label_143">
                        <property name="maximumSize">
                         <size>
-                         <width>13</width>
+                         <width>10</width>
                          <height>16777215</height>
                         </size>
                        </property>
@@ -9314,6 +9346,9 @@ background-color: transparent;</string>
                    </item>
                    <item>
                     <layout class="QVBoxLayout" name="verticalLayout_101">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
                      <item>
                       <widget class="QLabel" name="label_144">
                        <property name="maximumSize">
@@ -9373,7 +9408,7 @@ background-color: transparent;</string>
                       <widget class="QLabel" name="label_145">
                        <property name="maximumSize">
                         <size>
-                         <width>13</width>
+                         <width>10</width>
                          <height>16777215</height>
                         </size>
                        </property>
@@ -9397,6 +9432,9 @@ background-color: transparent;</string>
                    </item>
                    <item>
                     <layout class="QVBoxLayout" name="verticalLayout_103">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
                      <item>
                       <widget class="QLabel" name="label_146">
                        <property name="maximumSize">
@@ -9474,6 +9512,13 @@ background-color: transparent;</string>
                     </layout>
                    </item>
                   </layout>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="box">
+                   <property name="text">
+                    <string>Enable alarm filter</string>
+                   </property>
+                  </widget>
                  </item>
                 </layout>
                </widget>
